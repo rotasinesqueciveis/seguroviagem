@@ -1,0 +1,13 @@
+{
+  "name": "nome-do-seu-projeto",
+  "version": "1.0.0",
+  "description": "Serverless function para Rota Inesquecível",
+  "main": "api/send-email.js",
+  "scripts": {
+    "start": "node api/send-email.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1", 
+    "buffer": "^6.0.3" 
+  }
+}
