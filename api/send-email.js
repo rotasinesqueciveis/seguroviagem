@@ -1,12 +1,10 @@
-// api/send-email.js (O caminho é 'api' na raiz do projeto)
+// api/send-email.js
+// Usando CommonJS (require/module.exports) para garantir compatibilidade no Vercel
 
-// Importante: Se você estiver usando Vercel com um projeto Node.js que não seja Next.js, 
-// pode precisar instalar a dependência 'node-fetch' (npm install node-fetch) 
-// ou usar a função fetch nativa do Node.js (disponível em versões recentes).
+const fetch = require('node-fetch');
+const Buffer = require('buffer').Buffer;
 
-import fetch from 'node-fetch'; 
-
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
     // 1. Verificação de Método HTTP (Segurança básica)
     if (req.method !== 'POST') {
         return res.status(405).json({ success: false, message: 'Método não permitido.' });
@@ -42,12 +40,10 @@ export default async function handler(req, res) {
         Messages: [
             {
                 From: {
-                    // ⚠️ IMPORTANTE: Use um e-mail verificado/autorizado no seu Mailjet
                     Email: "no-reply@seu-dominio-autorizado.com", 
                     Name: "Rota Inesquecível - Leads"
                 },
                 To: [{
-                    // E-mail de destino (o seu, pego da variável de ambiente Vercel)
                     Email: TO_EMAIL,
                     Name: "Time de Vendas"
                 }],
@@ -70,7 +66,6 @@ export default async function handler(req, res) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                // Chave Secreta usada aqui!
                 'Authorization': `Basic ${auth}` 
             },
             body: JSON.stringify(mailjetData)
@@ -88,4 +83,4 @@ export default async function handler(req, res) {
         console.error('Erro Interno do Servidor:', error);
         return res.status(500).json({ success: false, message: 'Erro interno de conexão. Tente novamente mais tarde.' });
     }
-}
+};
