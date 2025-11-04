@@ -40,7 +40,7 @@ module.exports = async (req, res) => {
         Messages: [
             {
                 From: {
-                    Email: "pgiupponiamime@gmail.com", 
+                    Email: "contato@honigseguros.com.br", 
                     Name: "Rota Inesquecível - Leads"
                 },
                 To: [{
