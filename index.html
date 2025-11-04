@@ -213,7 +213,7 @@
      <p id="guides-subtitle" class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Roteiros exclusivos desenvolvidos por especialistas locais. Mapas detalhados, dicas insider e experiências autênticas que você não encontra em lugar nenhum.</p>
     </div>
     <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto"><div class="card-premium rounded-2xl overflow-hidden">
-      <div class="h-64 relative overflow-hidden"><img id="guide1-image" src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&q=80" alt="Castelo de Neuschwanstein na Alemanha" class="w-full h-full object-cover" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏰</span></div>';">
+      <div class="h-64 relative overflow-hidden"><img id="guide1-image" src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&q=80" alt="Castelo de Neuschwanstein na Alemanha" class="w-full h-full object-cover" onerror="this.src=''; this.alt='Imagem não disponível'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏰</span></div>';">
        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
        <div class="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1"><span class="text-white text-sm font-semibold">BESTSELLER</span>
        </div>
@@ -603,7 +603,7 @@
      </div>
     </div>
     <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-     <p id="footer-copyright">© 2025 Rota Inesquecível. Todos os direitos reservados. | Empresa certificada e licenciada para seguros de viagem internacionais.</p>
+     <p id="footer-copyright">© 2024 Rota Inesquecível. Todos os direitos reservados. | Empresa certificada e licenciada para seguros de viagem internacionais.</p>
     </div>
    </div>
   </footer>
@@ -755,7 +755,7 @@
             
             // Quote Section
             quote_title: "Faça sua Cotação de Seguro Viagem",
-            quote_subtitle: "Preencha seus dados e em seguida você será direcionado para o simulador oficial da Porto Seguro. Processo 100% seguro e oficial.",
+            quote_subtitle: "Preencha seus dados e em seguida você será redirecionado para o simulador oficial da Porto Seguro. Processo 100% seguro e oficial.",
             
             // Contact Section
             contact_title: "Pronto para sua próxima aventura?",
@@ -763,9 +763,9 @@
             contact_email: "contato@honigseguros.com.br", // Ajustado para o email de destino
             contact_phone: "(11) 99999-8888",
             
-            // Footer
+            // Footer (Simplificado)
             footer_description: "Sua parceira premium em todas as aventuras. Segurança, expertise e experiências inesquecíveis ao redor do mundo.",
-            footer_copyright: "© 2025 Rota Inesquecível. Todos os direitos reservados. | Empresa certificada e licenciada para seguros de viagem internacionais."
+            footer_copyright: "© 2024 Rota Inesquecível. Todos os direitos reservados. | Empresa certificada e licenciada para seguros de viagem internacionais."
         };
 
         // Update UI based on config
@@ -965,7 +965,7 @@
             if (footerDescription) footerDescription.textContent = config.footer_description || defaultConfig.footer_description;
             
             const footerCopyright = document.getElementById('footer-copyright');
-            if (footerCopyright) footerCopyright.innerHTML = config.footer_copyright || "© 2025 Rota Inesquecível. Todos os direitos reservados. | Empresa certificada e licenciada para seguros de viagem internacionais.";
+            if (footerCopyright) footerCopyright.innerHTML = config.footer_copyright || "© 2024 Rota Inesquecível. Todos os direitos reservados. | Empresa certificada e licenciada para seguros de viagem internacionais.";
         }
 
         // Capabilities
@@ -1040,7 +1040,7 @@
                 ["contact_email", config.contact_email || "contato@honigseguros.com.br"], // Ajustado
                 ["contact_phone", config.contact_phone || defaultConfig.contact_phone],
                 ["footer_description", config.footer_description || defaultConfig.footer_description],
-                ["footer_copyright", config.footer_copyright || "© 2025 Rota Inesquecível. Todos os direitos reservados. | Empresa certificada e licenciada para seguros de viagem internacionais."] // Ajustado
+                ["footer_copyright", config.footer_copyright || "© 2024 Rota Inesquecível. Todos os direitos reservados. | Empresa certificada e licenciada para seguros de viagem internacionais."] // Ajustado
             ]);
         }
 
@@ -1054,7 +1054,7 @@
             });
         }
 
-        // --- DADOS DOS DESTINOS COM SUAS NOVAS IMAGENS (URLs Corrigidos) ---
+        // --- DADOS DOS DESTINOS COM SUAS NOVAS IMAGENS (AGORA O CARROSSEL USA A IMAGENS[0]) ---
         const destinosData = {
             santorini: {
                 titulo: 'Santorini',
@@ -1072,7 +1072,7 @@
                 pais: 'Indonésia',
                 imagemPrincipal: 'https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcRgX9Y4cnH-zCffADoGmxpV9bJSEnd0BUwAu7nq84qQ7xlFqAO9IacK1P5E1hv_UF0Qnyrm-Vu7R0gJ4uU7Rp-cCKM&s=19',
                 imagens: [
-                    'https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
                     'https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTH0Fs5O4xH2fciZfVQe5qgg2Lg5kIi0oE4ZlQq6HF_DfhCj9Xy8o9gNMYwAoKSK8lND3PONc7QmVDSu6W3e7CAuE0&s=19',
                     'https://media.iatiseguros.pt/wp-content/uploads/sites/2/2018/12/templo-hindu-bali.jpg'
                 ],
@@ -1125,9 +1125,9 @@
             dubai: {
                 titulo: 'Dubai',
                 pais: 'Emirados Árabes Unidos',
-                imagemPrincipal: 'https://www.vagamundos.pt/wp-content/uploads/233.jpg', 
+                imagemPrincipal: 'https://www.vagamundos.pt/wp-content/uploads/201.jpg',
                 imagens: [
-                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
+                    'https://www.vagamundos.pt/wp-content/uploads/233.jpg',
                     'https://www.vagamundos.pt/wp-content/uploads/201.jpg',
                     'https://www.vagamundos.pt/wp-content/uploads/247.jpg'
                 ],
@@ -1138,9 +1138,9 @@
                 pais: 'Europa',
                 imagemPrincipal: 'https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQ-NlXWF_NmhKDZZwhQnu6H0n-UR6VblTIRHDz9s0PrdEhgev2hjb2qzoApReCasmxPHpgGlMnWX0h1tApZjH_brxk&s=19',
                 imagens: [
-                    'https://images.unsplash.com/photo-1518032768560-f703e33f6d70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
+                    'https://images.unsplash.com/photo-1496263546731-0329053229b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
                     'https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQO-kGqMb49VV82xEq-1K7A3HLChJOl5CTioeOfhi-LHbx72PCLobfFvTUxdNlJNMFKBdHC4NlVI-i4JAQHjvRIjSM&s=19',
-                    'https://images.unsplash.com/photo-1496263546731-0329053229b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' 
+                    'https://images.unsplash.com/photo-1518032768560-f703e33f6d70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' 
                 ],
                 descricao: 'A Islândia é a terra do fogo e do gelo, um país de paisagens dramáticas com vulcões, geleiras, fontes termais (como a Lagoa Azul) e a espetacular Aurora Boreal. É o destino ideal para amantes da natureza, aventura e para quem deseja presenciar fenômenos naturais raros e impressionantes.'
             },
@@ -1218,24 +1218,29 @@
             document.body.appendChild(modal);
         }
 
-        // Funções para modal de destino (mantidas e atualizadas para usar novas funções)
+        // Funções para modal de destino (mantidas e ajustadas para carregar a primeira imagem da galeria)
         function abrirDestinoModal(destino) {
             const dados = destinosData[destino];
             if (!dados) {
                 console.error(`Dados do destino '${destino}' não encontrados.`);
                 return;
             }
+            
+            // CORREÇÃO CRÍTICA: Define a imagem principal do MODAL
+            const imagemCarrossel = document.getElementById(`dest${Object.keys(destinosData).indexOf(destino) + 1}-image`);
 
             document.getElementById('modalDestinoTitulo').textContent = dados.titulo;
             document.getElementById('modalDestinoPais').textContent = dados.pais;
-            // Carrega a imagem principal 
-            document.getElementById('modalDestinoImagemPrincipal').src = dados.imagemPrincipal; 
+            
+            // Define a imagem principal do modal (usando a primeira da galeria do destinoData)
+            document.getElementById('modalDestinoImagemPrincipal').src = dados.imagens[0]; 
+            
             document.getElementById('modalDestinoDescricao').textContent = dados.descricao;
             
             // Carrega as 3 imagens secundárias
-            document.getElementById('modalDestinoImagem1').src = dados.imagens[0] || dados.imagemPrincipal;
-            document.getElementById('modalDestinoImagem2').src = dados.imagens[1] || dados.imagemPrincipal;
-            document.getElementById('modalDestinoImagem3').src = dados.imagens[2] || dados.imagemPrincipal;
+            document.getElementById('modalDestinoImagem1').src = dados.imagens[0];
+            document.getElementById('modalDestinoImagem2').src = dados.imagens[1] || dados.imagens[0];
+            document.getElementById('modalDestinoImagem3').src = dados.imagens[2] || dados.imagens[0];
 
             document.getElementById('modalDestino').classList.remove('hidden');
             document.getElementById('modalDestino').classList.add('flex');
@@ -1511,6 +1516,17 @@
             currentSlide = slideIndex;
             updateCarousel();
         }
+        
+        function updateCarouselImages() {
+             const keys = Object.keys(destinosData);
+             keys.forEach((key, index) => {
+                 const destImageElement = document.getElementById(`dest${index + 1}-image`);
+                 if (destImageElement && destinosData[key].imagens.length > 0) {
+                     // Força a imagem principal do carrossel a ser a primeira imagem da galeria
+                     destImageElement.src = destinosData[key].imagens[0];
+                 }
+             });
+         }
 
         function initializeCarousel() {
             // Garante que o track seja largo o suficiente para todos os slides
@@ -1522,6 +1538,9 @@
             for (let i = 0; i < slideElements.length; i++) {
                 slideElements[i].style.width = '100%'; 
             }
+            
+            // Atualiza as fontes das imagens no carrossel
+            updateCarouselImages();
         }
 
 
