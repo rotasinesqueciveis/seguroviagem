@@ -3,7 +3,7 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TravelGuard Pro - Seguros e Guias de Viagem Premium</title>
+  <title>Rota Inesquecível - Seguros e Guias de Viagem Premium</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="/_sdk/element_sdk.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
@@ -82,21 +82,19 @@
   <style>@view-transition { navigation: auto; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
- <body class="bg-gray-50"><!-- Header -->
-  <header class="glass-effect fixed w-full top-0 z-50 shadow-sm">
+ <body class="bg-gray-50"><header class="glass-effect fixed w-full top-0 z-50 shadow-sm">
    <div class="max-w-7xl mx-auto px-6 py-4">
     <div class="flex justify-between items-center">
      <div class="flex items-center space-x-3">
-      <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-lg">TG</span>
+      <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-lg">RI</span>
       </div>
-      <h1 id="site-title" class="text-2xl font-bold text-gray-900">TravelGuard Pro</h1>
+      <h1 id="site-title" class="text-2xl font-bold text-gray-900">Rota Inesquecível</h1>
      </div>
      <nav class="hidden md:flex space-x-8"><a href="#seguros" class="nav-link text-gray-700 font-medium">Seguros</a> <a href="#guias" class="nav-link text-gray-700 font-medium">Guias Premium</a> <a href="#cotacao" class="nav-link text-gray-700 font-medium">Cotação</a> <a href="#contato" class="nav-link text-gray-700 font-medium">Contato</a>
      </nav><button class="btn-primary text-white px-6 py-2 rounded-lg font-medium">Começar Agora</button>
     </div>
    </div>
-  </header><!-- Hero Section -->
-  <section class="hero-gradient text-white pt-24 pb-20 relative overflow-hidden">
+  </header><section class="hero-gradient text-white pt-24 pb-20 relative overflow-hidden">
    <div class="absolute inset-0"><img id="hero-bg-image" src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2835&amp;q=80" alt="Viajante contemplando paisagem montanhosa" class="w-full h-full object-cover opacity-30" onerror="this.style.display='none';">
    </div>
    <div class="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-800/60"></div>
@@ -106,8 +104,7 @@
      <p id="hero-subtitle" class="text-xl text-gray-300 mb-10 leading-relaxed">Proteção premium para suas viagens e roteiros exclusivos criados por especialistas. Mais de 50.000 viajantes confiam em nossa expertise.</p>
      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center"><button onclick="document.getElementById('seguros').scrollIntoView({behavior: 'smooth', block: 'start'})" class="btn-primary text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg"> Explorar Seguros Premium </button> <button onclick="document.getElementById('guias').scrollIntoView({behavior: 'smooth', block: 'start'})" class="border-2 border-white text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300"> Ver Guias Exclusivos </button>
      </div>
-    </div><!-- Stats -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto">
+    </div><div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto">
      <div class="text-center">
       <div id="stat1-number" class="text-3xl font-bold text-blue-400">
        50K+
@@ -142,15 +139,13 @@
      </div>
     </div>
    </div>
-  </section><!-- Seguros Section -->
-  <section id="seguros" class="py-20 bg-white">
+  </section><section id="seguros" class="py-20 bg-white">
    <div class="max-w-7xl mx-auto px-6">
     <div class="text-center mb-16">
      <h3 id="insurance-title" class="text-5xl font-bold text-gray-900 mb-6">Seguros Premium</h3>
      <p id="insurance-subtitle" class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Proteção completa com cobertura internacional, assistência médica 24h e suporte em português. Escolha o plano ideal para sua jornada.</p>
     </div>
-    <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto"><!-- Plano Essential -->
-     <div class="card-premium rounded-2xl p-8 relative">
+    <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto"><div class="card-premium rounded-2xl p-8 relative">
       <div class="text-center">
        <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"><span class="text-2xl">🛡️</span>
        </div>
@@ -164,8 +159,7 @@
         <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Assistência 24h em português</span></li>
        </ul><button class="w-full bg-gray-900 text-white py-4 rounded-xl font-semibold hover:bg-gray-800 transition-all duration-300" onclick="abrirFormulario('essential')"> Contratar Essential </button>
       </div>
-     </div><!-- Plano Premium -->
-     <div class="card-premium rounded-2xl p-8 relative border-2 border-blue-500 transform scale-105">
+     </div><div class="card-premium rounded-2xl p-8 relative border-2 border-blue-500 transform scale-105">
       <div class="absolute -top-4 left-1/2 transform -translate-x-1/2"><span class="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg"> MAIS POPULAR </span>
       </div>
       <div class="text-center">
@@ -182,8 +176,7 @@
         <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Telemedicina 24h</span></li>
        </ul><button class="w-full btn-primary text-white py-4 rounded-xl font-semibold shadow-lg" onclick="abrirFormulario('premium')"> Contratar Premium </button>
       </div>
-     </div><!-- Plano Elite -->
-     <div class="card-premium rounded-2xl p-8 relative">
+     </div><div class="card-premium rounded-2xl p-8 relative">
       <div class="text-center">
        <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 bg-gradient-to-r from-purple-100 to-purple-200"><span class="text-2xl">💎</span>
        </div>
@@ -201,16 +194,13 @@
      </div>
     </div>
    </div>
-  </section><!-- Section Divider -->
-  <div class="section-divider"></div><!-- Guias Section -->
-  <section id="guias" class="py-20 bg-gray-50">
+  </section><div class="section-divider"></div><section id="guias" class="py-20 bg-gray-50">
    <div class="max-w-7xl mx-auto px-6">
     <div class="text-center mb-16">
      <h3 id="guides-title" class="text-5xl font-bold text-gray-900 mb-6">Guias Premium de Viagem</h3>
      <p id="guides-subtitle" class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Roteiros exclusivos desenvolvidos por especialistas locais. Mapas detalhados, dicas insider e experiências autênticas que você não encontra em lugar nenhum.</p>
     </div>
-    <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto"><!-- Guia Europa -->
-     <div class="card-premium rounded-2xl overflow-hidden">
+    <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto"><div class="card-premium rounded-2xl overflow-hidden">
       <div class="h-64 relative overflow-hidden"><img id="guide1-image" src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80" alt="Castelo de Neuschwanstein na Alemanha" class="w-full h-full object-cover" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏰</span></div>';">
        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
        <div class="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1"><span class="text-white text-sm font-semibold">BESTSELLER</span>
@@ -232,8 +222,7 @@
         </div>
        </div><button class="w-full btn-primary text-white py-3 rounded-xl font-semibold shadow-lg" onclick="comprarGuia('europa')"> Adquirir Guia Premium </button>
       </div>
-     </div><!-- Guia Ásia -->
-     <div class="card-premium rounded-2xl overflow-hidden">
+     </div><div class="card-premium rounded-2xl overflow-hidden">
       <div class="h-64 relative overflow-hidden"><img id="guide2-image" src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80" alt="Templo Angkor Wat no Camboja" class="w-full h-full object-cover" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-red-500 via-orange-500 to-yellow-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏯</span></div>';">
        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
        <div class="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1"><span class="text-white text-sm font-semibold">NOVO</span>
@@ -255,8 +244,7 @@
         </div>
        </div><button class="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 rounded-xl font-semibold hover:from-orange-600 hover:to-red-600 transition-all duration-300" onclick="comprarGuia('asia')"> Adquirir Guia Premium </button>
       </div>
-     </div><!-- Guia América do Sul -->
-     <div class="card-premium rounded-2xl overflow-hidden">
+     </div><div class="card-premium rounded-2xl overflow-hidden">
       <div class="h-64 relative overflow-hidden"><img id="guide3-image" src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2076&amp;q=80" alt="Machu Picchu no Peru" class="w-full h-full object-cover" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-green-600 via-teal-500 to-blue-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏔️</span></div>';">
        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
        <div class="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1"><span class="text-white text-sm font-semibold">EXCLUSIVO</span>
@@ -281,16 +269,13 @@
      </div>
     </div>
    </div>
-  </section><!-- Gallery Section -->
-  <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+  </section><section class="py-20 bg-gradient-to-b from-gray-50 to-white">
    <div class="max-w-7xl mx-auto px-6">
     <div class="text-center mb-16">
      <h3 id="gallery-title" class="text-4xl font-bold text-gray-900 mb-4">Destinos Que Inspiram</h3>
      <p id="gallery-subtitle" class="text-xl text-gray-600 max-w-2xl mx-auto">Descubra alguns dos lugares incríveis que nossos clientes visitaram com segurança e nossos guias exclusivos</p>
-    </div><!-- Carousel Container -->
-    <div class="relative overflow-hidden">
-     <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out"><!-- Slide 1 -->
-      <div class="w-full flex-shrink-0">
+    </div><div class="relative overflow-hidden">
+     <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out"><div class="w-full flex-shrink-0">
        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('santorini')"><img id="dest1-image" src="https://images.unsplash.com/photo-1520637836862-4d197d17c93a?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Santorini, Grécia" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-blue-500 via-cyan-500 to-blue-600 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏛️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Santorini</div><div class=\'text-sm opacity-90\'>Grécia</div></div>';">
          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -349,11 +334,13 @@
          </div>
         </div>
        </div>
-      </div><!-- Slide 2 -->
-      <div class="w-full flex-shrink-0">
+      </div><div class="w-full flex-shrink-0">
        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="relative group overflow-hidden rounded-xl"><img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Paris, França" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-pink-500 via-rose-500 to-red-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🗼</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Paris</div><div class=\'text-sm opacity-90\'>França</div></div>';">
+        <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('paris')"><img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Paris, França" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-pink-500 via-rose-500 to-red-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🗼</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Paris</div><div class=\'text-sm opacity-90\'>França</div></div>';">
          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute inset-0 bg-pink-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">Clique para explorar</span>
+         </div>
          <div class="absolute bottom-4 left-4 text-white">
           <div class="font-semibold">
            Paris
@@ -363,8 +350,11 @@
           </div>
          </div>
         </div>
-        <div class="relative group overflow-hidden rounded-xl"><img src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Maldivas" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-cyan-400 via-blue-500 to-blue-600 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏖️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Maldivas</div><div class=\'text-sm opacity-90\'>Oceano Índico</div></div>';">
+        <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('maldivas')"><img src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Maldivas" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-cyan-400 via-blue-500 to-blue-600 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏖️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Maldivas</div><div class=\'text-sm opacity-90\'>Oceano Índico</div></div>';">
          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute inset-0 bg-cyan-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">Clique para explorar</span>
+         </div>
          <div class="absolute bottom-4 left-4 text-white">
           <div class="font-semibold">
            Maldivas
@@ -374,8 +364,11 @@
           </div>
          </div>
         </div>
-        <div class="relative group overflow-hidden rounded-xl"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Dubai, Emirados Árabes" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏙️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Dubai</div><div class=\'text-sm opacity-90\'>Emirados Árabes</div></div>';">
+        <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('dubai')"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Dubai, Emirados Árabes" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏙️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Dubai</div><div class=\'text-sm opacity-90\'>Emirados Árabes</div></div>';">
          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute inset-0 bg-yellow-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">Clique para explorar</span>
+         </div>
          <div class="absolute bottom-4 left-4 text-white">
           <div class="font-semibold">
            Dubai
@@ -385,8 +378,11 @@
           </div>
          </div>
         </div>
-        <div class="relative group overflow-hidden rounded-xl"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Islândia" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🌋</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Islândia</div><div class=\'text-sm opacity-90\'>Europa</div></div>';">
+        <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('islandia')"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Islândia" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🌋</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Islândia</div><div class=\'text-sm opacity-90\'>Europa</div></div>';">
          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute inset-0 bg-indigo-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">Clique para explorar</span>
+         </div>
          <div class="absolute bottom-4 left-4 text-white">
           <div class="font-semibold">
            Islândia
@@ -397,11 +393,13 @@
          </div>
         </div>
        </div>
-      </div><!-- Slide 3 -->
-      <div class="w-full flex-shrink-0">
+      </div><div class="w-full flex-shrink-0">
        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="relative group overflow-hidden rounded-xl"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Nova York, EUA" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-gray-600 via-gray-700 to-gray-800 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏙️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Nova York</div><div class=\'text-sm opacity-90\'>Estados Unidos</div></div>';">
+        <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('novayork')"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Nova York, EUA" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-gray-600 via-gray-700 to-gray-800 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏙️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Nova York</div><div class=\'text-sm opacity-90\'>Estados Unidos</div></div>';">
          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute inset-0 bg-gray-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">Clique para explorar</span>
+         </div>
          <div class="absolute bottom-4 left-4 text-white">
           <div class="font-semibold">
            Nova York
@@ -411,8 +409,11 @@
           </div>
          </div>
         </div>
-        <div class="relative group overflow-hidden rounded-xl"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Tailândia" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-orange-500 via-yellow-500 to-red-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏯</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Tailândia</div><div class=\'text-sm opacity-90\'>Sudeste Asiático</div></div>';">
+        <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('tailandia')"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Tailândia" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-orange-500 via-yellow-500 to-red-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏯</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Tailândia</div><div class=\'text-sm opacity-90\'>Sudeste Asiático</div></div>';">
          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute inset-0 bg-orange-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">Clique para explorar</span>
+         </div>
          <div class="absolute bottom-4 left-4 text-white">
           <div class="font-semibold">
            Tailândia
@@ -422,8 +423,11 @@
           </div>
          </div>
         </div>
-        <div class="relative group overflow-hidden rounded-xl"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Austrália" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-red-500 via-orange-500 to-yellow-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🦘</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Austrália</div><div class=\'text-sm opacity-90\'>Oceania</div></div>';">
+        <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('australia')"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Austrália" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-red-500 via-orange-500 to-yellow-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🦘</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Austrália</div><div class=\'text-sm opacity-90\'>Oceania</div></div>';">
          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute inset-0 bg-red-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">Clique para explorar</span>
+         </div>
          <div class="absolute bottom-4 left-4 text-white">
           <div class="font-semibold">
            Austrália
@@ -433,8 +437,11 @@
           </div>
          </div>
         </div>
-        <div class="relative group overflow-hidden rounded-xl"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Marrocos" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-yellow-600 via-orange-600 to-red-600 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🕌</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Marrocos</div><div class=\'text-sm opacity-90\'>África</div></div>';">
+        <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('marrocos')"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Marrocos" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-yellow-600 via-orange-600 to-red-600 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🕌</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Marrocos</div><div class=\'text-sm opacity-90\'>África</div></div>';">
          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute inset-0 bg-yellow-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">Clique para explorar</span>
+         </div>
          <div class="absolute bottom-4 left-4 text-white">
           <div class="font-semibold">
            Marrocos
@@ -446,13 +453,11 @@
         </div>
        </div>
       </div>
-     </div><!-- Carousel Indicators -->
-     <div class="flex justify-center mt-8 space-x-2"><button class="carousel-dot w-3 h-3 rounded-full bg-blue-600 transition-all duration-300" data-slide="0"></button> <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300" data-slide="1"></button> <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300" data-slide="2"></button>
+     </div><div class="flex justify-center mt-8 space-x-2"><button class="carousel-dot w-3 h-3 rounded-full bg-blue-600 transition-all duration-300" data-slide="0"></button> <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300" data-slide="1"></button> <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300" data-slide="2"></button>
      </div>
     </div>
    </div>
-  </section><!-- Testimonials -->
-  <section class="py-20 bg-white">
+  </section><section class="py-20 bg-white">
    <div class="max-w-7xl mx-auto px-6">
     <div class="text-center mb-16">
      <h3 id="testimonials-title" class="text-4xl font-bold text-gray-900 mb-4">O que nossos clientes dizem</h3>
@@ -505,8 +510,7 @@
      </div>
     </div>
    </div>
-  </section><!-- Cotação Section -->
-  <section id="cotacao" class="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white relative overflow-hidden">
+  </section><section id="cotacao" class="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white relative overflow-hidden">
    <div class="absolute inset-0 bg-black bg-opacity-20"></div>
    <div class="max-w-4xl mx-auto px-6 relative z-10">
     <div class="text-center mb-12">
@@ -514,7 +518,7 @@
      <p id="quote-subtitle" class="text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">Preencha seus dados e em seguida você será direcionado para o simulador oficial da Porto Seguro. Processo 100% seguro e oficial.</p>
     </div>
     <div class="glass-effect rounded-2xl p-8 bg-white/95 backdrop-blur-lg">
-     <form id="cotacao-form" onsubmit="redirecionarPortoSeguro(event)" class="space-y-6">
+     <form id="cotacao-form" onsubmit="processarCotacao(event)" class="space-y-6">
       <div class="grid md:grid-cols-2 gap-6">
        <div><label class="block text-gray-700 font-semibold mb-2">Nome Completo *</label> <input type="text" id="nome" name="nome" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="Seu nome completo" required>
        </div>
@@ -536,14 +540,13 @@
       <div id="mensagem-redirecionamento" class="hidden bg-blue-100 border border-blue-300 rounded-lg p-4 text-center">
        <div class="flex items-center justify-center space-x-3">
         <div class="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
-        <p class="text-blue-800 font-semibold">Aguarde... você será redirecionado para o simulador oficial da Porto Seguro.</p>
+        <p class="text-blue-800 font-semibold">Aguarde... processando dados e preparando redirecionamento para o simulador oficial.</p>
        </div>
       </div><button type="submit" class="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white py-4 rounded-xl font-bold text-lg shadow-lg transform hover:scale-105 transition-all duration-300"> 🚀 GERAR COTAÇÃO OFICIAL PORTO SEGURO </button>
      </form>
     </div>
    </div>
-  </section><!-- Contact Section -->
-  <section id="contato" class="py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-black text-white relative overflow-hidden">
+  </section><section id="contato" class="py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-black text-white relative overflow-hidden">
    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
    <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
     <h3 id="contact-title" class="text-5xl font-bold mb-6">Pronto para sua próxima aventura?</h3>
@@ -554,7 +557,7 @@
        📧
       </div>
       <h4 class="text-xl font-bold mb-2">Email Direto</h4>
-      <p id="contact-email" class="text-gray-300">contato@travelguardpro.com</p>
+      <p id="contact-email" class="text-gray-300">contato@honigseguros.com.br</p>
      </div>
      <div class="glass-effect rounded-2xl p-8 bg-white/5 backdrop-blur-lg border border-white/10">
       <div class="text-4xl mb-4">
@@ -565,15 +568,14 @@
      </div>
     </div><button onclick="abrirContatoModal()" class="btn-primary text-white px-12 py-4 rounded-xl font-bold text-lg shadow-lg transform hover:scale-105 transition-all duration-300"> 💬 Falar com Especialista Agora </button>
    </div>
-  </section><!-- Footer -->
-  <footer class="bg-black text-white py-16">
+  </section><footer class="bg-black text-white py-16">
    <div class="max-w-7xl mx-auto px-6">
     <div class="grid md:grid-cols-4 gap-8 mb-12">
      <div>
       <div class="flex items-center space-x-3 mb-6">
-       <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-lg">TG</span>
+       <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-lg">RI</span>
        </div>
-       <h4 id="footer-site-title" class="text-xl font-bold">TravelGuard Pro</h4>
+       <h4 id="footer-site-title" class="text-xl font-bold">Rota Inesquecível</h4>
       </div>
       <p id="footer-description" class="text-gray-400 leading-relaxed">Sua parceira premium em todas as aventuras. Segurança, expertise e experiências inesquecíveis ao redor do mundo.</p>
      </div>
@@ -598,7 +600,7 @@
      <div>
       <h5 class="font-bold mb-6 text-lg">Suporte Premium</h5>
       <ul class="space-y-3 text-gray-400">
-       <li>📧 contato@travelguardpro.com</li>
+       <li>📧 contato@honigseguros.com.br</li>
        <li>📱 (11) 99999-8888</li>
        <li>🌐 Chat 24/7 disponível</li>
        <li>🎯 Consultoria especializada</li>
@@ -606,73 +608,66 @@
      </div>
     </div>
     <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-     <p id="footer-copyright">© 2024 TravelGuard Pro. Todos os direitos reservados. | Empresa certificada e licenciada para seguros de viagem internacionais.</p>
+     <p id="footer-copyright">© 2024 Rota Inesquecível. Todos os direitos reservados. | Empresa certificada e licenciada para seguros de viagem internacionais.</p>
     </div>
    </div>
-  </footer><!-- Modal Formulário Seguro -->
-  <div id="modalFormulario" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50 backdrop-blur-sm">
+  </footer><div id="modalFormulario" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50 backdrop-blur-sm">
    <div class="bg-white rounded-2xl p-8 max-w-lg w-full mx-4 shadow-2xl">
     <div class="flex justify-between items-center mb-8">
      <h3 class="text-3xl font-bold text-gray-900" id="tituloModal">Contratar Seguro Premium</h3><button onclick="fecharModal()" class="text-gray-400 hover:text-gray-600 text-3xl font-light">×</button>
     </div>
     <form onsubmit="processarContratacao(event)" class="space-y-6">
      <div class="grid md:grid-cols-2 gap-6">
-      <div><label class="block text-gray-700 font-semibold mb-2">Nome Completo</label> <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required>
+      <div><label class="block text-gray-700 font-semibold mb-2">Nome Completo</label> <input type="text" name="nome" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required>
       </div>
-      <div><label class="block text-gray-700 font-semibold mb-2">Email</label> <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required>
+      <div><label class="block text-gray-700 font-semibold mb-2">Email</label> <input type="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required>
       </div>
      </div>
-     <div><label class="block text-gray-700 font-semibold mb-2">Telefone/WhatsApp</label> <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required>
+     <div><label class="block text-gray-700 font-semibold mb-2">Telefone/WhatsApp</label> <input type="tel" name="telefone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required>
      </div>
-     <div><label class="block text-gray-700 font-semibold mb-2">Destino Principal</label> <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="Ex: Europa, Ásia, América do Norte..." required>
+     <div><label class="block text-gray-700 font-semibold mb-2">Destino Principal</label> <input type="text" name="destino" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="Ex: Europa, Ásia, América do Norte..." required>
      </div>
      <div class="grid grid-cols-2 gap-6">
-      <div><label class="block text-gray-700 font-semibold mb-2">Data de Partida</label> <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required>
+      <div><label class="block text-gray-700 font-semibold mb-2">Data de Partida</label> <input type="date" name="partida" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required>
       </div>
-      <div><label class="block text-gray-700 font-semibold mb-2">Data de Retorno</label> <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required>
+      <div><label class="block text-gray-700 font-semibold mb-2">Data de Retorno</label> <input type="date" name="retorno" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required>
       </div>
      </div><button type="submit" class="w-full btn-primary text-white py-4 rounded-xl font-semibold text-lg shadow-lg"> Solicitar Cotação Premium </button>
     </form>
    </div>
-  </div><!-- Modal Destino -->
-  <div id="modalDestino" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50 backdrop-blur-sm">
+  </div><div id="modalDestino" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50 backdrop-blur-sm">
    <div class="bg-white rounded-2xl max-w-4xl w-full mx-4 shadow-2xl max-h-[90vh] overflow-y-auto">
-    <div class="relative"><button onclick="fecharDestinoModal()" class="absolute top-4 right-4 z-10 bg-black bg-opacity-50 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 transition-all"> × </button> <!-- Header com imagem principal -->
-     <div class="relative h-64 overflow-hidden rounded-t-2xl"><img id="modalDestinoImagemPrincipal" src="" alt="" class="w-full h-full object-cover">
+    <div class="relative"><button onclick="fecharDestinoModal()" class="absolute top-4 right-4 z-10 bg-black bg-opacity-50 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 transition-all"> × </button> <div class="relative h-64 overflow-hidden rounded-t-2xl"><img id="modalDestinoImagemPrincipal" src="" alt="" class="w-full h-full object-cover">
       <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
       <div class="absolute bottom-6 left-6 text-white">
        <h3 id="modalDestinoTitulo" class="text-4xl font-bold mb-2"></h3>
        <p id="modalDestinoPais" class="text-xl opacity-90"></p>
       </div>
      </div>
-     <div class="p-8"><!-- Galeria de 3 imagens -->
-      <div class="grid grid-cols-3 gap-4 mb-8">
+     <div class="p-8"><div class="grid grid-cols-3 gap-4 mb-8">
        <div class="relative h-32 overflow-hidden rounded-lg"><img id="modalDestinoImagem1" src="" alt="" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
        </div>
        <div class="relative h-32 overflow-hidden rounded-lg"><img id="modalDestinoImagem2" src="" alt="" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
        </div>
        <div class="relative h-32 overflow-hidden rounded-lg"><img id="modalDestinoImagem3" src="" alt="" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
        </div>
-      </div><!-- Descrição -->
-      <div class="mb-8">
+      </div><div class="mb-8">
        <h4 class="text-2xl font-bold text-gray-900 mb-4">Sobre este destino</h4>
        <p id="modalDestinoDescricao" class="text-gray-700 leading-relaxed text-lg"></p>
-      </div><!-- Botão de cotação -->
-      <div class="text-center"><button onclick="irParaCotacao()" class="btn-primary text-white px-10 py-4 rounded-xl font-bold text-lg shadow-lg transform hover:scale-105 transition-all duration-300"> 🛡️ Fazer Cotação de Seguro para este Destino </button>
+      </div><div class="text-center"><button onclick="irParaCotacao()" class="btn-primary text-white px-10 py-4 rounded-xl font-bold text-lg shadow-lg transform hover:scale-105 transition-all duration-300"> 🛡️ Fazer Cotação de Seguro para este Destino </button>
       </div>
      </div>
     </div>
    </div>
-  </div><!-- Modal Contato -->
-  <div id="modalContato" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50 backdrop-blur-sm">
+  </div><div id="modalContato" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50 backdrop-blur-sm">
    <div class="bg-white rounded-2xl p-8 max-w-lg w-full mx-4 shadow-2xl">
     <div class="flex justify-between items-center mb-8">
      <h3 class="text-3xl font-bold text-gray-900">Falar com Especialista</h3><button onclick="fecharContatoModal()" class="text-gray-400 hover:text-gray-600 text-3xl font-light">×</button>
     </div>
-    <div id="mensagemEnvioContato" class="hidden bg-green-100 border border-green-300 rounded-lg p-4 mb-6 text-center">
+    <div id="mensagemEnvioContato" class="hidden bg-blue-100 border border-blue-300 rounded-lg p-4 mb-6 text-center">
      <div class="flex items-center justify-center space-x-3">
-      <div class="animate-spin rounded-full h-6 w-6 border-b-2 border-green-600"></div>
-      <p class="text-green-800 font-semibold">Enviando sua mensagem...</p>
+      <div class="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
+      <p class="text-blue-800 font-semibold">Enviando sua mensagem...</p>
      </div>
     </div>
     <form id="formContato" onsubmit="enviarMensagemContato(event)" class="space-y-6">
@@ -692,10 +687,10 @@
    </div>
   </div>
   <script>
-        // Default configuration
+        // MUDANÇA 2: Configuração padrão atualizada para "Rota Inesquecível"
         const defaultConfig = {
             // Header
-            site_title: "TravelGuard Pro",
+            site_title: "Rota Inesquecível",
             
             // Hero Section
             hero_title: "Viaje com Segurança e Expertise",
@@ -767,22 +762,26 @@
             // Contact Section
             contact_title: "Pronto para sua próxima aventura?",
             contact_subtitle: "Nossa equipe de especialistas está pronta para criar a proteção perfeita para sua viagem e recomendar os melhores roteiros para seu perfil.",
-            contact_email: "contato@travelguardpro.com",
+            contact_email: "contato@honigseguros.com.br", // Ajustado para o email de destino
             contact_phone: "(11) 99999-8888",
             
             // Footer
             footer_description: "Sua parceira premium em todas as aventuras. Segurança, expertise e experiências inesquecíveis ao redor do mundo.",
-            footer_copyright: "© 2024 TravelGuard Pro. Todos os direitos reservados. | Empresa certificada e licenciada para seguros de viagem internacionais."
+            footer_copyright: "© 2024 Rota Inesquecível. Todos os direitos reservados. | Empresa certificada e licenciada para seguros de viagem internacionais."
         };
 
         // Update UI based on config
         async function onConfigChange(config) {
             // Header
             const siteTitle = document.getElementById('site-title');
-            if (siteTitle) siteTitle.textContent = config.site_title || defaultConfig.site_title;
+            // MUDANÇA 2: Título do site
+            if (siteTitle) siteTitle.textContent = config.site_title || "Rota Inesquecível";
             
             const footerSiteTitle = document.getElementById('footer-site-title');
-            if (footerSiteTitle) footerSiteTitle.textContent = config.site_title || defaultConfig.site_title;
+            // MUDANÇA 2: Título do site no footer
+            if (footerSiteTitle) footerSiteTitle.textContent = config.site_title || "Rota Inesquecível";
+            
+            // O restante da função onConfigChange permanece o mesmo
             
             // Hero Section
             const heroTitle = document.getElementById('hero-title');
@@ -960,8 +959,9 @@
             const contactSubtitle = document.getElementById('contact-subtitle');
             if (contactSubtitle) contactSubtitle.textContent = config.contact_subtitle || defaultConfig.contact_subtitle;
             
+            // MUDANÇA 2: Email de contato
             const contactEmail = document.getElementById('contact-email');
-            if (contactEmail) contactEmail.textContent = config.contact_email || defaultConfig.contact_email;
+            if (contactEmail) contactEmail.textContent = config.contact_email || "contato@honigseguros.com.br";
             
             const contactPhone = document.getElementById('contact-phone');
             if (contactPhone) contactPhone.textContent = config.contact_phone || defaultConfig.contact_phone;
@@ -971,7 +971,8 @@
             if (footerDescription) footerDescription.textContent = config.footer_description || defaultConfig.footer_description;
             
             const footerCopyright = document.getElementById('footer-copyright');
-            if (footerCopyright) footerCopyright.innerHTML = config.footer_copyright || defaultConfig.footer_copyright;
+            // MUDANÇA 2: Copyright
+            if (footerCopyright) footerCopyright.innerHTML = config.footer_copyright || "© 2024 Rota Inesquecível. Todos os direitos reservados. | Empresa certificada e licenciada para seguros de viagem internacionais.";
         }
 
         // Capabilities
@@ -986,8 +987,9 @@
 
         // Map to edit panel values
         function mapToEditPanelValues(config) {
+            // MUDANÇA 2: Ajuste nos valores do painel de edição
             return new Map([
-                ["site_title", config.site_title || defaultConfig.site_title],
+                ["site_title", config.site_title || "Rota Inesquecível"],
                 ["hero_title", config.hero_title || defaultConfig.hero_title],
                 ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
                 ["hero_image", config.hero_image || defaultConfig.hero_image],
@@ -1043,10 +1045,10 @@
                 ["quote_subtitle", config.quote_subtitle || defaultConfig.quote_subtitle],
                 ["contact_title", config.contact_title || defaultConfig.contact_title],
                 ["contact_subtitle", config.contact_subtitle || defaultConfig.contact_subtitle],
-                ["contact_email", config.contact_email || defaultConfig.contact_email],
+                ["contact_email", config.contact_email || "contato@honigseguros.com.br"], // Ajustado
                 ["contact_phone", config.contact_phone || defaultConfig.contact_phone],
                 ["footer_description", config.footer_description || defaultConfig.footer_description],
-                ["footer_copyright", config.footer_copyright || defaultConfig.footer_copyright]
+                ["footer_copyright", config.footer_copyright || "© 2024 Rota Inesquecível. Todos os direitos reservados. | Empresa certificada e licenciada para seguros de viagem internacionais."] // Ajustado
             ]);
         }
 
@@ -1060,7 +1062,7 @@
             });
         }
 
-        // Dados dos destinos
+        // MUDANÇA 1: Adicionado dados dos novos destinos
         const destinosData = {
             santorini: {
                 titulo: 'Santorini',
@@ -1105,6 +1107,94 @@
                     'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
                 ],
                 descricao: 'Kyoto é o coração cultural do Japão, antiga capital imperial que preserva mais de 2.000 templos e santuários, jardins zen meticulosamente cuidados e o famoso distrito de gueixas de Gion. Esta cidade mágica oferece uma imersão completa na tradição japonesa, desde cerimônias do chá autênticas até a contemplação das famosas flores de cerejeira (sakura). Kyoto combina perfeitamente o Japão tradicional com toques de modernidade, oferecendo experiências gastronômicas únicas e uma atmosfera de serenidade inesquecível.'
+            },
+            paris: {
+                titulo: 'Paris',
+                pais: 'França',
+                imagemPrincipal: 'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                imagens: [
+                    'https://images.unsplash.com/photo-1522093007474-d8669c5e27a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1500602015330-80a9d80c3b01?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                ],
+                descricao: 'Paris, a Cidade Luz, é mundialmente famosa por sua arte, moda, gastronomia e cultura. Lar da Torre Eiffel, Museu do Louvre e Catedral de Notre Dame, a capital francesa exala romantismo e história. Perfeita para explorar cafés charmosos, passear pelo Rio Sena e se maravilhar com a arquitetura neoclássica. Um destino obrigatório para os amantes de cultura e beleza.'
+            },
+            maldivas: {
+                titulo: 'Maldivas',
+                pais: 'Oceano Índico',
+                imagemPrincipal: 'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                imagens: [
+                    'https://images.unsplash.com/photo-1514283181822-6b9f27161b27?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1530932822474-04cc6114b30c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                ],
+                descricao: 'As Maldivas são o arquétipo do paraíso tropical, com águas turquesa, bangalôs sobre a água e recifes de coral vibrantes. Ideal para mergulho, snorkeling e relaxamento total. Um destino de luxo perfeito para quem busca privacidade, tranquilidade e paisagens de tirar o fôlego.'
+            },
+            dubai: {
+                titulo: 'Dubai',
+                pais: 'Emirados Árabes Unidos',
+                imagemPrincipal: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                imagens: [
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1555109307-f316182c658f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1555109307-f316182c658f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                ],
+                descricao: 'Dubai é a capital do luxo e da inovação, lar do Burj Khalifa e de ilhas artificiais. É uma metrópole futurista que oferece shoppings de classe mundial, desert safaris e uma vida noturna agitada. Perfeita para quem busca modernidade, extravagância e experiências únicas no Oriente Médio.'
+            },
+            islandia: {
+                titulo: 'Islândia',
+                pais: 'Europa',
+                imagemPrincipal: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                imagens: [
+                    'https://images.unsplash.com/photo-1496263546731-0329053229b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1518032768560-f703e33f6d70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1518032768560-f703e33f6d70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                ],
+                descricao: 'A Islândia é a terra do fogo e do gelo, um país de paisagens dramáticas com vulcões, geleiras, fontes termais (como a Lagoa Azul) e a espetacular Aurora Boreal. É o destino ideal para amantes da natureza, aventura e para quem deseja presenciar fenômenos naturais raros e impressionantes.'
+            },
+            novayork: {
+                titulo: 'Nova York',
+                pais: 'Estados Unidos',
+                imagemPrincipal: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                imagens: [
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1496263546731-0329053229b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1518032768560-f703e33f6d70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                ],
+                descricao: 'Nova York, a "Big Apple", é o centro mundial de finanças, cultura, moda e mídia. Com a Estátua da Liberdade, Times Square e Central Park, a cidade oferece uma experiência inigualável de vida urbana, arte de vanguarda e gastronomia multicultural. Ideal para quem busca energia, diversão e uma infinidade de atrações.'
+            },
+            tailandia: {
+                titulo: 'Tailândia',
+                pais: 'Sudeste Asiático',
+                imagemPrincipal: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                imagens: [
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                ],
+                descricao: 'A Tailândia é um destino de contrastes, famoso por seus templos dourados (Wats), praias paradisíacas e a vibrante cidade de Bangkok. De passeios de elefante à culinária de rua, o país oferece cultura rica, história milenar e belezas naturais. Perfeito para quem busca aventura, espiritualidade e cenários exóticos.'
+            },
+            australia: {
+                titulo: 'Austrália',
+                pais: 'Oceania',
+                imagemPrincipal: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                imagens: [
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                ],
+                descricao: 'A Austrália é um continente-país de tirar o fôlego, com a Grande Barreira de Coral, a Ópera de Sydney e o deserto do Outback. É um destino de aventura com vida selvagem única (cangurus, coalas) e cidades modernas e acolhedoras. Ideal para amantes da natureza, surfistas e exploradores.'
+            },
+            marrocos: {
+                titulo: 'Marrocos',
+                pais: 'África',
+                imagemPrincipal: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                imagens: [
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                ],
+                descricao: 'Marrocos é um país vibrante no norte da África, famoso por seus souks (mercados), medinas históricas e a arquitetura colorida de Marrakech e Fez. Oferece uma imersão cultural única, do deserto do Saara às montanhas Atlas. Perfeito para quem busca história, culinária exótica e uma experiência de viagem intensa.'
             }
         };
 
@@ -1118,7 +1208,10 @@
         // Funções para modal de destino
         function abrirDestinoModal(destino) {
             const dados = destinosData[destino];
-            if (!dados) return;
+            if (!dados) {
+                console.error(`Dados do destino '${destino}' não encontrados.`);
+                return;
+            }
 
             // Preenche os dados do modal
             document.getElementById('modalDestinoTitulo').textContent = dados.titulo;
@@ -1126,10 +1219,10 @@
             document.getElementById('modalDestinoImagemPrincipal').src = dados.imagemPrincipal;
             document.getElementById('modalDestinoDescricao').textContent = dados.descricao;
             
-            // Preenche as 3 imagens da galeria
-            document.getElementById('modalDestinoImagem1').src = dados.imagens[0];
-            document.getElementById('modalDestinoImagem2').src = dados.imagens[1];
-            document.getElementById('modalDestinoImagem3').src = dados.imagens[2];
+            // Preenche as 3 imagens da galeria (com fallback)
+            document.getElementById('modalDestinoImagem1').src = dados.imagens[0] || dados.imagemPrincipal;
+            document.getElementById('modalDestinoImagem2').src = dados.imagens[1] || dados.imagemPrincipal;
+            document.getElementById('modalDestinoImagem3').src = dados.imagens[2] || dados.imagemPrincipal;
 
             // Mostra o modal
             document.getElementById('modalDestino').classList.remove('hidden');
@@ -1157,157 +1250,73 @@
             document.getElementById('modalContato').classList.remove('flex');
         }
 
-        function enviarMensagemContato(event) {
-            event.preventDefault();
-            
-            const formData = new FormData(event.target);
-            const dadosContato = {
-                nome: formData.get('nome'),
-                email: formData.get('email'),
-                telefone: formData.get('telefone'),
-                assunto: formData.get('assunto'),
-                mensagem: formData.get('mensagem')
-            };
-            
-            // Mostra mensagem de envio
-            document.getElementById('mensagemEnvioContato').classList.remove('hidden');
-            
-            // Desabilita o botão
-            const button = event.target.querySelector('button[type="submit"]');
-            button.disabled = true;
-            button.innerHTML = '⏳ Enviando...';
-            
-            // Simula envio e envia por email
-            setTimeout(() => {
-                enviarContatoPorEmail(dadosContato);
+        // MUDANÇA 3: FUNÇÃO CENTRALIZADA PARA ENVIO AO MAILJET (BACKEND SIMULADO)
+        async function enviarParaMailjet(dados, assunto, emailCliente) {
+            const corpoEmail = `
+                Novo Contato/Lead - ${assunto}
+                =====================================
                 
-                // Mostra mensagem de sucesso
-                const modal = document.createElement('div');
-                modal.className = 'fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50';
-                modal.innerHTML = `
-                    <div class="bg-white rounded-2xl p-8 max-w-md mx-4 text-center">
-                        <div class="text-6xl mb-4">✅</div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Mensagem Enviada!</h3>
-                        <p class="text-gray-600 mb-6">Recebemos sua mensagem e nossa equipe entrará em contato em até 2 horas. Obrigado!</p>
-                        <button onclick="this.parentElement.parentElement.remove(); fecharContatoModal();" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold">
-                            Entendi
-                        </button>
-                    </div>
-                `;
-                document.body.appendChild(modal);
+                DADOS DO CLIENTE:
+                • Nome: ${dados.nome || dados.nome_completo || 'N/A'}
+                • Email: ${dados.email}
+                • Telefone/WhatsApp: ${dados.whatsapp || dados.telefone || 'N/A'}
+                ${dados.destino ? `• Destino: ${dados.destino}` : ''}
+                ${dados.plano ? `• Plano Desejado: ${dados.plano}` : ''}
+                ${dados.partida ? `• Data de Partida: ${dados.partida}` : ''}
+                ${dados.retorno ? `• Data de Retorno: ${dados.retorno}` : ''}
+                ${dados.assunto ? `• Assunto: ${dados.assunto}` : ''}
+                ${dados.mensagem ? `• Mensagem: ${dados.mensagem}` : ''}
                 
-                // Reset do formulário
-                document.getElementById('mensagemEnvioContato').classList.add('hidden');
-                button.disabled = false;
-                button.innerHTML = '📧 Enviar Mensagem';
-                event.target.reset();
-            }, 2000);
-        }
+                =====================================
+                Enviado via Rota Inesquecível
+                Data/Hora: ${new Date().toLocaleString('pt-BR')}
+            `;
 
-        function enviarContatoPorEmail(dados) {
-            // Cria o corpo do email formatado
-            const corpoEmail = `Nova Mensagem de Contato - TravelGuard Pro
-=====================================
-
-DADOS DO CLIENTE:
-• Nome: ${dados.nome}
-• Email: ${dados.email}
-• Telefone: ${dados.telefone}
-• Assunto: ${dados.assunto}
-
-MENSAGEM:
-${dados.mensagem}
-
-=====================================
-Mensagem enviada via TravelGuard Pro
-Data/Hora: ${new Date().toLocaleString('pt-BR')}`;
-
-            // Usa EmailJS ou serviço similar para envio automático
-            // Como não podemos usar serviços externos, vamos simular o envio
-            console.log('Email enviado para contato@honigseguros.com.br:', corpoEmail);
+            console.log("--- SIMULANDO ENVIO MAILJET ---");
+            console.log(`Para: contato@honigseguros.com.br`);
+            console.log(`Assunto: ${assunto}`);
+            console.log(`Corpo: ${corpoEmail}`);
             
-            // Em um ambiente real, você usaria algo como:
-            // emailjs.send('service_id', 'template_id', {
-            //     to_email: 'contato@honigseguros.com.br',
-            //     from_name: dados.nome,
-            //     from_email: dados.email,
-            //     subject: `Contato: ${dados.assunto}`,
-            //     message: corpoEmail
-            // });
+            // ⚠️ AQUI VOCÊ DEVE IMPLEMENTAR UM ENDPOINT SEGURO NO SEU SERVIDOR (BACKEND)
+            // QUE RECEBA ESSES DADOS E FAÇA A CHAMADA À API DO MAILJET USANDO AS CHAVES SECRETAS.
+            // Exemplo de como a requisição **DEVE SER FEITA EM UM BACKEND**:
+            /*
+            try {
+                const response = await fetch('/api/mailjet-send', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        to: 'contato@honigseguros.com.br',
+                        subject: assunto,
+                        text: corpoEmail,
+                        html: corpoEmail.replace(/\n/g, '<br>'),
+                        fromEmail: emailCliente,
+                        fromName: dados.nome || 'Novo Cliente'
+                    })
+                });
+                
+                if (response.ok) {
+                    console.log('Envio Mailjet SUCESSO via backend.');
+                    return true;
+                } else {
+                    console.error('Envio Mailjet FALHA no backend.');
+                    return false;
+                }
+            } catch (error) {
+                console.error('Erro de rede ao tentar enviar email:', error);
+                return false;
+            }
+            */
+           
+            // SIMULAÇÃO DE RESPOSTA BEM SUCEDIDA para o frontend
+            return new Promise(resolve => setTimeout(() => resolve(true), 500));
         }
 
-        function fecharModal() {
-            document.getElementById('modalFormulario').classList.add('hidden');
-            document.getElementById('modalFormulario').classList.remove('flex');
-        }
-
-        function processarContratacao(event) {
+        // MUDANÇA 3: NOVA FUNÇÃO - Cotação de Seguro
+        async function processarCotacao(event) {
             event.preventDefault();
             
-            // Create custom modal instead of alert
-            const modal = document.createElement('div');
-            modal.className = 'fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50';
-            modal.innerHTML = `
-                <div class="bg-white rounded-2xl p-8 max-w-md mx-4 text-center">
-                    <div class="text-6xl mb-4">🎉</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Solicitação Enviada!</h3>
-                    <p class="text-gray-600 mb-6">Nossa equipe premium entrará em contato em até 2 horas com sua cotação personalizada e condições especiais.</p>
-                    <button onclick="this.parentElement.parentElement.remove()" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold">
-                        Entendi
-                    </button>
-                </div>
-            `;
-            document.body.appendChild(modal);
-            fecharModal();
-        }
-
-        function comprarGuia(guia) {
-            const modal = document.createElement('div');
-            modal.className = 'fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50';
-            modal.innerHTML = `
-                <div class="bg-white rounded-2xl p-8 max-w-md mx-4 text-center">
-                    <div class="text-6xl mb-4">🚀</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Redirecionando...</h3>
-                    <p class="text-gray-600 mb-6">Após o pagamento, você receberá imediatamente:<br>
-                    • PDF Premium em alta resolução<br>
-                    • Mapas interativos offline<br>
-                    • Acesso ao app exclusivo<br>
-                    • Suporte especializado por 30 dias</p>
-                    <button onclick="this.parentElement.parentElement.remove()" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold">
-                        Fechar
-                    </button>
-                </div>
-            `;
-            document.body.appendChild(modal);
-        }
-
-        function enviarContato(event) {
-            event.preventDefault();
-            
-            const modal = document.createElement('div');
-            modal.className = 'fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50';
-            modal.innerHTML = `
-                <div class="bg-white rounded-2xl p-8 max-w-md mx-4 text-center">
-                    <div class="text-6xl mb-4">✅</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Consultoria Solicitada!</h3>
-                    <p class="text-gray-600 mb-6">Um especialista entrará em contato em até 1 hora para agendar sua consultoria gratuita de 30 minutos.</p>
-                    <button onclick="this.parentElement.parentElement.remove()" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold">
-                        Entendi
-                    </button>
-                </div>
-            `;
-            document.body.appendChild(modal);
-            event.target.reset();
-        }
-
-        function redirecionarPortoSeguro(event) {
-            event.preventDefault();
-            
-            // Identifica qual formulário foi submetido
             const form = event.target;
-            const mensagemId = form.querySelector('[id*="mensagem-redirecionamento"]').id;
-            
-            // Coleta os dados do formulário
             const formData = new FormData(form);
             const dadosCliente = {
                 nome: formData.get('nome'),
@@ -1318,67 +1327,160 @@ Data/Hora: ${new Date().toLocaleString('pt-BR')}`;
                 retorno: formData.get('retorno')
             };
             
-            // Mostra mensagem de redirecionamento
-            document.getElementById(mensagemId).classList.remove("hidden");
-            
-            // Desabilita o botão
             const button = form.querySelector('button[type="submit"]');
             button.disabled = true;
             button.innerHTML = '⏳ Processando e redirecionando...';
-            
-            // Envia os dados por email
-            enviarDadosPorEmail(dadosCliente);
-            
-            // Redireciona após 2 segundos
+
+            document.getElementById('mensagem-redirecionamento').classList.remove("hidden");
+
+            // 1. Enviar email com Mailjet (via simulação de backend)
+            const assuntoEmail = 'Lead de Cotação - Seguro Viagem';
+            const envioSucesso = await enviarParaMailjet(dadosCliente, assuntoEmail, dadosCliente.email);
+
+            // 2. Redirecionar
             setTimeout(function() {
                 window.open("http://www.porto.vc/VIAGEM_S3048J_3446214654cd463993a623a117cbf311", "_blank");
                 
                 // Reset do formulário após redirecionamento
-                setTimeout(() => {
-                    document.getElementById(mensagemId).classList.add("hidden");
-                    button.disabled = false;
-                    button.innerHTML = '🚀 GERAR COTAÇÃO OFICIAL PORTO SEGURO';
-                    form.reset();
-                }, 1000);
+                document.getElementById('mensagem-redirecionamento').classList.add("hidden");
+                button.disabled = false;
+                button.innerHTML = '🚀 GERAR COTAÇÃO OFICIAL PORTO SEGURO';
+                form.reset();
+                
+                if (envioSucesso) {
+                    mostrarMensagem('sucesso', 'Dados enviados! Você será redirecionado para a Porto Seguro em instantes.');
+                } else {
+                    mostrarMensagem('alerta', 'Erro ao enviar dados do lead, mas você será redirecionado para a Porto Seguro.');
+                }
             }, 2000);
         }
 
-        function enviarDadosPorEmail(dados) {
-            // Cria o corpo do email formatado
-            const corpoEmail = `Novo Lead - Cotação de Seguro Viagem
-=====================================
-
-DADOS DO CLIENTE:
-• Nome: ${dados.nome}
-• Email: ${dados.email}
-• WhatsApp: ${dados.whatsapp}
-• Destino: ${dados.destino}
-• Data de Partida: ${dados.partida}
-• Data de Retorno: ${dados.retorno}
-
-=====================================
-Lead gerado via TravelGuard Pro
-Data/Hora: ${new Date().toLocaleString('pt-BR')}`;
-
-            // Cria link mailto para abrir cliente de email
-            const assunto = encodeURIComponent('Novo Lead - Cotação Seguro Viagem');
-            const corpo = encodeURIComponent(corpoEmail);
-            const emailDestino = 'contato@honigseguros.com.br';
+        // MUDANÇA 3: NOVA FUNÇÃO - Contratação no Modal
+        async function processarContratacao(event) {
+            event.preventDefault();
             
-            const mailtoLink = `mailto:${emailDestino}?subject=${assunto}&body=${corpo}`;
+            const form = event.target;
+            const formData = new FormData(form);
             
-            // Abre o cliente de email padrão em nova aba
-            window.open(mailtoLink, '_blank');
+            const planoDesejado = document.getElementById('tituloModal').textContent.replace('Contratar Seguro ', '');
             
-            // Copia os dados para área de transferência como backup
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(corpoEmail).catch(() => {
-                    console.log('Dados processados');
-                });
+            const dadosCliente = {
+                nome: formData.get('nome'),
+                email: formData.get('email'),
+                telefone: formData.get('telefone'),
+                destino: formData.get('destino'),
+                partida: formData.get('partida'),
+                retorno: formData.get('retorno'),
+                plano: planoDesejado
+            };
+            
+            const button = form.querySelector('button[type="submit"]');
+            button.disabled = true;
+            button.innerHTML = '⏳ Solicitando Cotação...';
+
+            // 1. Enviar email com Mailjet (via simulação de backend)
+            const assuntoEmail = `Lead de Contratação - ${planoDesejado}`;
+            const envioSucesso = await enviarParaMailjet(dadosCliente, assuntoEmail, dadosCliente.email);
+
+            // 2. Mostrar modal de sucesso
+            button.disabled = false;
+            button.innerHTML = 'Solicitar Cotação Premium';
+            form.reset();
+            fecharModal();
+            
+            if (envioSucesso) {
+                mostrarMensagem('sucesso', '🎉 Solicitação Enviada! Nossa equipe premium entrará em contato em até 2 horas com sua cotação personalizada e condições especiais.');
+            } else {
+                mostrarMensagem('erro', '❌ Erro ao enviar solicitação. Por favor, tente novamente ou entre em contato pelo WhatsApp.');
             }
         }
 
-        // Smooth scroll
+        // MUDANÇA 3: NOVA FUNÇÃO - Fale com Especialista
+        async function enviarMensagemContato(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const dadosContato = {
+                nome: formData.get('nome'),
+                email: formData.get('email'),
+                telefone: formData.get('telefone'),
+                assunto: formData.get('assunto'),
+                mensagem: formData.get('mensagem')
+            };
+            
+            const button = form.querySelector('button[type="submit"]');
+            
+            // Mostra mensagem de envio e desabilita
+            document.getElementById('mensagemEnvioContato').classList.remove('hidden');
+            button.disabled = true;
+            button.innerHTML = '⏳ Enviando...';
+            
+            // 1. Enviar email com Mailjet (via simulação de backend)
+            const assuntoEmail = `Mensagem de Contato: ${dadosContato.assunto}`;
+            const envioSucesso = await enviarParaMailjet(dadosContato, assuntoEmail, dadosContato.email);
+
+            // 2. Mostrar feedback e resetar
+            document.getElementById('mensagemEnvioContato').classList.add('hidden');
+            button.disabled = false;
+            button.innerHTML = '📧 Enviar Mensagem';
+            form.reset();
+            
+            if (envioSucesso) {
+                mostrarMensagem('sucesso', '✅ Mensagem Enviada! Recebemos sua mensagem e entraremos em contato em até 2 horas. Obrigado!');
+                fecharContatoModal();
+            } else {
+                mostrarMensagem('erro', '❌ Erro ao enviar mensagem. Por favor, tente novamente ou use o WhatsApp.');
+            }
+        }
+
+        // Função Genérica para mostrar Modal de Feedback
+        function mostrarMensagem(tipo, texto) {
+            const icones = {
+                sucesso: { emoji: '✅', cor: 'bg-green-100 text-green-800' },
+                alerta: { emoji: '⚠️', cor: 'bg-yellow-100 text-yellow-800' },
+                erro: { emoji: '❌', cor: 'bg-red-100 text-red-800' }
+            };
+            
+            const config = icones[tipo] || icones.alerta;
+            
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50';
+            modal.innerHTML = `
+                <div class="bg-white rounded-2xl p-8 max-w-md mx-4 text-center shadow-2xl">
+                    <div class="text-6xl mb-4">${config.emoji}</div>
+                    <p class="text-gray-600 mb-6 font-semibold">${texto}</p>
+                    <button onclick="this.parentElement.parentElement.remove()" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold">
+                        Entendi
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        // Funções de fechar/comprar (mantidas)
+        function fecharModal() {
+            document.getElementById('modalFormulario').classList.add('hidden');
+            document.getElementById('modalFormulario').classList.remove('flex');
+        }
+
+        function comprarGuia(guia) {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50';
+            modal.innerHTML = `
+                <div class="bg-white rounded-2xl p-8 max-w-md mx-4 text-center">
+                    <div class="text-6xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Redirecionando...</h3>
+                    <p class="text-gray-600 mb-6">Você será levado para a página de pagamento seguro do Guia. Após o pagamento, o download será liberado imediatamente!</p>
+                    <button onclick="this.parentElement.parentElement.remove()" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold">
+                        Fechar
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        // Smooth scroll (mantido)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1392,28 +1494,28 @@ Data/Hora: ${new Date().toLocaleString('pt-BR')}`;
             });
         });
 
-        // Close modal on outside click
+        // Close modal on outside click (mantido)
         document.getElementById('modalFormulario').addEventListener('click', function(e) {
             if (e.target === this) {
                 fecharModal();
             }
         });
 
-        // Close destino modal on outside click
+        // Close destino modal on outside click (mantido)
         document.getElementById('modalDestino').addEventListener('click', function(e) {
             if (e.target === this) {
                 fecharDestinoModal();
             }
         });
 
-        // Close contato modal on outside click
+        // Close contato modal on outside click (mantido)
         document.getElementById('modalContato').addEventListener('click', function(e) {
             if (e.target === this) {
                 fecharContatoModal();
             }
         });
 
-        // Carousel functionality
+        // Carousel functionality (mantido)
         let currentSlide = 0;
         const totalSlides = 3;
         const carouselTrack = document.getElementById('carousel-track');
