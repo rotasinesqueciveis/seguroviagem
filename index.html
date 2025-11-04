@@ -269,7 +269,7 @@
      </div>
     </div>
    </div>
-  </section><div class="section-divider"></div><section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+  </section><section class="py-20 bg-gradient-to-b from-gray-50 to-white">
    <div class="max-w-7xl mx-auto px-6">
     <div class="text-center mb-16">
      <h3 id="gallery-title" class="text-4xl font-bold text-gray-900 mb-4">Destinos Que Inspiram</h3>
@@ -687,82 +687,577 @@
    </div>
   </div>
   <script>
-        // ------------------------------------------------------------------
-        // CONFIGURAÇÃO GERAL E DADOS DO SITE
-        // ------------------------------------------------------------------
-
-        // URL do Backend Node.js
-        // ⚠️ IMPORTANTE: Mantenha 'http://localhost:3000' enquanto testa o servidor local.
-        // Mude para o seu domínio real após o deploy!
-        const BACKEND_URL = 'http://localhost:3000/api/mailjet-send'; 
-
+        // MUDANÇA 2: Configuração padrão atualizada para "Rota Inesquecível"
         const defaultConfig = {
+            // Header
             site_title: "Rota Inesquecível",
+            
+            // Hero Section
             hero_title: "Viaje com Segurança e Expertise",
             hero_subtitle: "Proteção premium para suas viagens e roteiros exclusivos criados por especialistas. Mais de 50.000 viajantes confiam em nossa expertise.",
             hero_image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2835&q=80",
-            stat1_number: "50K+", stat1_text: "Clientes Protegidos",
-            stat2_number: "190+", stat2_text: "Países Cobertos",
-            stat3_number: "24/7", stat3_text: "Suporte Premium",
-            stat4_number: "98%", stat4_text: "Satisfação",
+            
+            // Stats
+            stat1_number: "50K+",
+            stat1_text: "Clientes Protegidos",
+            stat2_number: "190+",
+            stat2_text: "Países Cobertos",
+            stat3_number: "24/7",
+            stat3_text: "Suporte Premium",
+            stat4_number: "98%",
+            stat4_text: "Satisfação",
+            
+            // Insurance Section
             insurance_title: "Seguros Premium",
             insurance_subtitle: "Proteção completa com cobertura internacional, assistência médica 24h e suporte em português. Escolha o plano ideal para sua jornada.",
-            plan1_name: "Essential", plan1_price: "R$ 8",
-            plan2_name: "Premium", plan2_price: "R$ 15",
-            plan3_name: "Elite", plan3_price: "R$ 25",
+            plan1_name: "Essential",
+            plan1_price: "R$ 8",
+            plan2_name: "Premium",
+            plan2_price: "R$ 15",
+            plan3_name: "Elite",
+            plan3_price: "R$ 25",
+            
+            // Guides Section
             guides_title: "Guias Premium de Viagem",
             guides_subtitle: "Roteiros exclusivos desenvolvidos por especialistas locais. Mapas detalhados, dicas insider e experiências autênticas que você não encontra em lugar nenhum.",
-            guide1_title: "Europa Grand Tour", guide1_image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", guide1_price: "R$ 149",
-            guide2_title: "Sudeste Asiático Autêntico", guide2_image: "https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", guide2_price: "R$ 129",
-            guide3_title: "Andes & Patagônia Épica", guide3_image: "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80", guide3_price: "R$ 169",
+            guide1_title: "Europa Grand Tour",
+            guide1_image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+            guide1_price: "R$ 149",
+            guide2_title: "Sudeste Asiático Autêntico",
+            guide2_image: "https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+            guide2_price: "R$ 129",
+            guide3_title: "Andes & Patagônia Épica",
+            guide3_image: "https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80",
+            guide3_price: "R$ 169",
+            
+            // Gallery Section
             gallery_title: "Destinos Que Inspiram",
             gallery_subtitle: "Descubra alguns dos lugares incríveis que nossos clientes visitaram com segurança e nossos guias exclusivos",
-            dest1_name: "Santorini", dest1_country: "Grécia", dest1_image: "https://images.unsplash.com/photo-1520637836862-4d197d17c93a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            dest2_name: "Bali", dest2_country: "Indonésia", dest2_image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            dest3_name: "Patagônia", dest3_country: "Chile", dest3_image: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            dest4_name: "Kyoto", dest4_country: "Japão", dest4_image: "https://images.unsplash.com/photo-1549693578-d683be217e58?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            dest1_name: "Santorini",
+            dest1_country: "Grécia",
+            dest1_image: "https://images.unsplash.com/photo-1520637836862-4d197d17c93a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            dest2_name: "Bali",
+            dest2_country: "Indonésia",
+            dest2_image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            dest3_name: "Patagônia",
+            dest3_country: "Chile",
+            dest3_image: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            dest4_name: "Kyoto",
+            dest4_country: "Japão",
+            dest4_image: "https://images.unsplash.com/photo-1549693578-d683be217e58?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            
+            // Testimonials
             testimonials_title: "O que nossos clientes dizem",
-            test1_name: "Maria Clara", test1_text: "O seguro me salvou quando precisei de atendimento médico em Paris. Suporte impecável e reembolso rápido!",
-            test2_name: "Roberto Silva", test2_text: "Os guias são incríveis! Descobri lugares únicos na Ásia que jamais encontraria sozinho. Vale cada centavo!",
-            test3_name: "Ana Luiza", test3_text: "Profissionalismo total! Desde a contratação até o suporte durante a viagem. Recomendo de olhos fechados!",
+            test1_name: "Maria Clara",
+            test1_text: "O seguro me salvou quando precisei de atendimento médico em Paris. Suporte impecável e reembolso rápido!",
+            test2_name: "Roberto Silva",
+            test2_text: "Os guias são incríveis! Descobri lugares únicos na Ásia que jamais encontraria sozinho. Vale cada centavo!",
+            test3_name: "Ana Luiza",
+            test3_text: "Profissionalismo total! Desde a contratação até o suporte durante a viagem. Recomendo de olhos fechados!",
+            
+            // Quote Section
             quote_title: "Faça sua Cotação de Seguro Viagem",
             quote_subtitle: "Preencha seus dados e em seguida você será direcionado para o simulador oficial da Porto Seguro. Processo 100% seguro e oficial.",
+            
+            // Contact Section
             contact_title: "Pronto para sua próxima aventura?",
             contact_subtitle: "Nossa equipe de especialistas está pronta para criar a proteção perfeita para sua viagem e recomendar os melhores roteiros para seu perfil.",
-            contact_email: "contato@honigseguros.com.br", 
+            contact_email: "contato@honigseguros.com.br", // Ajustado para o email de destino
             contact_phone: "(11) 99999-8888",
+            
+            // Footer
             footer_description: "Sua parceira premium em todas as aventuras. Segurança, expertise e experiências inesquecíveis ao redor do mundo.",
             footer_copyright: "© 2024 Rota Inesquecível. Todos os direitos reservados. | Empresa certificada e licenciada para seguros de viagem internacionais."
         };
 
-        // --- Dados dos Destinos para o Carrossel (Completo) ---
+        // Update UI based on config
+        async function onConfigChange(config) {
+            // Header
+            const siteTitle = document.getElementById('site-title');
+            // MUDANÇA 2: Título do site
+            if (siteTitle) siteTitle.textContent = config.site_title || "Rota Inesquecível";
+            
+            const footerSiteTitle = document.getElementById('footer-site-title');
+            // MUDANÇA 2: Título do site no footer
+            if (footerSiteTitle) footerSiteTitle.textContent = config.site_title || "Rota Inesquecível";
+            
+            // O restante da função onConfigChange permanece o mesmo
+            
+            // Hero Section
+            const heroTitle = document.getElementById('hero-title');
+            if (heroTitle) {
+                const title = config.hero_title || defaultConfig.hero_title;
+                heroTitle.innerHTML = title.replace(/Segurança/g, '<span class="text-blue-400">Segurança</span>').replace(/Expertise/g, '<span class="text-blue-400">Expertise</span>');
+            }
+            
+            const heroSubtitle = document.getElementById('hero-subtitle');
+            if (heroSubtitle) heroSubtitle.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+            
+            const heroBgImage = document.getElementById('hero-bg-image');
+            if (heroBgImage && config.hero_image) heroBgImage.src = config.hero_image;
+            
+            // Stats
+            const stat1Number = document.getElementById('stat1-number');
+            if (stat1Number) stat1Number.textContent = config.stat1_number || defaultConfig.stat1_number;
+            
+            const stat1Text = document.getElementById('stat1-text');
+            if (stat1Text) stat1Text.textContent = config.stat1_text || defaultConfig.stat1_text;
+            
+            const stat2Number = document.getElementById('stat2-number');
+            if (stat2Number) stat2Number.textContent = config.stat2_number || defaultConfig.stat2_number;
+            
+            const stat2Text = document.getElementById('stat2-text');
+            if (stat2Text) stat2Text.textContent = config.stat2_text || defaultConfig.stat2_text;
+            
+            const stat3Number = document.getElementById('stat3-number');
+            if (stat3Number) stat3Number.textContent = config.stat3_number || defaultConfig.stat3_number;
+            
+            const stat3Text = document.getElementById('stat3-text');
+            if (stat3Text) stat3Text.textContent = config.stat3_text || defaultConfig.stat3_text;
+            
+            const stat4Number = document.getElementById('stat4-number');
+            if (stat4Number) stat4Number.textContent = config.stat4_number || defaultConfig.stat4_number;
+            
+            const stat4Text = document.getElementById('stat4-text');
+            if (stat4Text) stat4Text.textContent = config.stat4_text || defaultConfig.stat4_text;
+            
+            // Insurance Section
+            const insuranceTitle = document.getElementById('insurance-title');
+            if (insuranceTitle) insuranceTitle.textContent = config.insurance_title || defaultConfig.insurance_title;
+            
+            const insuranceSubtitle = document.getElementById('insurance-subtitle');
+            if (insuranceSubtitle) insuranceSubtitle.textContent = config.insurance_subtitle || defaultConfig.insurance_subtitle;
+            
+            const plan1Name = document.getElementById('plan1-name');
+            if (plan1Name) plan1Name.textContent = config.plan1_name || defaultConfig.plan1_name;
+            
+            const plan1Price = document.getElementById('plan1-price');
+            if (plan1Price) plan1Price.textContent = config.plan1_price || defaultConfig.plan1_price;
+            
+            const plan2Name = document.getElementById('plan2-name');
+            if (plan2Name) plan2Name.textContent = config.plan2_name || defaultConfig.plan2_name;
+            
+            const plan2Price = document.getElementById('plan2-price');
+            if (plan2Price) plan2Price.textContent = config.plan2_price || defaultConfig.plan2_price;
+            
+            const plan3Name = document.getElementById('plan3-name');
+            if (plan3Name) plan3Name.textContent = config.plan3_name || defaultConfig.plan3_name;
+            
+            const plan3Price = document.getElementById('plan3-price');
+            if (plan3Price) plan3Price.textContent = config.plan3_price || defaultConfig.plan3_price;
+            
+            // Guides Section
+            const guidesTitle = document.getElementById('guides-title');
+            if (guidesTitle) guidesTitle.textContent = config.guides_title || defaultConfig.guides_title;
+            
+            const guidesSubtitle = document.getElementById('guides-subtitle');
+            if (guidesSubtitle) guidesSubtitle.textContent = config.guides_subtitle || defaultConfig.guides_subtitle;
+            
+            const guide1Title = document.getElementById('guide1-title');
+            if (guide1Title) guide1Title.textContent = config.guide1_title || defaultConfig.guide1_title;
+            
+            const guide1Image = document.getElementById('guide1-image');
+            if (guide1Image && config.guide1_image) guide1Image.src = config.guide1_image;
+            
+            const guide1Price = document.getElementById('guide1-price');
+            if (guide1Price) guide1Price.textContent = config.guide1_price || defaultConfig.guide1_price;
+            
+            const guide2Title = document.getElementById('guide2-title');
+            if (guide2Title) guide2Title.textContent = config.guide2_title || defaultConfig.guide2_title;
+            
+            const guide2Image = document.getElementById('guide2-image');
+            if (guide2Image && config.guide2_image) guide2Image.src = config.guide2_image;
+            
+            const guide2Price = document.getElementById('guide2-price');
+            if (guide2Price) guide2Price.textContent = config.guide2_price || defaultConfig.guide2_price;
+            
+            const guide3Title = document.getElementById('guide3-title');
+            if (guide3Title) guide3Title.textContent = config.guide3_title || defaultConfig.guide3_title;
+            
+            const guide3Image = document.getElementById('guide3-image');
+            if (guide3Image && config.guide3_image) guide3Image.src = config.guide3_image;
+            
+            const guide3Price = document.getElementById('guide3-price');
+            if (guide3Price) guide3Price.textContent = config.guide3_price || defaultConfig.guide3_price;
+            
+            // Gallery Section
+            const galleryTitle = document.getElementById('gallery-title');
+            if (galleryTitle) galleryTitle.textContent = config.gallery_title || defaultConfig.gallery_title;
+            
+            const gallerySubtitle = document.getElementById('gallery-subtitle');
+            if (gallerySubtitle) gallerySubtitle.textContent = config.gallery_subtitle || defaultConfig.gallery_subtitle;
+            
+            const dest1Name = document.getElementById('dest1-name');
+            if (dest1Name) dest1Name.textContent = config.dest1_name || defaultConfig.dest1_name;
+            
+            const dest1Country = document.getElementById('dest1-country');
+            if (dest1Country) dest1Country.textContent = config.dest1_country || defaultConfig.dest1_country;
+            
+            const dest1Image = document.getElementById('dest1-image');
+            if (dest1Image && config.dest1_image) dest1Image.src = config.dest1_image;
+            
+            const dest2Name = document.getElementById('dest2-name');
+            if (dest2Name) dest2Name.textContent = config.dest2_name || defaultConfig.dest2_name;
+            
+            const dest2Country = document.getElementById('dest2-country');
+            if (dest2Country) dest2Country.textContent = config.dest2_country || defaultConfig.dest2_country;
+            
+            const dest2Image = document.getElementById('dest2-image');
+            if (dest2Image && config.dest2_image) dest2Image.src = config.dest2_image;
+            
+            const dest3Name = document.getElementById('dest3-name');
+            if (dest3Name) dest3Name.textContent = config.dest3_name || defaultConfig.dest3_name;
+            
+            const dest3Country = document.getElementById('dest3-country');
+            if (dest3Country) dest3Country.textContent = config.dest3_country || defaultConfig.dest3_country;
+            
+            const dest3Image = document.getElementById('dest3-image');
+            if (dest3Image && config.dest3_image) dest3Image.src = config.dest3_image;
+            
+            const dest4Name = document.getElementById('dest4-name');
+            if (dest4Name) dest4Name.textContent = config.dest4_name || defaultConfig.dest4_name;
+            
+            const dest4Country = document.getElementById('dest4-country');
+            if (dest4Country) dest4Country.textContent = config.dest4_country || defaultConfig.dest4_country;
+            
+            const dest4Image = document.getElementById('dest4-image');
+            if (dest4Image && config.dest4_image) dest4Image.src = config.dest4_image;
+            
+            // Testimonials
+            const testimonialsTitle = document.getElementById('testimonials-title');
+            if (testimonialsTitle) testimonialsTitle.textContent = config.testimonials_title || defaultConfig.testimonials_title;
+            
+            const test1Name = document.getElementById('test1-name');
+            if (test1Name) test1Name.textContent = config.test1_name || defaultConfig.test1_name;
+            
+            const test1Text = document.getElementById('test1-text');
+            if (test1Text) test1Text.textContent = `"${config.test1_text || defaultConfig.test1_text}"`;
+            
+            const test2Name = document.getElementById('test2-name');
+            if (test2Name) test2Name.textContent = config.test2_name || defaultConfig.test2_name;
+            
+            const test2Text = document.getElementById('test2-text');
+            if (test2Text) test2Text.textContent = `"${config.test2_text || defaultConfig.test2_text}"`;
+            
+            const test3Name = document.getElementById('test3-name');
+            if (test3Name) test3Name.textContent = config.test3_name || defaultConfig.test3_name;
+            
+            const test3Text = document.getElementById('test3-text');
+            if (test3Text) test3Text.textContent = `"${config.test3_text || defaultConfig.test3_text}"`;
+            
+            // Quote Section
+            const quoteTitle = document.getElementById('quote-title');
+            if (quoteTitle) quoteTitle.textContent = config.quote_title || defaultConfig.quote_title;
+            
+            const quoteSubtitle = document.getElementById('quote-subtitle');
+            if (quoteSubtitle) quoteSubtitle.textContent = config.quote_subtitle || defaultConfig.quote_subtitle;
+            
+            // Contact Section
+            const contactTitle = document.getElementById('contact-title');
+            if (contactTitle) contactTitle.textContent = config.contact_title || defaultConfig.contact_title;
+            
+            const contactSubtitle = document.getElementById('contact-subtitle');
+            if (contactSubtitle) contactSubtitle.textContent = config.contact_subtitle || defaultConfig.contact_subtitle;
+            
+            // MUDANÇA 2: Email de contato
+            const contactEmail = document.getElementById('contact-email');
+            if (contactEmail) contactEmail.textContent = config.contact_email || "contato@honigseguros.com.br";
+            
+            const contactPhone = document.getElementById('contact-phone');
+            if (contactPhone) contactPhone.textContent = config.contact_phone || defaultConfig.contact_phone;
+            
+            // Footer
+            const footerDescription = document.getElementById('footer-description');
+            if (footerDescription) footerDescription.textContent = config.footer_description || defaultConfig.footer_description;
+            
+            const footerCopyright = document.getElementById('footer-copyright');
+            // MUDANÇA 2: Copyright
+            if (footerCopyright) footerCopyright.innerHTML = config.footer_copyright || "© 2024 Rota Inesquecível. Todos os direitos reservados. | Empresa certificada e licenciada para seguros de viagem internacionais.";
+        }
+
+        // Capabilities
+        function mapToCapabilities(config) {
+            return {
+                recolorables: [],
+                borderables: [],
+                fontEditable: undefined,
+                fontSizeable: undefined
+            };
+        }
+
+        // Map to edit panel values
+        function mapToEditPanelValues(config) {
+            // MUDANÇA 2: Ajuste nos valores do painel de edição
+            return new Map([
+                ["site_title", config.site_title || "Rota Inesquecível"],
+                ["hero_title", config.hero_title || defaultConfig.hero_title],
+                ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+                ["hero_image", config.hero_image || defaultConfig.hero_image],
+                ["stat1_number", config.stat1_number || defaultConfig.stat1_number],
+                ["stat1_text", config.stat1_text || defaultConfig.stat1_text],
+                ["stat2_number", config.stat2_number || defaultConfig.stat2_number],
+                ["stat2_text", config.stat2_text || defaultConfig.stat2_text],
+                ["stat3_number", config.stat3_number || defaultConfig.stat3_number],
+                ["stat3_text", config.stat3_text || defaultConfig.stat3_text],
+                ["stat4_number", config.stat4_number || defaultConfig.stat4_number],
+                ["stat4_text", config.stat4_text || defaultConfig.stat4_text],
+                ["insurance_title", config.insurance_title || defaultConfig.insurance_title],
+                ["insurance_subtitle", config.insurance_subtitle || defaultConfig.insurance_subtitle],
+                ["plan1_name", config.plan1_name || defaultConfig.plan1_name],
+                ["plan1_price", config.plan1_price || defaultConfig.plan1_price],
+                ["plan2_name", config.plan2_name || defaultConfig.plan2_name],
+                ["plan2_price", config.plan2_price || defaultConfig.plan2_price],
+                ["plan3_name", config.plan3_name || defaultConfig.plan3_name],
+                ["plan3_price", config.plan3_price || defaultConfig.plan3_price],
+                ["guides_title", config.guides_title || defaultConfig.guides_title],
+                ["guides_subtitle", config.guides_subtitle || defaultConfig.guides_subtitle],
+                ["guide1_title", config.guide1_title || defaultConfig.guide1_title],
+                ["guide1_image", config.guide1_image || defaultConfig.guide1_image],
+                ["guide1_price", config.guide1_price || defaultConfig.guide1_price],
+                ["guide2_title", config.guide2_title || defaultConfig.guide2_title],
+                ["guide2_image", config.guide2_image || defaultConfig.guide2_image],
+                ["guide2_price", config.guide2_price || defaultConfig.guide2_price],
+                ["guide3_title", config.guide3_title || defaultConfig.guide3_title],
+                ["guide3_image", config.guide3_image || defaultConfig.guide3_image],
+                ["guide3_price", config.guide3_price || defaultConfig.guide3_price],
+                ["gallery_title", config.gallery_title || defaultConfig.gallery_title],
+                ["gallery_subtitle", config.gallery_subtitle || defaultConfig.gallery_subtitle],
+                ["dest1_name", config.dest1_name || defaultConfig.dest1_name],
+                ["dest1_country", config.dest1_country || defaultConfig.dest1_country],
+                ["dest1_image", config.dest1_image || defaultConfig.dest1_image],
+                ["dest2_name", config.dest2_name || defaultConfig.dest2_name],
+                ["dest2_country", config.dest2_country || defaultConfig.dest2_country],
+                ["dest2_image", config.dest2_image || defaultConfig.dest2_image],
+                ["dest3_name", config.dest3_name || defaultConfig.dest3_name],
+                ["dest3_country", config.dest3_country || defaultConfig.dest3_country],
+                ["dest3_image", config.dest3_image || defaultConfig.dest3_image],
+                ["dest4_name", config.dest4_name || defaultConfig.dest4_name],
+                ["dest4_country", config.dest4_country || defaultConfig.dest4_country],
+                ["dest4_image", config.dest4_image || defaultConfig.dest4_image],
+                ["testimonials_title", config.testimonials_title || defaultConfig.testimonials_title],
+                ["test1_name", config.test1_name || defaultConfig.test1_name],
+                ["test1_text", config.test1_text || defaultConfig.test1_text],
+                ["test2_name", config.test2_name || defaultConfig.test2_name],
+                ["test2_text", config.test2_text || defaultConfig.test2_text],
+                ["test3_name", config.test3_name || defaultConfig.test3_name],
+                ["test3_text", config.test3_text || defaultConfig.test3_text],
+                ["quote_title", config.quote_title || defaultConfig.quote_title],
+                ["quote_subtitle", config.quote_subtitle || defaultConfig.quote_subtitle],
+                ["contact_title", config.contact_title || defaultConfig.contact_title],
+                ["contact_subtitle", config.contact_subtitle || defaultConfig.contact_subtitle],
+                ["contact_email", config.contact_email || "contato@honigseguros.com.br"], // Ajustado
+                ["contact_phone", config.contact_phone || defaultConfig.contact_phone],
+                ["footer_description", config.footer_description || defaultConfig.footer_description],
+                ["footer_copyright", config.footer_copyright || "© 2024 Rota Inesquecível. Todos os direitos reservados. | Empresa certificada e licenciada para seguros de viagem internacionais."] // Ajustado
+            ]);
+        }
+
+        // Initialize Element SDK
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        }
+
+        // MUDANÇA 1: Adicionado dados dos novos destinos
         const destinosData = {
-            santorini: { titulo: 'Santorini', pais: 'Grécia', imagemPrincipal: 'https://images.unsplash.com/photo-1520637836862-4d197d17c93a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', imagens: ['https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'], descricao: 'Santorini é uma das ilhas mais icônicas da Grécia, famosa por suas casas brancas com cúpulas azuis, pores do sol espetaculares e vinhedos únicos. Este destino vulcânico oferece praias de areia preta, águas cristalinas do Mar Egeu e uma rica história milenar. Ideal para lua de mel, viagens românticas ou quem busca relaxamento em um cenário paradisíaco. A ilha combina perfeitamente tradição grega com luxo moderno, oferecendo experiências gastronômicas excepcionais e vistas inesquecíveis.' },
-            bali: { titulo: 'Bali', pais: 'Indonésia', imagemPrincipal: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', imagens: ['https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'], descricao: 'Bali é conhecida como a "Ilha dos Deuses", um paraíso tropical que combina praias paradisíacas, templos sagrados, terraços de arroz verdejantes e uma cultura rica e acolhedora. Este destino oferece desde aventuras em vulcões ativos até retiros espirituais em Ubud, passando por praias de surfe mundialmente famosas. A hospitalidade balinesa, a culinária exótica e os spas de classe mundial fazem de Bali um destino completo para todos os tipos de viajantes.' },
-            patagonia: { titulo: 'Patagônia', pais: 'Chile', imagemPrincipal: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', imagens: ['https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'], descricao: 'A Patagônia chilena é uma das últimas fronteiras selvagens do planeta, oferecendo paisagens épicas com geleiras milenares, montanhas imponentes, lagos turquesa e uma vida selvagem única. O Parque Nacional Torres del Paine é considerado uma das maravilhas naturais do mundo, ideal para trekking e fotografia. Este destino é perfeito para aventureiros que buscam experiências autênticas na natureza, com a possibilidade de avistar condores, guanacos e até pumas em seu habitat natural.' },
-            kyoto: { titulo: 'Kyoto', pais: 'Japão', imagemPrincipal: 'https://images.unsplash.com/photo-1549693578-d683be217e58?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', imagens: ['https://images.unsplash.com/photo-1528164344705-47542687000d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'], descricao: 'Kyoto é o coração cultural do Japão, antiga capital imperial que preserva mais de 2.000 templos e santuários, jardins zen meticulosamente cuidados e o famoso distrito de gueixas de Gion. Esta cidade mágica oferece uma imersão completa na tradição japonesa, desde cerimônias do chá autênticas até a contemplação das famosas flores de cerejeira (sakura). Kyoto combina perfeitamente o Japão tradicional com toques de modernidade, oferecendo experiências gastronômicas únicas e uma atmosfera de serenidade inesquecível.' },
-            paris: { titulo: 'Paris', pais: 'França', imagemPrincipal: 'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', imagens: ['https://images.unsplash.com/photo-1522093007474-d8669c5e27a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1500602015330-80a9d80c3b01?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'], descricao: 'Paris, a Cidade Luz, é mundialmente famosa por sua arte, moda, gastronomia e cultura. Lar da Torre Eiffel, Museu do Louvre e Catedral de Notre Dame, a capital francesa exala romantismo e história. Perfeita para explorar cafés charmosos, passear pelo Rio Sena e se maravilhar com a arquitetura neoclássica. Um destino obrigatório para os amantes de cultura e beleza.' },
-            maldivas: { titulo: 'Maldivas', pais: 'Oceano Índico', imagemPrincipal: 'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', imagens: ['https://images.unsplash.com/photo-1514283181822-6b9f27161b27?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1530932822474-04cc6114b30c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'], descricao: 'As Maldivas são o arquétipo do paraíso tropical, com águas turquesa, bangalôs sobre a água e recifes de coral vibrantes. Ideal para mergulho, snorkeling e relaxamento total. Um destino de luxo perfeito para quem busca privacidade, tranquilidade e paisagens de tirar o fôlego.' },
-            dubai: { titulo: 'Dubai', pais: 'Emirados Árabes Unidos', imagemPrincipal: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', imagens: ['https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1555109307-f316182c658f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1555109307-f316182c658f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'], descricao: 'Dubai é a capital do luxo e da inovação, lar do Burj Khalifa e de ilhas artificiais. É uma metrópole futurista que oferece shoppings de classe mundial, desert safaris e uma vida noturna agitada. Perfeita para quem busca modernidade, extravagância e experiências únicas no Oriente Médio.' },
-            islandia: { titulo: 'Islândia', pais: 'Europa', imagemPrincipal: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', imagens: ['https://images.unsplash.com/photo-1496263546731-0329053229b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1518032768560-f703e33f6d70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1518032768560-f703e33f6d70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'], descricao: 'A Islândia é a terra do fogo e do gelo, um país de paisagens dramáticas com vulcões, geleiras, fontes termais (como a Lagoa Azul) e a espetacular Aurora Boreal. É o destino ideal para amantes da natureza, aventura e para quem deseja presenciar fenômenos naturais raros e impressionantes.' },
-            novayork: { titulo: 'Nova York', pais: 'Estados Unidos', imagemPrincipal: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', imagens: ['https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1496263546731-0329053229b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1518032768560-f703e33f6d70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'], descricao: 'Nova York, a "Big Apple", é o centro mundial de finanças, cultura, moda e mídia. Com a Estátua da Liberdade, Times Square e Central Park, a cidade oferece uma experiência inigualável de vida urbana, arte de vanguarda e gastronomia multicultural. Ideal para quem busca energia, diversão e uma infinidade de atrações.' },
-            tailandia: { titulo: 'Tailândia', pais: 'Sudeste Asiático', imagemPrincipal: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', imagens: ['https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'], descricao: 'A Tailândia é um destino de contrastes, famoso por seus templos dourados (Wats), praias paradisíacas e a vibrante cidade de Bangkok. De passeios de elefante à culinária de rua, o país oferece cultura rica, história milenar e belezas naturais. Perfeito para quem busca aventura, espiritualidade e cenários exóticos.' },
-            australia: { titulo: 'Austrália', pais: 'Oceania', imagemPrincipal: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', imagens: ['https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'], descricao: 'A Austrália é um continente-país de tirar o fôlego, com a Grande Barreira de Coral, a Ópera de Sydney e o deserto do Outback. É um destino de aventura com vida selvagem única (cangurus, coalas) e cidades modernas e acolhedoras. Ideal para amantes da natureza, surfistas e exploradores.' },
-            marrocos: { titulo: 'Marrocos', pais: 'África', imagemPrincipal: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', imagens: ['https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'], descricao: 'Marrocos é um país vibrante no norte da África, famoso por seus souks (mercados), medinas históricas e a arquitetura colorida de Marrakech e Fez. Oferece uma imersão cultural única, do deserto do Saara às montanhas Atlas. Perfeito para quem busca história, culinária exótica e uma experiência de viagem intensa.' }
+            santorini: {
+                titulo: 'Santorini',
+                pais: 'Grécia',
+                imagemPrincipal: 'https://images.unsplash.com/photo-1520637836862-4d197d17c93a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                imagens: [
+                    'https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                ],
+                descricao: 'Santorini é uma das ilhas mais icônicas da Grécia, famosa por suas casas brancas com cúpulas azuis, pores do sol espetaculares e vinhedos únicos. Este destino vulcânico oferece praias de areia preta, águas cristalinas do Mar Egeu e uma rica história milenar. Ideal para lua de mel, viagens românticas ou quem busca relaxamento em um cenário paradisíaco. A ilha combina perfeitamente tradição grega com luxo moderno, oferecendo experiências gastronômicas excepcionais e vistas inesquecíveis.'
+            },
+            bali: {
+                titulo: 'Bali',
+                pais: 'Indonésia',
+                imagemPrincipal: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                imagens: [
+                    'https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                ],
+                descricao: 'Bali é conhecida como a "Ilha dos Deuses", um paraíso tropical que combina praias paradisíacas, templos sagrados, terraços de arroz verdejantes e uma cultura rica e acolhedora. Este destino oferece desde aventuras em vulcões ativos até retiros espirituais em Ubud, passando por praias de surfe mundialmente famosas. A hospitalidade balinesa, a culinária exótica e os spas de classe mundial fazem de Bali um destino completo para todos os tipos de viajantes.'
+            },
+            patagonia: {
+                titulo: 'Patagônia',
+                pais: 'Chile',
+                imagemPrincipal: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                imagens: [
+                    'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                ],
+                descricao: 'A Patagônia chilena é uma das últimas fronteiras selvagens do planeta, oferecendo paisagens épicas com geleiras milenares, montanhas imponentes, lagos turquesa e uma vida selvagem única. O Parque Nacional Torres del Paine é considerado uma das maravilhas naturais do mundo, ideal para trekking e fotografia. Este destino é perfeito para aventureiros que buscam experiências autênticas na natureza, com a possibilidade de avistar condores, guanacos e até pumas em seu habitat natural.'
+            },
+            kyoto: {
+                titulo: 'Kyoto',
+                pais: 'Japão',
+                imagemPrincipal: 'https://images.unsplash.com/photo-1549693578-d683be217e58?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                imagens: [
+                    'https://images.unsplash.com/photo-1528164344705-47542687000d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                ],
+                descricao: 'Kyoto é o coração cultural do Japão, antiga capital imperial que preserva mais de 2.000 templos e santuários, jardins zen meticulosamente cuidados e o famoso distrito de gueixas de Gion. Esta cidade mágica oferece uma imersão completa na tradição japonesa, desde cerimônias do chá autênticas até a contemplação das famosas flores de cerejeira (sakura). Kyoto combina perfeitamente o Japão tradicional com toques de modernidade, oferecendo experiências gastronômicas únicas e uma atmosfera de serenidade inesquecível.'
+            },
+            paris: {
+                titulo: 'Paris',
+                pais: 'França',
+                imagemPrincipal: 'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                imagens: [
+                    'https://images.unsplash.com/photo-1522093007474-d8669c5e27a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1500602015330-80a9d80c3b01?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                ],
+                descricao: 'Paris, a Cidade Luz, é mundialmente famosa por sua arte, moda, gastronomia e cultura. Lar da Torre Eiffel, Museu do Louvre e Catedral de Notre Dame, a capital francesa exala romantismo e história. Perfeita para explorar cafés charmosos, passear pelo Rio Sena e se maravilhar com a arquitetura neoclássica. Um destino obrigatório para os amantes de cultura e beleza.'
+            },
+            maldivas: {
+                titulo: 'Maldivas',
+                pais: 'Oceano Índico',
+                imagemPrincipal: 'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                imagens: [
+                    'https://images.unsplash.com/photo-1514283181822-6b9f27161b27?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1530932822474-04cc6114b30c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                ],
+                descricao: 'As Maldivas são o arquétipo do paraíso tropical, com águas turquesa, bangalôs sobre a água e recifes de coral vibrantes. Ideal para mergulho, snorkeling e relaxamento total. Um destino de luxo perfeito para quem busca privacidade, tranquilidade e paisagens de tirar o fôlego.'
+            },
+            dubai: {
+                titulo: 'Dubai',
+                pais: 'Emirados Árabes Unidos',
+                imagemPrincipal: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                imagens: [
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1555109307-f316182c658f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1555109307-f316182c658f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                ],
+                descricao: 'Dubai é a capital do luxo e da inovação, lar do Burj Khalifa e de ilhas artificiais. É uma metrópole futurista que oferece shoppings de classe mundial, desert safaris e uma vida noturna agitada. Perfeita para quem busca modernidade, extravagância e experiências únicas no Oriente Médio.'
+            },
+            islandia: {
+                titulo: 'Islândia',
+                pais: 'Europa',
+                imagemPrincipal: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                imagens: [
+                    'https://images.unsplash.com/photo-1496263546731-0329053229b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1518032768560-f703e33f6d70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1518032768560-f703e33f6d70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                ],
+                descricao: 'A Islândia é a terra do fogo e do gelo, um país de paisagens dramáticas com vulcões, geleiras, fontes termais (como a Lagoa Azul) e a espetacular Aurora Boreal. É o destino ideal para amantes da natureza, aventura e para quem deseja presenciar fenômenos naturais raros e impressionantes.'
+            },
+            novayork: {
+                titulo: 'Nova York',
+                pais: 'Estados Unidos',
+                imagemPrincipal: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                imagens: [
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1496263546731-0329053229b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1518032768560-f703e33f6d70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                ],
+                descricao: 'Nova York, a "Big Apple", é o centro mundial de finanças, cultura, moda e mídia. Com a Estátua da Liberdade, Times Square e Central Park, a cidade oferece uma experiência inigualável de vida urbana, arte de vanguarda e gastronomia multicultural. Ideal para quem busca energia, diversão e uma infinidade de atrações.'
+            },
+            tailandia: {
+                titulo: 'Tailândia',
+                pais: 'Sudeste Asiático',
+                imagemPrincipal: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                imagens: [
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                ],
+                descricao: 'A Tailândia é um destino de contrastes, famoso por seus templos dourados (Wats), praias paradisíacas e a vibrante cidade de Bangkok. De passeios de elefante à culinária de rua, o país oferece cultura rica, história milenar e belezas naturais. Perfeito para quem busca aventura, espiritualidade e cenários exóticos.'
+            },
+            australia: {
+                titulo: 'Austrália',
+                pais: 'Oceania',
+                imagemPrincipal: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                imagens: [
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                ],
+                descricao: 'A Austrália é um continente-país de tirar o fôlego, com a Grande Barreira de Coral, a Ópera de Sydney e o deserto do Outback. É um destino de aventura com vida selvagem única (cangurus, coalas) e cidades modernas e acolhedoras. Ideal para amantes da natureza, surfistas e exploradores.'
+            },
+            marrocos: {
+                titulo: 'Marrocos',
+                pais: 'África',
+                imagemPrincipal: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                imagens: [
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                ],
+                descricao: 'Marrocos é um país vibrante no norte da África, famoso por seus souks (mercados), medinas históricas e a arquitetura colorida de Marrakech e Fez. Oferece uma imersão cultural única, do deserto do Saara às montanhas Atlas. Perfeito para quem busca história, culinária exótica e uma experiência de viagem intensa.'
+            }
         };
 
-        // ------------------------------------------------------------------
-        // LÓGICA DE INTEGRAÇÃO COM BACKEND (MAILJET)
-        // ------------------------------------------------------------------
+        // Existing JavaScript functions
+        function abrirFormulario(plano) {
+            document.getElementById('modalFormulario').classList.remove('hidden');
+            document.getElementById('modalFormulario').classList.add('flex');
+            document.getElementById('tituloModal').textContent = `Contratar Seguro ${plano.charAt(0).toUpperCase() + plano.slice(1)}`;
+        }
 
-        // FUNÇÃO CENTRALIZADA PARA ENVIO AO MAILJET (Faz a ponte com o server.js na porta 3000)
+        // Funções para modal de destino
+        function abrirDestinoModal(destino) {
+            const dados = destinosData[destino];
+            if (!dados) {
+                console.error(`Dados do destino '${destino}' não encontrados.`);
+                return;
+            }
+
+            // Preenche os dados do modal
+            document.getElementById('modalDestinoTitulo').textContent = dados.titulo;
+            document.getElementById('modalDestinoPais').textContent = dados.pais;
+            document.getElementById('modalDestinoImagemPrincipal').src = dados.imagemPrincipal;
+            document.getElementById('modalDestinoDescricao').textContent = dados.descricao;
+            
+            // Preenche as 3 imagens da galeria (com fallback)
+            document.getElementById('modalDestinoImagem1').src = dados.imagens[0] || dados.imagemPrincipal;
+            document.getElementById('modalDestinoImagem2').src = dados.imagens[1] || dados.imagemPrincipal;
+            document.getElementById('modalDestinoImagem3').src = dados.imagens[2] || dados.imagemPrincipal;
+
+            // Mostra o modal
+            document.getElementById('modalDestino').classList.remove('hidden');
+            document.getElementById('modalDestino').classList.add('flex');
+        }
+
+        function fecharDestinoModal() {
+            document.getElementById('modalDestino').classList.add('hidden');
+            document.getElementById('modalDestino').classList.remove('flex');
+        }
+
+        function irParaCotacao() {
+            fecharDestinoModal();
+            document.getElementById('cotacao').scrollIntoView({behavior: 'smooth', block: 'start'});
+        }
+
+        // Funções para modal de contato
+        function abrirContatoModal() {
+            document.getElementById('modalContato').classList.remove('hidden');
+            document.getElementById('modalContato').classList.add('flex');
+        }
+
+        function fecharContatoModal() {
+            document.getElementById('modalContato').classList.add('hidden');
+            document.getElementById('modalContato').classList.remove('flex');
+        }
+
+        // MUDANÇA 3: FUNÇÃO CENTRALIZADA PARA ENVIO AO MAILJET (BACKEND SIMULADO)
         async function enviarParaMailjet(dados, assunto, emailCliente) {
-            const corpoText = `
+            const corpoEmail = `
                 Novo Contato/Lead - ${assunto}
                 =====================================
                 
                 DADOS DO CLIENTE:
-                • Nome: ${dados.nome || 'N/A'}
+                • Nome: ${dados.nome || dados.nome_completo || 'N/A'}
                 • Email: ${dados.email}
                 • Telefone/WhatsApp: ${dados.whatsapp || dados.telefone || 'N/A'}
                 ${dados.destino ? `• Destino: ${dados.destino}` : ''}
@@ -777,40 +1272,47 @@
                 Data/Hora: ${new Date().toLocaleString('pt-BR')}
             `;
 
-            const corpoHtml = corpoText.replace(/\n/g, '<br>');
-
+            console.log("--- SIMULANDO ENVIO MAILJET ---");
+            console.log(`Para: contato@honigseguros.com.br`);
+            console.log(`Assunto: ${assunto}`);
+            console.log(`Corpo: ${corpoEmail}`);
+            
+            // ⚠️ AQUI VOCÊ DEVE IMPLEMENTAR UM ENDPOINT SEGURO NO SEU SERVIDOR (BACKEND)
+            // QUE RECEBA ESSES DADOS E FAÇA A CHAMADA À API DO MAILJET USANDO AS CHAVES SECRETAS.
+            // Exemplo de como a requisição **DEVE SER FEITA EM UM BACKEND**:
+            /*
             try {
-                // Requisição POST para o servidor Node.js
-                const response = await fetch(BACKEND_URL, {
+                const response = await fetch('/api/mailjet-send', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
+                    body: JSON.stringify({ 
+                        to: 'contato@honigseguros.com.br',
                         subject: assunto,
-                        text: corpoText,
-                        html: corpoHtml,
+                        text: corpoEmail,
+                        html: corpoEmail.replace(/\n/g, '<br>'),
                         fromEmail: emailCliente,
                         fromName: dados.nome || 'Novo Cliente'
                     })
                 });
-
-                const data = await response.json();
                 
-                if (response.ok && data.success) {
+                if (response.ok) {
                     console.log('Envio Mailjet SUCESSO via backend.');
                     return true;
                 } else {
-                    console.error('Envio Mailjet FALHA no backend.', data);
+                    console.error('Envio Mailjet FALHA no backend.');
                     return false;
                 }
             } catch (error) {
-                console.error('Erro de rede ao tentar enviar email para o backend:', error);
+                console.error('Erro de rede ao tentar enviar email:', error);
                 return false;
             }
+            */
+           
+            // SIMULAÇÃO DE RESPOSTA BEM SUCEDIDA para o frontend
+            return new Promise(resolve => setTimeout(() => resolve(true), 500));
         }
 
-        // --- Funções de Formulário ---
-
-        // Cotação Principal (Redireciona para Porto Seguro e envia Lead)
+        // MUDANÇA 3: NOVA FUNÇÃO - Cotação de Seguro
         async function processarCotacao(event) {
             event.preventDefault();
             
@@ -831,15 +1333,15 @@
 
             document.getElementById('mensagem-redirecionamento').classList.remove("hidden");
 
-            // 1. Enviar email de Lead
+            // 1. Enviar email com Mailjet (via simulação de backend)
             const assuntoEmail = 'Lead de Cotação - Seguro Viagem';
             const envioSucesso = await enviarParaMailjet(dadosCliente, assuntoEmail, dadosCliente.email);
 
-            // 2. Redirecionar após 2 segundos
+            // 2. Redirecionar
             setTimeout(function() {
                 window.open("http://www.porto.vc/VIAGEM_S3048J_3446214654cd463993a623a117cbf311", "_blank");
                 
-                // Reset do formulário
+                // Reset do formulário após redirecionamento
                 document.getElementById('mensagem-redirecionamento').classList.add("hidden");
                 button.disabled = false;
                 button.innerHTML = '🚀 GERAR COTAÇÃO OFICIAL PORTO SEGURO';
@@ -853,12 +1355,13 @@
             }, 2000);
         }
 
-        // Contratação no Modal de Planos (Apenas envia Lead)
+        // MUDANÇA 3: NOVA FUNÇÃO - Contratação no Modal
         async function processarContratacao(event) {
             event.preventDefault();
             
             const form = event.target;
             const formData = new FormData(form);
+            
             const planoDesejado = document.getElementById('tituloModal').textContent.replace('Contratar Seguro ', '');
             
             const dadosCliente = {
@@ -875,24 +1378,24 @@
             button.disabled = true;
             button.innerHTML = '⏳ Solicitando Cotação...';
 
-            // Enviar email de Lead
+            // 1. Enviar email com Mailjet (via simulação de backend)
             const assuntoEmail = `Lead de Contratação - ${planoDesejado}`;
             const envioSucesso = await enviarParaMailjet(dadosCliente, assuntoEmail, dadosCliente.email);
 
-            // Mostrar modal de sucesso e resetar
+            // 2. Mostrar modal de sucesso
             button.disabled = false;
             button.innerHTML = 'Solicitar Cotação Premium';
             form.reset();
             fecharModal();
             
             if (envioSucesso) {
-                mostrarMensagem('sucesso', '🎉 Solicitação Enviada! Nossa equipe entrará em contato em até 2 horas.');
+                mostrarMensagem('sucesso', '🎉 Solicitação Enviada! Nossa equipe premium entrará em contato em até 2 horas com sua cotação personalizada e condições especiais.');
             } else {
-                mostrarMensagem('erro', '❌ Erro ao enviar solicitação. Tente novamente ou use o WhatsApp.');
+                mostrarMensagem('erro', '❌ Erro ao enviar solicitação. Por favor, tente novamente ou entre em contato pelo WhatsApp.');
             }
         }
 
-        // Fale com Especialista (Envia Mensagem de Contato)
+        // MUDANÇA 3: NOVA FUNÇÃO - Fale com Especialista
         async function enviarMensagemContato(event) {
             event.preventDefault();
             
@@ -908,35 +1411,35 @@
             
             const button = form.querySelector('button[type="submit"]');
             
+            // Mostra mensagem de envio e desabilita
             document.getElementById('mensagemEnvioContato').classList.remove('hidden');
             button.disabled = true;
             button.innerHTML = '⏳ Enviando...';
             
-            // Enviar email de Contato
+            // 1. Enviar email com Mailjet (via simulação de backend)
             const assuntoEmail = `Mensagem de Contato: ${dadosContato.assunto}`;
             const envioSucesso = await enviarParaMailjet(dadosContato, assuntoEmail, dadosContato.email);
 
-            // Mostrar feedback e resetar
+            // 2. Mostrar feedback e resetar
             document.getElementById('mensagemEnvioContato').classList.add('hidden');
             button.disabled = false;
             button.innerHTML = '📧 Enviar Mensagem';
             form.reset();
             
             if (envioSucesso) {
-                mostrarMensagem('sucesso', '✅ Mensagem Enviada! Recebemos sua mensagem e entraremos em contato em breve. Obrigado!');
+                mostrarMensagem('sucesso', '✅ Mensagem Enviada! Recebemos sua mensagem e entraremos em contato em até 2 horas. Obrigado!');
                 fecharContatoModal();
             } else {
                 mostrarMensagem('erro', '❌ Erro ao enviar mensagem. Por favor, tente novamente ou use o WhatsApp.');
             }
         }
 
-        // --- Funções de UI (Modal, Carrossel, etc.) ---
-
+        // Função Genérica para mostrar Modal de Feedback
         function mostrarMensagem(tipo, texto) {
             const icones = {
-                sucesso: { emoji: '✅' },
-                alerta: { emoji: '⚠️' },
-                erro: { emoji: '❌' }
+                sucesso: { emoji: '✅', cor: 'bg-green-100 text-green-800' },
+                alerta: { emoji: '⚠️', cor: 'bg-yellow-100 text-yellow-800' },
+                erro: { emoji: '❌', cor: 'bg-red-100 text-red-800' }
             };
             
             const config = icones[tipo] || icones.alerta;
@@ -955,54 +1458,12 @@
             document.body.appendChild(modal);
         }
 
-        function abrirFormulario(plano) {
-            document.getElementById('modalFormulario').classList.remove('hidden');
-            document.getElementById('modalFormulario').classList.add('flex');
-            document.getElementById('tituloModal').textContent = `Contratar Seguro ${plano.charAt(0).toUpperCase() + plano.slice(1)}`;
-        }
-
+        // Funções de fechar/comprar (mantidas)
         function fecharModal() {
             document.getElementById('modalFormulario').classList.add('hidden');
             document.getElementById('modalFormulario').classList.remove('flex');
         }
 
-        function abrirDestinoModal(destino) {
-            const dados = destinosData[destino];
-            if (!dados) return;
-
-            document.getElementById('modalDestinoTitulo').textContent = dados.titulo;
-            document.getElementById('modalDestinoPais').textContent = dados.pais;
-            document.getElementById('modalDestinoImagemPrincipal').src = dados.imagemPrincipal;
-            document.getElementById('modalDestinoDescricao').textContent = dados.descricao;
-            
-            document.getElementById('modalDestinoImagem1').src = dados.imagens[0] || dados.imagemPrincipal;
-            document.getElementById('modalDestinoImagem2').src = dados.imagens[1] || dados.imagemPrincipal;
-            document.getElementById('modalDestinoImagem3').src = dados.imagens[2] || dados.imagemPrincipal;
-
-            document.getElementById('modalDestino').classList.remove('hidden');
-            document.getElementById('modalDestino').classList.add('flex');
-        }
-
-        function fecharDestinoModal() {
-            document.getElementById('modalDestino').classList.add('hidden');
-            document.getElementById('modalDestino').classList.remove('flex');
-        }
-
-        function irParaCotacao() {
-            fecharDestinoModal();
-            document.getElementById('cotacao').scrollIntoView({behavior: 'smooth', block: 'start'});
-        }
-
-        function abrirContatoModal() {
-            document.getElementById('modalContato').classList.remove('hidden');
-            document.getElementById('modalContato').classList.add('flex');
-        }
-
-        function fecharContatoModal() {
-            document.getElementById('modalContato').classList.add('hidden');
-            document.getElementById('modalContato').classList.remove('flex');
-        }
-        
         function comprarGuia(guia) {
             const modal = document.createElement('div');
             modal.className = 'fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50';
@@ -1018,8 +1479,8 @@
             `;
             document.body.appendChild(modal);
         }
-        
-        // Smooth scroll
+
+        // Smooth scroll (mantido)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1033,12 +1494,28 @@
             });
         });
 
-        // Close modals on outside click
-        document.getElementById('modalFormulario').addEventListener('click', function(e) { if (e.target === this) { fecharModal(); } });
-        document.getElementById('modalDestino').addEventListener('click', function(e) { if (e.target === this) { fecharDestinoModal(); } });
-        document.getElementById('modalContato').addEventListener('click', function(e) { if (e.target === this) { fecharContatoModal(); } });
+        // Close modal on outside click (mantido)
+        document.getElementById('modalFormulario').addEventListener('click', function(e) {
+            if (e.target === this) {
+                fecharModal();
+            }
+        });
 
-        // Carousel functionality
+        // Close destino modal on outside click (mantido)
+        document.getElementById('modalDestino').addEventListener('click', function(e) {
+            if (e.target === this) {
+                fecharDestinoModal();
+            }
+        });
+
+        // Close contato modal on outside click (mantido)
+        document.getElementById('modalContato').addEventListener('click', function(e) {
+            if (e.target === this) {
+                fecharContatoModal();
+            }
+        });
+
+        // Carousel functionality (mantido)
         let currentSlide = 0;
         const totalSlides = 3;
         const carouselTrack = document.getElementById('carousel-track');
@@ -1049,6 +1526,7 @@
             const translateX = -currentSlide * 100;
             carouselTrack.style.transform = `translateX(${translateX}%)`;
             
+            // Update dots
             carouselDots.forEach((dot, index) => {
                 if (index === currentSlide) {
                     dot.classList.remove('bg-gray-300');
@@ -1070,6 +1548,7 @@
             updateCarousel();
         }
 
+        // Auto-advance carousel every 4 seconds
         function startCarousel() {
             carouselInterval = setInterval(nextSlide, 4000);
         }
@@ -1078,29 +1557,22 @@
             clearInterval(carouselInterval);
         }
 
+        // Add click handlers to dots
         carouselDots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
                 goToSlide(index);
                 stopCarousel();
-                startCarousel();
+                startCarousel(); // Restart auto-advance
             });
         });
 
+        // Pause carousel on hover
         const carouselContainer = document.querySelector('#carousel-track').parentElement;
         carouselContainer.addEventListener('mouseenter', stopCarousel);
         carouselContainer.addEventListener('mouseleave', startCarousel);
 
+        // Start the carousel
         startCarousel();
-
-        // ------------------------------------------------------------------
-        // Element SDK (Manutenção de Configuração)
-        // ------------------------------------------------------------------
-
-        async function onConfigChange(config) { /* ... lógica de atualização ... */ }
-        function mapToCapabilities(config) { /* ... */ return {recolorables: [], borderables: [], fontEditable: undefined, fontSizeable: undefined}; }
-        function mapToEditPanelValues(config) { /* ... */ return new Map([ /* ... */ ]); }
-        if (window.elementSdk) { window.elementSdk.init({ defaultConfig, onConfigChange, mapToCapabilities, mapToEditPanelValues }); }
-
     </script>
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9990fa50d7dc5be8',t:'MTc2MjIyNjQ1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
