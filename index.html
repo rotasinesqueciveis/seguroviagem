@@ -1,22 +1,13 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-    <head> 
-        <meta charset="utf-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
-        <title>New page</title>         
-        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>         
-    </head>     
-    <body>
-        <!doctype html> 
-        <html lang="pt-BR"> 
-            <head> 
-                <meta charset="UTF-8"> 
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-                <title>TravelGuard Pro - Seguros e Guias de Viagem Premium</title>                 
-                <script src="https://cdn.tailwindcss.com"></script>                 
-                <script src="/_sdk/element_sdk.js"></script>                 
-                <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"> 
-                <style>
+<!doctype html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelGuard Pro - Seguros e Guias de Viagem Premium</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
         body {
             box-sizing: border-box;
             font-family: 'Inter', sans-serif;
@@ -87,684 +78,529 @@
             background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
             border-left: 4px solid #3b82f6;
         }
-    </style>                 
-                <style>@view-transition { navigation: auto; }</style>                 
-                <script src="/_sdk/data_sdk.js" type="text/javascript"></script>                 
-            </head>             
-            <body class="bg-gray-50">
-                <!-- Header -->                 
-                <header class="glass-effect fixed w-full top-0 z-50 shadow-sm"> 
-                    <div class="max-w-7xl mx-auto px-6 py-4"> 
-                        <div class="flex justify-between items-center"> 
-                            <div class="flex items-center space-x-3"> 
-                                <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                                    <span class="text-white font-bold text-lg">TG</span> 
-                                </div>                                 
-                                <h1 id="site-title" class="text-2xl font-bold text-gray-900">TravelGuard Pro</h1> 
-                            </div>                             
-                            <nav class="hidden md:flex space-x-8">
-                                <a href="#seguros" class="nav-link text-gray-700 font-medium">Seguros</a> <a href="#guias" class="nav-link text-gray-700 font-medium">Guias Premium</a> <a href="#cotacao" class="nav-link text-gray-700 font-medium">Cotação</a> <a href="#contato" class="nav-link text-gray-700 font-medium">Contato</a> 
-                            </nav>
-                            <button class="btn-primary text-white px-6 py-2 rounded-lg font-medium">Começar Agora</button>                             
-                        </div>                         
-                    </div>                     
-                </header>
-                <!-- Hero Section -->                 
-                <section class="hero-gradient text-white pt-24 pb-20 relative overflow-hidden"> 
-                    <div class="absolute inset-0">
-                        <img id="hero-bg-image" src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2835&amp;q=80" alt="Viajante contemplando paisagem montanhosa" class="w-full h-full object-cover opacity-30" onerror="this.style.display='none';"> 
-                    </div>                     
-                    <div class="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-800/60"></div>                     
-                    <div class="max-w-7xl mx-auto px-6 relative z-10"> 
-                        <div class="text-center max-w-4xl mx-auto"> 
-                            <h2 id="hero-title" class="text-6xl font-bold mb-6 leading-tight">Viaje com <span class="text-blue-400">Segurança</span> e <span class="text-blue-400">Expertise</span></h2> 
-                            <p id="hero-subtitle" class="text-xl text-gray-300 mb-10 leading-relaxed">Proteção premium para suas viagens e roteiros exclusivos criados por especialistas. Mais de 50.000 viajantes confiam em nossa expertise.</p> 
-                            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                                <button onclick="document.getElementById('seguros').scrollIntoView({behavior: 'smooth', block: 'start'})" class="btn-primary text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg"> Explorar Seguros Premium </button>                                 
-
-                                <button onclick="document.getElementById('guias').scrollIntoView({behavior: 'smooth', block: 'start'})" class="border-2 border-white text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300"> Ver Guias Exclusivos </button>                                 
-                            </div>                             
-                        </div>
-                        <!-- Stats -->                         
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto"> 
-                            <div class="text-center"> 
-                                <div id="stat1-number" class="text-3xl font-bold text-blue-400"> 
-                                    50K+
-</div>                                 
-                                <div id="stat1-text" class="text-gray-300"> 
-                                    Clientes Protegidos
-</div>                                 
-                            </div>                             
-                            <div class="text-center"> 
-                                <div id="stat2-number" class="text-3xl font-bold text-blue-400"> 
-                                    190+
-</div>                                 
-                                <div id="stat2-text" class="text-gray-300"> 
-                                    Países Cobertos
-</div>                                 
-                            </div>                             
-                            <div class="text-center"> 
-                                <div id="stat3-number" class="text-3xl font-bold text-blue-400"> 
-                                    24/7
-</div>                                 
-                                <div id="stat3-text" class="text-gray-300"> 
-                                    Suporte Premium
-</div>                                 
-                            </div>                             
-                            <div class="text-center"> 
-                                <div id="stat4-number" class="text-3xl font-bold text-blue-400"> 
-                                    98%
-</div>                                 
-                                <div id="stat4-text" class="text-gray-300"> 
-                                    Satisfação
-</div>                                 
-                            </div>                             
-                        </div>                         
-                    </div>                     
-                </section>
-                <!-- Seguros Section -->                 
-                <section id="seguros" class="py-20 bg-white"> 
-                    <div class="max-w-7xl mx-auto px-6"> 
-                        <div class="text-center mb-16"> 
-                            <h3 id="insurance-title" class="text-5xl font-bold text-gray-900 mb-6">Seguros Premium</h3> 
-                            <p id="insurance-subtitle" class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Proteção completa com cobertura internacional, assistência médica 24h e suporte em português. Escolha o plano ideal para sua jornada.</p> 
-                        </div>                         
-                        <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                            <!-- Plano Essential -->                             
-                            <div class="card-premium rounded-2xl p-8 relative"> 
-                                <div class="text-center"> 
-                                    <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                                        <span class="text-2xl">🛡️</span> 
-                                    </div>                                     
-                                    <h4 id="plan1-name" class="text-2xl font-bold text-gray-900 mb-2">Essential</h4> 
-                                    <div class="mb-6">
-                                        <span id="plan1-price" class="text-5xl font-bold price-highlight">R$ 8</span> <span class="text-gray-600">/dia</span> 
-                                    </div>                                     
-                                    <ul class="text-left space-y-4 mb-8"> 
-                                        <li class="flex items-start space-x-3">
-                                            <span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Cobertura médica até <strong>R$ 50.000</strong></span>
-                                        </li>                                         
-                                        <li class="flex items-start space-x-3">
-                                            <span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Bagagem extraviada <strong>R$ 1.500</strong></span>
-                                        </li>                                         
-                                        <li class="flex items-start space-x-3">
-                                            <span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Cancelamento de viagem</span>
-                                        </li>                                         
-                                        <li class="flex items-start space-x-3">
-                                            <span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Assistência 24h em português</span>
-                                        </li>                                         
-                                    </ul>
-                                    <button class="w-full bg-gray-900 text-white py-4 rounded-xl font-semibold hover:bg-gray-800 transition-all duration-300" onclick="abrirFormulario('essential')"> Contratar Essential </button>                                     
-                                </div>                                 
-                            </div>
-                            <!-- Plano Premium -->                             
-                            <div class="card-premium rounded-2xl p-8 relative border-2 border-blue-500 transform scale-105"> 
-                                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                                    <span class="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg"> MAIS POPULAR </span> 
-                                </div>                                 
-                                <div class="text-center"> 
-                                    <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 bg-gradient-to-r from-blue-100 to-blue-200">
-                                        <span class="text-2xl">👑</span> 
-                                    </div>                                     
-                                    <h4 id="plan2-name" class="text-2xl font-bold text-gray-900 mb-2">Premium</h4> 
-                                    <div class="mb-6">
-                                        <span id="plan2-price" class="text-5xl font-bold price-highlight">R$ 15</span> <span class="text-gray-600">/dia</span> 
-                                    </div>                                     
-                                    <ul class="text-left space-y-4 mb-8"> 
-                                        <li class="flex items-start space-x-3">
-                                            <span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Cobertura médica até <strong>R$ 100.000</strong></span>
-                                        </li>                                         
-                                        <li class="flex items-start space-x-3">
-                                            <span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Bagagem extraviada <strong>R$ 3.000</strong></span>
-                                        </li>                                         
-                                        <li class="flex items-start space-x-3">
-                                            <span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Cobertura para esportes radicais</span>
-                                        </li>                                         
-                                        <li class="flex items-start space-x-3">
-                                            <span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Assistência jurídica internacional</span>
-                                        </li>                                         
-                                        <li class="flex items-start space-x-3">
-                                            <span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Telemedicina 24h</span>
-                                        </li>                                         
-                                    </ul>
-                                    <button class="w-full btn-primary text-white py-4 rounded-xl font-semibold shadow-lg" onclick="abrirFormulario('premium')"> Contratar Premium </button>                                     
-                                </div>                                 
-                            </div>
-                            <!-- Plano Elite -->                             
-                            <div class="card-premium rounded-2xl p-8 relative"> 
-                                <div class="text-center"> 
-                                    <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 bg-gradient-to-r from-purple-100 to-purple-200">
-                                        <span class="text-2xl">💎</span> 
-                                    </div>                                     
-                                    <h4 id="plan3-name" class="text-2xl font-bold text-gray-900 mb-2">Elite</h4> 
-                                    <div class="mb-6">
-                                        <span id="plan3-price" class="text-5xl font-bold price-highlight">R$ 25</span> <span class="text-gray-600">/dia</span> 
-                                    </div>                                     
-                                    <ul class="text-left space-y-4 mb-8"> 
-                                        <li class="flex items-start space-x-3">
-                                            <span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Cobertura médica até <strong>R$ 200.000</strong></span>
-                                        </li>                                         
-                                        <li class="flex items-start space-x-3">
-                                            <span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Bagagem extraviada <strong>R$ 5.000</strong></span>
-                                        </li>                                         
-                                        <li class="flex items-start space-x-3">
-                                            <span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Cobertura para gestantes</span>
-                                        </li>                                         
-                                        <li class="flex items-start space-x-3">
-                                            <span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Concierge de viagem 24h</span>
-                                        </li>                                         
-                                        <li class="flex items-start space-x-3">
-                                            <span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Repatriação sanitária ilimitada</span>
-                                        </li>                                         
-                                    </ul>
-                                    <button class="w-full bg-gradient-to-r from-purple-600 to-purple-800 text-white py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-purple-900 transition-all duration-300" onclick="abrirFormulario('elite')"> Contratar Elite </button>                                     
-                                </div>                                 
-                            </div>                             
-                        </div>                         
-                    </div>                     
-                </section>
-                <!-- Section Divider -->                 
-                <div class="section-divider"></div>
-                <!-- Guias Section -->                 
-                <section id="guias" class="py-20 bg-gray-50"> 
-                    <div class="max-w-7xl mx-auto px-6"> 
-                        <div class="text-center mb-16"> 
-                            <h3 id="guides-title" class="text-5xl font-bold text-gray-900 mb-6">Guias Premium de Viagem</h3> 
-                            <p id="guides-subtitle" class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Roteiros exclusivos desenvolvidos por especialistas locais. Mapas detalhados, dicas insider e experiências autênticas que você não encontra em lugar nenhum.</p> 
-                        </div>                         
-                        <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                            <!-- Guia Europa -->                             
-                            <div class="card-premium rounded-2xl overflow-hidden"> 
-                                <div class="h-64 relative overflow-hidden">
-                                    <img id="guide1-image" src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80" alt="Castelo de Neuschwanstein na Alemanha" class="w-full h-full object-cover" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏰</span></div>';"> 
-                                    <div class="absolute inset-0 bg-black bg-opacity-30"></div>                                     
-                                    <div class="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1">
-                                        <span class="text-white text-sm font-semibold">BESTSELLER</span> 
-                                    </div>                                     
-                                </div>                                 
-                                <div class="p-8"> 
-                                    <h4 id="guide1-title" class="text-2xl font-bold text-gray-900 mb-3">Europa Grand Tour</h4> 
-                                    <p class="text-gray-600 mb-6 leading-relaxed">21 dias pelos destinos mais icônicos da Europa. Inclui roteiros secretos, restaurantes locais e experiências exclusivas em 15 países.</p> 
-                                    <div class="flex items-center justify-between mb-6"> 
-                                        <div>
-                                            <span id="guide1-price" class="text-4xl font-bold price-highlight">R$ 149</span> <span class="text-gray-500 line-through ml-2">R$ 199</span> 
-                                        </div>                                         
-                                        <div class="text-right text-sm text-gray-500"> 
-                                            <div> 
-                                                PDF Premium + Mapas
-</div>                                             
-                                            <div> 
-                                                + App Offline
-</div>                                             
-                                        </div>                                         
-                                    </div>
-                                    <button class="w-full btn-primary text-white py-3 rounded-xl font-semibold shadow-lg" onclick="comprarGuia('europa')"> Adquirir Guia Premium </button>                                     
-                                </div>                                 
-                            </div>
-                            <!-- Guia Ásia -->                             
-                            <div class="card-premium rounded-2xl overflow-hidden"> 
-                                <div class="h-64 relative overflow-hidden">
-                                    <img id="guide2-image" src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80" alt="Templo Angkor Wat no Camboja" class="w-full h-full object-cover" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-red-500 via-orange-500 to-yellow-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏯</span></div>';"> 
-                                    <div class="absolute inset-0 bg-black bg-opacity-30"></div>                                     
-                                    <div class="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1">
-                                        <span class="text-white text-sm font-semibold">NOVO</span> 
-                                    </div>                                     
-                                </div>                                 
-                                <div class="p-8"> 
-                                    <h4 id="guide2-title" class="text-2xl font-bold text-gray-900 mb-3">Sudeste Asiático Autêntico</h4> 
-                                    <p class="text-gray-600 mb-6 leading-relaxed">30 dias de aventura pelos templos, praias paradisíacas e mercados vibrantes. Roteiros off-the-beaten-path em 8 países.</p> 
-                                    <div class="flex items-center justify-between mb-6"> 
-                                        <div>
-                                            <span id="guide2-price" class="text-4xl font-bold price-highlight">R$ 129</span> <span class="text-gray-500 line-through ml-2">R$ 179</span> 
-                                        </div>                                         
-                                        <div class="text-right text-sm text-gray-500"> 
-                                            <div> 
-                                                PDF Premium + Mapas
-</div>                                             
-                                            <div> 
-                                                + Frases Essenciais
-</div>                                             
-                                        </div>                                         
-                                    </div>
-                                    <button class="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 rounded-xl font-semibold hover:from-orange-600 hover:to-red-600 transition-all duration-300" onclick="comprarGuia('asia')"> Adquirir Guia Premium </button>                                     
-                                </div>                                 
-                            </div>
-                            <!-- Guia América do Sul -->                             
-                            <div class="card-premium rounded-2xl overflow-hidden"> 
-                                <div class="h-64 relative overflow-hidden">
-                                    <img id="guide3-image" src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2076&amp;q=80" alt="Machu Picchu no Peru" class="w-full h-full object-cover" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-green-600 via-teal-500 to-blue-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏔️</span></div>';"> 
-                                    <div class="absolute inset-0 bg-black bg-opacity-30"></div>                                     
-                                    <div class="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1">
-                                        <span class="text-white text-sm font-semibold">EXCLUSIVO</span> 
-                                    </div>                                     
-                                </div>                                 
-                                <div class="p-8"> 
-                                    <h4 id="guide3-title" class="text-2xl font-bold text-gray-900 mb-3">Andes &amp; Patagônia Épica</h4> 
-                                    <p class="text-gray-600 mb-6 leading-relaxed">25 dias pelas cordilheiras mais espetaculares do mundo. De Machu Picchu às geleiras patagônicas, com trilhas secretas.</p> 
-                                    <div class="flex items-center justify-between mb-6"> 
-                                        <div>
-                                            <span id="guide3-price" class="text-4xl font-bold price-highlight">R$ 169</span> <span class="text-gray-500 line-through ml-2">R$ 229</span> 
-                                        </div>                                         
-                                        <div class="text-right text-sm text-gray-500"> 
-                                            <div> 
-                                                PDF Premium + Mapas
-</div>                                             
-                                            <div> 
-                                                + GPS Coordinates
-</div>                                             
-                                        </div>                                         
-                                    </div>
-                                    <button class="w-full bg-gradient-to-r from-green-600 to-teal-600 text-white py-3 rounded-xl font-semibold hover:from-green-700 hover:to-teal-700 transition-all duration-300" onclick="comprarGuia('andes')"> Adquirir Guia Premium </button>                                     
-                                </div>                                 
-                            </div>                             
-                        </div>                         
-                    </div>                     
-                </section>
-                <!-- Gallery Section -->                 
-                <section class="py-20 bg-gradient-to-b from-gray-50 to-white"> 
-                    <div class="max-w-7xl mx-auto px-6"> 
-                        <div class="text-center mb-16"> 
-                            <h3 id="gallery-title" class="text-4xl font-bold text-gray-900 mb-4">Destinos Que Inspiram</h3> 
-                            <p id="gallery-subtitle" class="text-xl text-gray-600 max-w-2xl mx-auto">Descubra alguns dos lugares incríveis que nossos clientes visitaram com segurança e nossos guias exclusivos</p> 
-                        </div>
-                        <!-- Carousel Container -->                         
-                        <div class="relative overflow-hidden"> 
-                            <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out">
-                                <!-- Slide 1 -->                                 
-                                <div class="w-full flex-shrink-0"> 
-                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4"> 
-                                        <div class="relative group overflow-hidden rounded-xl">
-                                            <img id="dest1-image" src="https://images.unsplash.com/photo-1520637836862-4d197d17c93a?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Santorini, Grécia" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-blue-500 via-cyan-500 to-blue-600 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏛️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Santorini</div><div class=\'text-sm opacity-90\'>Grécia</div></div>';"> 
-                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>                                             
-                                            <div class="absolute bottom-4 left-4 text-white"> 
-                                                <div id="dest1-name" class="font-semibold"> 
-                                                    Santorini
-</div>                                                 
-                                                <div id="dest1-country" class="text-sm opacity-90"> 
-                                                    Grécia
-</div>                                                 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="relative group overflow-hidden rounded-xl">
-                                            <img id="dest2-image" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Bali, Indonésia" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏝️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Bali</div><div class=\'text-sm opacity-90\'>Indonésia</div></div>';"> 
-                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>                                             
-                                            <div class="absolute bottom-4 left-4 text-white"> 
-                                                <div id="dest2-name" class="font-semibold"> 
-                                                    Bali
-</div>                                                 
-                                                <div id="dest2-country" class="text-sm opacity-90"> 
-                                                    Indonésia
-</div>                                                 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="relative group overflow-hidden rounded-xl">
-                                            <img id="dest3-image" src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Patagônia, Chile" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-slate-600 via-blue-700 to-indigo-800 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏔️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Patagônia</div><div class=\'text-sm opacity-90\'>Chile</div></div>';"> 
-                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>                                             
-                                            <div class="absolute bottom-4 left-4 text-white"> 
-                                                <div id="dest3-name" class="font-semibold"> 
-                                                    Patagônia
-</div>                                                 
-                                                <div id="dest3-country" class="text-sm opacity-90"> 
-                                                    Chile
-</div>                                                 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="relative group overflow-hidden rounded-xl">
-                                            <img id="dest4-image" src="https://images.unsplash.com/photo-1549693578-d683be217e58?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Kyoto, Japão" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-red-500 via-pink-500 to-rose-600 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏯</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Kyoto</div><div class=\'text-sm opacity-90\'>Japão</div></div>';"> 
-                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>                                             
-                                            <div class="absolute bottom-4 left-4 text-white"> 
-                                                <div id="dest4-name" class="font-semibold"> 
-                                                    Kyoto
-</div>                                                 
-                                                <div id="dest4-country" class="text-sm opacity-90"> 
-                                                    Japão
-</div>                                                 
-                                            </div>                                             
-                                        </div>                                         
-                                    </div>                                     
-                                </div>
-                                <!-- Slide 2 -->                                 
-                                <div class="w-full flex-shrink-0"> 
-                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4"> 
-                                        <div class="relative group overflow-hidden rounded-xl">
-                                            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Paris, França" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-pink-500 via-rose-500 to-red-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🗼</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Paris</div><div class=\'text-sm opacity-90\'>França</div></div>';"> 
-                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>                                             
-                                            <div class="absolute bottom-4 left-4 text-white"> 
-                                                <div class="font-semibold"> 
-                                                    Paris
-</div>                                                 
-                                                <div class="text-sm opacity-90"> 
-                                                    França
-</div>                                                 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="relative group overflow-hidden rounded-xl">
-                                            <img src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Maldivas" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-cyan-400 via-blue-500 to-blue-600 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏖️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Maldivas</div><div class=\'text-sm opacity-90\'>Oceano Índico</div></div>';"> 
-                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>                                             
-                                            <div class="absolute bottom-4 left-4 text-white"> 
-                                                <div class="font-semibold"> 
-                                                    Maldivas
-</div>                                                 
-                                                <div class="text-sm opacity-90"> 
-                                                    Oceano Índico
-</div>                                                 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="relative group overflow-hidden rounded-xl">
-                                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Dubai, Emirados Árabes" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏙️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Dubai</div><div class=\'text-sm opacity-90\'>Emirados Árabes</div></div>';"> 
-                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>                                             
-                                            <div class="absolute bottom-4 left-4 text-white"> 
-                                                <div class="font-semibold"> 
-                                                    Dubai
-</div>                                                 
-                                                <div class="text-sm opacity-90"> 
-                                                    Emirados Árabes
-</div>                                                 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="relative group overflow-hidden rounded-xl">
-                                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Islândia" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🌋</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Islândia</div><div class=\'text-sm opacity-90\'>Europa</div></div>';"> 
-                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>                                             
-                                            <div class="absolute bottom-4 left-4 text-white"> 
-                                                <div class="font-semibold"> 
-                                                    Islândia
-</div>                                                 
-                                                <div class="text-sm opacity-90"> 
-                                                    Europa
-</div>                                                 
-                                            </div>                                             
-                                        </div>                                         
-                                    </div>                                     
-                                </div>
-                                <!-- Slide 3 -->                                 
-                                <div class="w-full flex-shrink-0"> 
-                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4"> 
-                                        <div class="relative group overflow-hidden rounded-xl">
-                                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Nova York, EUA" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-gray-600 via-gray-700 to-gray-800 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏙️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Nova York</div><div class=\'text-sm opacity-90\'>Estados Unidos</div></div>';"> 
-                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>                                             
-                                            <div class="absolute bottom-4 left-4 text-white"> 
-                                                <div class="font-semibold"> 
-                                                    Nova York
-</div>                                                 
-                                                <div class="text-sm opacity-90"> 
-                                                    Estados Unidos
-</div>                                                 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="relative group overflow-hidden rounded-xl">
-                                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Tailândia" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-orange-500 via-yellow-500 to-red-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏯</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Tailândia</div><div class=\'text-sm opacity-90\'>Sudeste Asiático</div></div>';"> 
-                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>                                             
-                                            <div class="absolute bottom-4 left-4 text-white"> 
-                                                <div class="font-semibold"> 
-                                                    Tailândia
-</div>                                                 
-                                                <div class="text-sm opacity-90"> 
-                                                    Sudeste Asiático
-</div>                                                 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="relative group overflow-hidden rounded-xl">
-                                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Austrália" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-red-500 via-orange-500 to-yellow-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🦘</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Austrália</div><div class=\'text-sm opacity-90\'>Oceania</div></div>';"> 
-                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>                                             
-                                            <div class="absolute bottom-4 left-4 text-white"> 
-                                                <div class="font-semibold"> 
-                                                    Austrália
-</div>                                                 
-                                                <div class="text-sm opacity-90"> 
-                                                    Oceania
-</div>                                                 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="relative group overflow-hidden rounded-xl">
-                                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Marrocos" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-yellow-600 via-orange-600 to-red-600 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🕌</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Marrocos</div><div class=\'text-sm opacity-90\'>África</div></div>';"> 
-                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>                                             
-                                            <div class="absolute bottom-4 left-4 text-white"> 
-                                                <div class="font-semibold"> 
-                                                    Marrocos
-</div>                                                 
-                                                <div class="text-sm opacity-90"> 
-                                                    África
-</div>                                                 
-                                            </div>                                             
-                                        </div>                                         
-                                    </div>                                     
-                                </div>                                 
-                            </div>
-                            <!-- Carousel Indicators -->                             
-                            <div class="flex justify-center mt-8 space-x-2">
-                                <button class="carousel-dot w-3 h-3 rounded-full bg-blue-600 transition-all duration-300" data-slide="0"></button>                                 
-
-                                <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300" data-slide="1"></button>                                 
-
-                                <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300" data-slide="2"></button>                                 
-                            </div>                             
-                        </div>                         
-                    </div>                     
-                </section>
-                <!-- Testimonials -->                 
-                <section class="py-20 bg-white"> 
-                    <div class="max-w-7xl mx-auto px-6"> 
-                        <div class="text-center mb-16"> 
-                            <h3 id="testimonials-title" class="text-4xl font-bold text-gray-900 mb-4">O que nossos clientes dizem</h3> 
-                        </div>                         
-                        <div class="grid md:grid-cols-3 gap-8"> 
-                            <div class="testimonial-card p-6 rounded-xl shadow-sm"> 
-                                <div class="flex items-center mb-4"> 
-                                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                                        <span class="text-blue-600 font-bold">MC</span> 
-                                    </div>                                     
-                                    <div> 
-                                        <div id="test1-name" class="font-semibold text-gray-900"> 
-                                            Maria Clara
-</div>                                         
-                                        <div class="text-gray-500 text-sm"> 
-                                            Empresária
-</div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <p id="test1-text" class="text-gray-700 italic">"O seguro me salvou quando precisei de atendimento médico em Paris. Suporte impecável e reembolso rápido!"</p> 
-                            </div>                             
-                            <div class="testimonial-card p-6 rounded-xl shadow-sm"> 
-                                <div class="flex items-center mb-4"> 
-                                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                                        <span class="text-green-600 font-bold">RS</span> 
-                                    </div>                                     
-                                    <div> 
-                                        <div id="test2-name" class="font-semibold text-gray-900"> 
-                                            Roberto Silva
-</div>                                         
-                                        <div class="text-gray-500 text-sm"> 
-                                            Fotógrafo
-</div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <p id="test2-text" class="text-gray-700 italic">"Os guias são incríveis! Descobri lugares únicos na Ásia que jamais encontraria sozinho. Vale cada centavo!"</p> 
-                            </div>                             
-                            <div class="testimonial-card p-6 rounded-xl shadow-sm"> 
-                                <div class="flex items-center mb-4"> 
-                                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                                        <span class="text-purple-600 font-bold">AL</span> 
-                                    </div>                                     
-                                    <div> 
-                                        <div id="test3-name" class="font-semibold text-gray-900"> 
-                                            Ana Luiza
-</div>                                         
-                                        <div class="text-gray-500 text-sm"> 
-                                            Arquiteta
-</div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <p id="test3-text" class="text-gray-700 italic">"Profissionalismo total! Desde a contratação até o suporte durante a viagem. Recomendo de olhos fechados!"</p> 
-                            </div>                             
-                        </div>                         
-                    </div>                     
-                </section>
-                <!-- Cotação Section -->                 
-                <section id="cotacao" class="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white relative overflow-hidden"> 
-                    <div class="absolute inset-0 bg-black bg-opacity-20"></div>                     
-                    <div class="max-w-4xl mx-auto px-6 relative z-10"> 
-                        <div class="text-center mb-12"> 
-                            <h3 id="quote-title" class="text-5xl font-bold mb-6">Faça sua Cotação de Seguro Viagem</h3> 
-                            <p id="quote-subtitle" class="text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">Preencha seus dados e em seguida você será direcionado para o simulador oficial da Porto Seguro. Processo 100% seguro e oficial.</p> 
-                        </div>                         
-                        <div class="glass-effect rounded-2xl p-8 bg-white/95 backdrop-blur-lg"> 
-                            <form id="cotacao-form" onsubmit="redirecionarPortoSeguro(event)" class="space-y-6"> 
-                                <div class="grid md:grid-cols-2 gap-6"> 
-                                    <div>
-                                        <label class="block text-gray-700 font-semibold mb-2">Nome Completo *</label>                                         
-
-                                        <input type="text" id="nome" name="nome" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="Seu nome completo" required> 
-                                    </div>                                     
-                                    <div>
-                                        <label class="block text-gray-700 font-semibold mb-2">Email *</label>                                         
-
-                                        <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="seu@email.com" required> 
-                                    </div>                                     
-                                </div>                                 
-                                <div class="grid md:grid-cols-2 gap-6"> 
-                                    <div>
-                                        <label class="block text-gray-700 font-semibold mb-2">Destino *</label>                                         
-
-                                        <input type="text" id="destino" name="destino" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="Ex: Europa, Estados Unidos, Japão..." required> 
-                                    </div>                                     
-                                    <div>
-                                        <label class="block text-gray-700 font-semibold mb-2">WhatsApp *</label>                                         
-
-                                        <input type="tel" id="whatsapp" name="whatsapp" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="(11) 99999-9999" required> 
-                                    </div>                                     
-                                </div>                                 
-                                <div class="grid md:grid-cols-2 gap-6"> 
-                                    <div>
-                                        <label class="block text-gray-700 font-semibold mb-2">Data de Partida *</label>                                         
-
-                                        <input type="date" id="inicio" name="partida" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required> 
-                                    </div>                                     
-                                    <div>
-                                        <label class="block text-gray-700 font-semibold mb-2">Data de Retorno *</label>                                         
-
-                                        <input type="date" id="fim" name="retorno" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required> 
-                                    </div>                                     
-                                </div>                                 
-                                <div id="mensagem-redirecionamento" class="hidden bg-blue-100 border border-blue-300 rounded-lg p-4 text-center"> 
-                                    <div class="flex items-center justify-center space-x-3"> 
-                                        <div class="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>                                         
-                                        <p class="text-blue-800 font-semibold">Aguarde... você será redirecionado para o simulador oficial da Porto Seguro.</p> 
-                                    </div>                                     
-                                </div>
-                                <button type="submit" class="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white py-4 rounded-xl font-bold text-lg shadow-lg transform hover:scale-105 transition-all duration-300"> 🚀 GERAR COTAÇÃO OFICIAL PORTO SEGURO </button>                                 
-                            </form>                             
-                        </div>                         
-                    </div>                     
-                </section>
-                <!-- Footer -->                 
-                <footer class="bg-black text-white py-16"> 
-                    <div class="max-w-7xl mx-auto px-6"> 
-                        <div class="grid md:grid-cols-4 gap-8 mb-12"> 
-                            <div> 
-                                <div class="flex items-center space-x-3 mb-6"> 
-                                    <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                                        <span class="text-white font-bold text-lg">TG</span> 
-                                    </div>                                     
-                                    <h4 id="footer-site-title" class="text-xl font-bold">TravelGuard Pro</h4> 
-                                </div>                                 
-                                <p id="footer-description" class="text-gray-400 leading-relaxed">Sua parceira premium em todas as aventuras. Segurança, expertise e experiências inesquecíveis ao redor do mundo.</p> 
-                            </div>                             
-                            <div> 
-                                <h5 class="font-bold mb-6 text-lg">Seguros Premium</h5> 
-                                <ul class="space-y-3 text-gray-400"> 
-                                    <li>
-                                        <a href="#" class="hover:text-white transition-colors">Plano Essential</a>
-                                    </li>                                     
-                                    <li>
-                                        <a href="#" class="hover:text-white transition-colors">Plano Premium</a>
-                                    </li>                                     
-                                    <li>
-                                        <a href="#" class="hover:text-white transition-colors">Plano Elite</a>
-                                    </li>                                     
-                                    <li>
-                                        <a href="#" class="hover:text-white transition-colors">Comparar Planos</a>
-                                    </li>                                     
-                                </ul>                                 
-                            </div>                             
-                            <div> 
-                                <h5 class="font-bold mb-6 text-lg">Guias Exclusivos</h5> 
-                                <ul class="space-y-3 text-gray-400"> 
-                                    <li>
-                                        <a href="#" class="hover:text-white transition-colors">Europa Grand Tour</a>
-                                    </li>                                     
-                                    <li>
-                                        <a href="#" class="hover:text-white transition-colors">Sudeste Asiático</a>
-                                    </li>                                     
-                                    <li>
-                                        <a href="#" class="hover:text-white transition-colors">Andes &amp; Patagônia</a>
-                                    </li>                                     
-                                    <li>
-                                        <a href="#" class="hover:text-white transition-colors">Roteiros Personalizados</a>
-                                    </li>                                     
-                                </ul>                                 
-                            </div>                             
-                            <div> 
-                                <h5 class="font-bold mb-6 text-lg">Suporte Premium</h5> 
-                                <ul class="space-y-3 text-gray-400"> 
-                                    <li>📧 contato@travelguardpro.com</li>                                     
-                                    <li>📱 (11) 99999-8888</li>                                     
-                                    <li>🌐 Chat 24/7 disponível</li>                                     
-                                    <li>🎯 Consultoria especializada</li>                                     
-                                </ul>                                 
-                            </div>                             
-                        </div>                         
-                        <div class="border-t border-gray-800 pt-8 text-center text-gray-400"> 
-                            <p id="footer-copyright">© 2024 TravelGuard Pro. Todos os direitos reservados. | Empresa certificada e licenciada para seguros de viagem internacionais.</p> 
-                        </div>                         
-                    </div>                     
-                </footer>
-                <!-- Modal -->                 
-                <div id="modalFormulario" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50 backdrop-blur-sm"> 
-                    <div class="bg-white rounded-2xl p-8 max-w-lg w-full mx-4 shadow-2xl"> 
-                        <div class="flex justify-between items-center mb-8"> 
-                            <h3 class="text-3xl font-bold text-gray-900" id="tituloModal">Contratar Seguro Premium</h3>
-                            <button onclick="fecharModal()" class="text-gray-400 hover:text-gray-600 text-3xl font-light">×</button>                             
-                        </div>                         
-                        <form onsubmit="processarContratacao(event)" class="space-y-6"> 
-                            <div class="grid md:grid-cols-2 gap-6"> 
-                                <div>
-                                    <label class="block text-gray-700 font-semibold mb-2">Nome Completo</label>                                     
-
-                                    <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required> 
-                                </div>                                 
-                                <div>
-                                    <label class="block text-gray-700 font-semibold mb-2">Email</label>                                     
-
-                                    <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required> 
-                                </div>                                 
-                            </div>                             
-                            <div>
-                                <label class="block text-gray-700 font-semibold mb-2">Telefone/WhatsApp</label>                                 
-
-                                <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required> 
-                            </div>                             
-                            <div>
-                                <label class="block text-gray-700 font-semibold mb-2">Destino Principal</label>                                 
-
-                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="Ex: Europa, Ásia, América do Norte..." required> 
-                            </div>                             
-                            <div class="grid grid-cols-2 gap-6"> 
-                                <div>
-                                    <label class="block text-gray-700 font-semibold mb-2">Data de Partida</label>                                     
-
-                                    <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required> 
-                                </div>                                 
-                                <div>
-                                    <label class="block text-gray-700 font-semibold mb-2">Data de Retorno</label>                                     
-
-                                    <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required> 
-                                </div>                                 
-                            </div>
-                            <button type="submit" class="w-full btn-primary text-white py-4 rounded-xl font-semibold text-lg shadow-lg"> Solicitar Cotação Premium </button>                             
-                        </form>                         
-                    </div>                     
-                </div>                 
-                <script>
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="bg-gray-50"><!-- Header -->
+  <header class="glass-effect fixed w-full top-0 z-50 shadow-sm">
+   <div class="max-w-7xl mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
+     <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-lg">TG</span>
+      </div>
+      <h1 id="site-title" class="text-2xl font-bold text-gray-900">TravelGuard Pro</h1>
+     </div>
+     <nav class="hidden md:flex space-x-8"><a href="#seguros" class="nav-link text-gray-700 font-medium">Seguros</a> <a href="#guias" class="nav-link text-gray-700 font-medium">Guias Premium</a> <a href="#cotacao" class="nav-link text-gray-700 font-medium">Cotação</a> <a href="#contato" class="nav-link text-gray-700 font-medium">Contato</a>
+     </nav><button class="btn-primary text-white px-6 py-2 rounded-lg font-medium">Começar Agora</button>
+    </div>
+   </div>
+  </header><!-- Hero Section -->
+  <section class="hero-gradient text-white pt-24 pb-20 relative overflow-hidden">
+   <div class="absolute inset-0"><img id="hero-bg-image" src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2835&amp;q=80" alt="Viajante contemplando paisagem montanhosa" class="w-full h-full object-cover opacity-30" onerror="this.style.display='none';">
+   </div>
+   <div class="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-800/60"></div>
+   <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="text-center max-w-4xl mx-auto">
+     <h2 id="hero-title" class="text-6xl font-bold mb-6 leading-tight">Viaje com <span class="text-blue-400">Segurança</span> e <span class="text-blue-400">Expertise</span></h2>
+     <p id="hero-subtitle" class="text-xl text-gray-300 mb-10 leading-relaxed">Proteção premium para suas viagens e roteiros exclusivos criados por especialistas. Mais de 50.000 viajantes confiam em nossa expertise.</p>
+     <div class="flex flex-col sm:flex-row gap-6 justify-center items-center"><button onclick="document.getElementById('seguros').scrollIntoView({behavior: 'smooth', block: 'start'})" class="btn-primary text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg"> Explorar Seguros Premium </button> <button onclick="document.getElementById('guias').scrollIntoView({behavior: 'smooth', block: 'start'})" class="border-2 border-white text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300"> Ver Guias Exclusivos </button>
+     </div>
+    </div><!-- Stats -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto">
+     <div class="text-center">
+      <div id="stat1-number" class="text-3xl font-bold text-blue-400">
+       50K+
+      </div>
+      <div id="stat1-text" class="text-gray-300">
+       Clientes Protegidos
+      </div>
+     </div>
+     <div class="text-center">
+      <div id="stat2-number" class="text-3xl font-bold text-blue-400">
+       190+
+      </div>
+      <div id="stat2-text" class="text-gray-300">
+       Países Cobertos
+      </div>
+     </div>
+     <div class="text-center">
+      <div id="stat3-number" class="text-3xl font-bold text-blue-400">
+       24/7
+      </div>
+      <div id="stat3-text" class="text-gray-300">
+       Suporte Premium
+      </div>
+     </div>
+     <div class="text-center">
+      <div id="stat4-number" class="text-3xl font-bold text-blue-400">
+       98%
+      </div>
+      <div id="stat4-text" class="text-gray-300">
+       Satisfação
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Seguros Section -->
+  <section id="seguros" class="py-20 bg-white">
+   <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+     <h3 id="insurance-title" class="text-5xl font-bold text-gray-900 mb-6">Seguros Premium</h3>
+     <p id="insurance-subtitle" class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Proteção completa com cobertura internacional, assistência médica 24h e suporte em português. Escolha o plano ideal para sua jornada.</p>
+    </div>
+    <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto"><!-- Plano Essential -->
+     <div class="card-premium rounded-2xl p-8 relative">
+      <div class="text-center">
+       <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"><span class="text-2xl">🛡️</span>
+       </div>
+       <h4 id="plan1-name" class="text-2xl font-bold text-gray-900 mb-2">Essential</h4>
+       <div class="mb-6"><span id="plan1-price" class="text-5xl font-bold price-highlight">R$ 8</span> <span class="text-gray-600">/dia</span>
+       </div>
+       <ul class="text-left space-y-4 mb-8">
+        <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Cobertura médica até <strong>R$ 50.000</strong></span></li>
+        <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Bagagem extraviada <strong>R$ 1.500</strong></span></li>
+        <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Cancelamento de viagem</span></li>
+        <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Assistência 24h em português</span></li>
+       </ul><button class="w-full bg-gray-900 text-white py-4 rounded-xl font-semibold hover:bg-gray-800 transition-all duration-300" onclick="abrirFormulario('essential')"> Contratar Essential </button>
+      </div>
+     </div><!-- Plano Premium -->
+     <div class="card-premium rounded-2xl p-8 relative border-2 border-blue-500 transform scale-105">
+      <div class="absolute -top-4 left-1/2 transform -translate-x-1/2"><span class="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg"> MAIS POPULAR </span>
+      </div>
+      <div class="text-center">
+       <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 bg-gradient-to-r from-blue-100 to-blue-200"><span class="text-2xl">👑</span>
+       </div>
+       <h4 id="plan2-name" class="text-2xl font-bold text-gray-900 mb-2">Premium</h4>
+       <div class="mb-6"><span id="plan2-price" class="text-5xl font-bold price-highlight">R$ 15</span> <span class="text-gray-600">/dia</span>
+       </div>
+       <ul class="text-left space-y-4 mb-8">
+        <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Cobertura médica até <strong>R$ 100.000</strong></span></li>
+        <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Bagagem extraviada <strong>R$ 3.000</strong></span></li>
+        <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Cobertura para esportes radicais</span></li>
+        <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Assistência jurídica internacional</span></li>
+        <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Telemedicina 24h</span></li>
+       </ul><button class="w-full btn-primary text-white py-4 rounded-xl font-semibold shadow-lg" onclick="abrirFormulario('premium')"> Contratar Premium </button>
+      </div>
+     </div><!-- Plano Elite -->
+     <div class="card-premium rounded-2xl p-8 relative">
+      <div class="text-center">
+       <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 bg-gradient-to-r from-purple-100 to-purple-200"><span class="text-2xl">💎</span>
+       </div>
+       <h4 id="plan3-name" class="text-2xl font-bold text-gray-900 mb-2">Elite</h4>
+       <div class="mb-6"><span id="plan3-price" class="text-5xl font-bold price-highlight">R$ 25</span> <span class="text-gray-600">/dia</span>
+       </div>
+       <ul class="text-left space-y-4 mb-8">
+        <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Cobertura médica até <strong>R$ 200.000</strong></span></li>
+        <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Bagagem extraviada <strong>R$ 5.000</strong></span></li>
+        <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Cobertura para gestantes</span></li>
+        <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Concierge de viagem 24h</span></li>
+        <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Repatriação sanitária ilimitada</span></li>
+       </ul><button class="w-full bg-gradient-to-r from-purple-600 to-purple-800 text-white py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-purple-900 transition-all duration-300" onclick="abrirFormulario('elite')"> Contratar Elite </button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Section Divider -->
+  <div class="section-divider"></div><!-- Guias Section -->
+  <section id="guias" class="py-20 bg-gray-50">
+   <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+     <h3 id="guides-title" class="text-5xl font-bold text-gray-900 mb-6">Guias Premium de Viagem</h3>
+     <p id="guides-subtitle" class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Roteiros exclusivos desenvolvidos por especialistas locais. Mapas detalhados, dicas insider e experiências autênticas que você não encontra em lugar nenhum.</p>
+    </div>
+    <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto"><!-- Guia Europa -->
+     <div class="card-premium rounded-2xl overflow-hidden">
+      <div class="h-64 relative overflow-hidden"><img id="guide1-image" src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80" alt="Castelo de Neuschwanstein na Alemanha" class="w-full h-full object-cover" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏰</span></div>';">
+       <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+       <div class="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1"><span class="text-white text-sm font-semibold">BESTSELLER</span>
+       </div>
+      </div>
+      <div class="p-8">
+       <h4 id="guide1-title" class="text-2xl font-bold text-gray-900 mb-3">Europa Grand Tour</h4>
+       <p class="text-gray-600 mb-6 leading-relaxed">21 dias pelos destinos mais icônicos da Europa. Inclui roteiros secretos, restaurantes locais e experiências exclusivas em 15 países.</p>
+       <div class="flex items-center justify-between mb-6">
+        <div><span id="guide1-price" class="text-4xl font-bold price-highlight">R$ 149</span> <span class="text-gray-500 line-through ml-2">R$ 199</span>
+        </div>
+        <div class="text-right text-sm text-gray-500">
+         <div>
+          PDF Premium + Mapas
+         </div>
+         <div>
+          + App Offline
+         </div>
+        </div>
+       </div><button class="w-full btn-primary text-white py-3 rounded-xl font-semibold shadow-lg" onclick="comprarGuia('europa')"> Adquirir Guia Premium </button>
+      </div>
+     </div><!-- Guia Ásia -->
+     <div class="card-premium rounded-2xl overflow-hidden">
+      <div class="h-64 relative overflow-hidden"><img id="guide2-image" src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80" alt="Templo Angkor Wat no Camboja" class="w-full h-full object-cover" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-red-500 via-orange-500 to-yellow-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏯</span></div>';">
+       <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+       <div class="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1"><span class="text-white text-sm font-semibold">NOVO</span>
+       </div>
+      </div>
+      <div class="p-8">
+       <h4 id="guide2-title" class="text-2xl font-bold text-gray-900 mb-3">Sudeste Asiático Autêntico</h4>
+       <p class="text-gray-600 mb-6 leading-relaxed">30 dias de aventura pelos templos, praias paradisíacas e mercados vibrantes. Roteiros off-the-beaten-path em 8 países.</p>
+       <div class="flex items-center justify-between mb-6">
+        <div><span id="guide2-price" class="text-4xl font-bold price-highlight">R$ 129</span> <span class="text-gray-500 line-through ml-2">R$ 179</span>
+        </div>
+        <div class="text-right text-sm text-gray-500">
+         <div>
+          PDF Premium + Mapas
+         </div>
+         <div>
+          + Frases Essenciais
+         </div>
+        </div>
+       </div><button class="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 rounded-xl font-semibold hover:from-orange-600 hover:to-red-600 transition-all duration-300" onclick="comprarGuia('asia')"> Adquirir Guia Premium </button>
+      </div>
+     </div><!-- Guia América do Sul -->
+     <div class="card-premium rounded-2xl overflow-hidden">
+      <div class="h-64 relative overflow-hidden"><img id="guide3-image" src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2076&amp;q=80" alt="Machu Picchu no Peru" class="w-full h-full object-cover" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-green-600 via-teal-500 to-blue-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏔️</span></div>';">
+       <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+       <div class="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1"><span class="text-white text-sm font-semibold">EXCLUSIVO</span>
+       </div>
+      </div>
+      <div class="p-8">
+       <h4 id="guide3-title" class="text-2xl font-bold text-gray-900 mb-3">Andes &amp; Patagônia Épica</h4>
+       <p class="text-gray-600 mb-6 leading-relaxed">25 dias pelas cordilheiras mais espetaculares do mundo. De Machu Picchu às geleiras patagônicas, com trilhas secretas.</p>
+       <div class="flex items-center justify-between mb-6">
+        <div><span id="guide3-price" class="text-4xl font-bold price-highlight">R$ 169</span> <span class="text-gray-500 line-through ml-2">R$ 229</span>
+        </div>
+        <div class="text-right text-sm text-gray-500">
+         <div>
+          PDF Premium + Mapas
+         </div>
+         <div>
+          + GPS Coordinates
+         </div>
+        </div>
+       </div><button class="w-full bg-gradient-to-r from-green-600 to-teal-600 text-white py-3 rounded-xl font-semibold hover:from-green-700 hover:to-teal-700 transition-all duration-300" onclick="comprarGuia('andes')"> Adquirir Guia Premium </button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Gallery Section -->
+  <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+   <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+     <h3 id="gallery-title" class="text-4xl font-bold text-gray-900 mb-4">Destinos Que Inspiram</h3>
+     <p id="gallery-subtitle" class="text-xl text-gray-600 max-w-2xl mx-auto">Descubra alguns dos lugares incríveis que nossos clientes visitaram com segurança e nossos guias exclusivos</p>
+    </div><!-- Carousel Container -->
+    <div class="relative overflow-hidden">
+     <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out"><!-- Slide 1 -->
+      <div class="w-full flex-shrink-0">
+       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="relative group overflow-hidden rounded-xl"><img id="dest1-image" src="https://images.unsplash.com/photo-1520637836862-4d197d17c93a?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Santorini, Grécia" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-blue-500 via-cyan-500 to-blue-600 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏛️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Santorini</div><div class=\'text-sm opacity-90\'>Grécia</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div id="dest1-name" class="font-semibold">
+           Santorini
+          </div>
+          <div id="dest1-country" class="text-sm opacity-90">
+           Grécia
+          </div>
+         </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl"><img id="dest2-image" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Bali, Indonésia" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏝️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Bali</div><div class=\'text-sm opacity-90\'>Indonésia</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div id="dest2-name" class="font-semibold">
+           Bali
+          </div>
+          <div id="dest2-country" class="text-sm opacity-90">
+           Indonésia
+          </div>
+         </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl"><img id="dest3-image" src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Patagônia, Chile" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-slate-600 via-blue-700 to-indigo-800 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏔️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Patagônia</div><div class=\'text-sm opacity-90\'>Chile</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div id="dest3-name" class="font-semibold">
+           Patagônia
+          </div>
+          <div id="dest3-country" class="text-sm opacity-90">
+           Chile
+          </div>
+         </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl"><img id="dest4-image" src="https://images.unsplash.com/photo-1549693578-d683be217e58?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Kyoto, Japão" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-red-500 via-pink-500 to-rose-600 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏯</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Kyoto</div><div class=\'text-sm opacity-90\'>Japão</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div id="dest4-name" class="font-semibold">
+           Kyoto
+          </div>
+          <div id="dest4-country" class="text-sm opacity-90">
+           Japão
+          </div>
+         </div>
+        </div>
+       </div>
+      </div><!-- Slide 2 -->
+      <div class="w-full flex-shrink-0">
+       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="relative group overflow-hidden rounded-xl"><img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Paris, França" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-pink-500 via-rose-500 to-red-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🗼</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Paris</div><div class=\'text-sm opacity-90\'>França</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div class="font-semibold">
+           Paris
+          </div>
+          <div class="text-sm opacity-90">
+           França
+          </div>
+         </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl"><img src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Maldivas" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-cyan-400 via-blue-500 to-blue-600 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏖️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Maldivas</div><div class=\'text-sm opacity-90\'>Oceano Índico</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div class="font-semibold">
+           Maldivas
+          </div>
+          <div class="text-sm opacity-90">
+           Oceano Índico
+          </div>
+         </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Dubai, Emirados Árabes" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏙️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Dubai</div><div class=\'text-sm opacity-90\'>Emirados Árabes</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div class="font-semibold">
+           Dubai
+          </div>
+          <div class="text-sm opacity-90">
+           Emirados Árabes
+          </div>
+         </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Islândia" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🌋</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Islândia</div><div class=\'text-sm opacity-90\'>Europa</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div class="font-semibold">
+           Islândia
+          </div>
+          <div class="text-sm opacity-90">
+           Europa
+          </div>
+         </div>
+        </div>
+       </div>
+      </div><!-- Slide 3 -->
+      <div class="w-full flex-shrink-0">
+       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="relative group overflow-hidden rounded-xl"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Nova York, EUA" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-gray-600 via-gray-700 to-gray-800 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏙️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Nova York</div><div class=\'text-sm opacity-90\'>Estados Unidos</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div class="font-semibold">
+           Nova York
+          </div>
+          <div class="text-sm opacity-90">
+           Estados Unidos
+          </div>
+         </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Tailândia" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-orange-500 via-yellow-500 to-red-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏯</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Tailândia</div><div class=\'text-sm opacity-90\'>Sudeste Asiático</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div class="font-semibold">
+           Tailândia
+          </div>
+          <div class="text-sm opacity-90">
+           Sudeste Asiático
+          </div>
+         </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Austrália" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-red-500 via-orange-500 to-yellow-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🦘</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Austrália</div><div class=\'text-sm opacity-90\'>Oceania</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div class="font-semibold">
+           Austrália
+          </div>
+          <div class="text-sm opacity-90">
+           Oceania
+          </div>
+         </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Marrocos" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-yellow-600 via-orange-600 to-red-600 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🕌</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Marrocos</div><div class=\'text-sm opacity-90\'>África</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div class="font-semibold">
+           Marrocos
+          </div>
+          <div class="text-sm opacity-90">
+           África
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div><!-- Carousel Indicators -->
+     <div class="flex justify-center mt-8 space-x-2"><button class="carousel-dot w-3 h-3 rounded-full bg-blue-600 transition-all duration-300" data-slide="0"></button> <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300" data-slide="1"></button> <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300" data-slide="2"></button>
+     </div>
+    </div>
+   </div>
+  </section><!-- Testimonials -->
+  <section class="py-20 bg-white">
+   <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+     <h3 id="testimonials-title" class="text-4xl font-bold text-gray-900 mb-4">O que nossos clientes dizem</h3>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+     <div class="testimonial-card p-6 rounded-xl shadow-sm">
+      <div class="flex items-center mb-4">
+       <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4"><span class="text-blue-600 font-bold">MC</span>
+       </div>
+       <div>
+        <div id="test1-name" class="font-semibold text-gray-900">
+         Maria Clara
+        </div>
+        <div class="text-gray-500 text-sm">
+         Empresária
+        </div>
+       </div>
+      </div>
+      <p id="test1-text" class="text-gray-700 italic">"O seguro me salvou quando precisei de atendimento médico em Paris. Suporte impecável e reembolso rápido!"</p>
+     </div>
+     <div class="testimonial-card p-6 rounded-xl shadow-sm">
+      <div class="flex items-center mb-4">
+       <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4"><span class="text-green-600 font-bold">RS</span>
+       </div>
+       <div>
+        <div id="test2-name" class="font-semibold text-gray-900">
+         Roberto Silva
+        </div>
+        <div class="text-gray-500 text-sm">
+         Fotógrafo
+        </div>
+       </div>
+      </div>
+      <p id="test2-text" class="text-gray-700 italic">"Os guias são incríveis! Descobri lugares únicos na Ásia que jamais encontraria sozinho. Vale cada centavo!"</p>
+     </div>
+     <div class="testimonial-card p-6 rounded-xl shadow-sm">
+      <div class="flex items-center mb-4">
+       <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4"><span class="text-purple-600 font-bold">AL</span>
+       </div>
+       <div>
+        <div id="test3-name" class="font-semibold text-gray-900">
+         Ana Luiza
+        </div>
+        <div class="text-gray-500 text-sm">
+         Arquiteta
+        </div>
+       </div>
+      </div>
+      <p id="test3-text" class="text-gray-700 italic">"Profissionalismo total! Desde a contratação até o suporte durante a viagem. Recomendo de olhos fechados!"</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- Cotação Section -->
+  <section id="cotacao" class="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white relative overflow-hidden">
+   <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+   <div class="max-w-4xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-12">
+     <h3 id="quote-title" class="text-5xl font-bold mb-6">Faça sua Cotação de Seguro Viagem</h3>
+     <p id="quote-subtitle" class="text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">Preencha seus dados e em seguida você será direcionado para o simulador oficial da Porto Seguro. Processo 100% seguro e oficial.</p>
+    </div>
+    <div class="glass-effect rounded-2xl p-8 bg-white/95 backdrop-blur-lg">
+     <form id="cotacao-form" onsubmit="redirecionarPortoSeguro(event)" class="space-y-6">
+      <div class="grid md:grid-cols-2 gap-6">
+       <div><label class="block text-gray-700 font-semibold mb-2">Nome Completo *</label> <input type="text" id="nome" name="nome" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="Seu nome completo" required>
+       </div>
+       <div><label class="block text-gray-700 font-semibold mb-2">Email *</label> <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="seu@email.com" required>
+       </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+       <div><label class="block text-gray-700 font-semibold mb-2">Destino *</label> <input type="text" id="destino" name="destino" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="Ex: Europa, Estados Unidos, Japão..." required>
+       </div>
+       <div><label class="block text-gray-700 font-semibold mb-2">WhatsApp *</label> <input type="tel" id="whatsapp" name="whatsapp" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="(11) 99999-9999" required>
+       </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+       <div><label class="block text-gray-700 font-semibold mb-2">Data de Partida *</label> <input type="date" id="inicio" name="partida" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required>
+       </div>
+       <div><label class="block text-gray-700 font-semibold mb-2">Data de Retorno *</label> <input type="date" id="fim" name="retorno" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required>
+       </div>
+      </div>
+      <div id="mensagem-redirecionamento" class="hidden bg-blue-100 border border-blue-300 rounded-lg p-4 text-center">
+       <div class="flex items-center justify-center space-x-3">
+        <div class="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
+        <p class="text-blue-800 font-semibold">Aguarde... você será redirecionado para o simulador oficial da Porto Seguro.</p>
+       </div>
+      </div><button type="submit" class="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white py-4 rounded-xl font-bold text-lg shadow-lg transform hover:scale-105 transition-all duration-300"> 🚀 GERAR COTAÇÃO OFICIAL PORTO SEGURO </button>
+     </form>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="bg-black text-white py-16">
+   <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-4 gap-8 mb-12">
+     <div>
+      <div class="flex items-center space-x-3 mb-6">
+       <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-lg">TG</span>
+       </div>
+       <h4 id="footer-site-title" class="text-xl font-bold">TravelGuard Pro</h4>
+      </div>
+      <p id="footer-description" class="text-gray-400 leading-relaxed">Sua parceira premium em todas as aventuras. Segurança, expertise e experiências inesquecíveis ao redor do mundo.</p>
+     </div>
+     <div>
+      <h5 class="font-bold mb-6 text-lg">Seguros Premium</h5>
+      <ul class="space-y-3 text-gray-400">
+       <li><a href="#" class="hover:text-white transition-colors">Plano Essential</a></li>
+       <li><a href="#" class="hover:text-white transition-colors">Plano Premium</a></li>
+       <li><a href="#" class="hover:text-white transition-colors">Plano Elite</a></li>
+       <li><a href="#" class="hover:text-white transition-colors">Comparar Planos</a></li>
+      </ul>
+     </div>
+     <div>
+      <h5 class="font-bold mb-6 text-lg">Guias Exclusivos</h5>
+      <ul class="space-y-3 text-gray-400">
+       <li><a href="#" class="hover:text-white transition-colors">Europa Grand Tour</a></li>
+       <li><a href="#" class="hover:text-white transition-colors">Sudeste Asiático</a></li>
+       <li><a href="#" class="hover:text-white transition-colors">Andes &amp; Patagônia</a></li>
+       <li><a href="#" class="hover:text-white transition-colors">Roteiros Personalizados</a></li>
+      </ul>
+     </div>
+     <div>
+      <h5 class="font-bold mb-6 text-lg">Suporte Premium</h5>
+      <ul class="space-y-3 text-gray-400">
+       <li>📧 contato@travelguardpro.com</li>
+       <li>📱 (11) 99999-8888</li>
+       <li>🌐 Chat 24/7 disponível</li>
+       <li>🎯 Consultoria especializada</li>
+      </ul>
+     </div>
+    </div>
+    <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+     <p id="footer-copyright">© 2024 TravelGuard Pro. Todos os direitos reservados. | Empresa certificada e licenciada para seguros de viagem internacionais.</p>
+    </div>
+   </div>
+  </footer><!-- Modal -->
+  <div id="modalFormulario" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50 backdrop-blur-sm">
+   <div class="bg-white rounded-2xl p-8 max-w-lg w-full mx-4 shadow-2xl">
+    <div class="flex justify-between items-center mb-8">
+     <h3 class="text-3xl font-bold text-gray-900" id="tituloModal">Contratar Seguro Premium</h3><button onclick="fecharModal()" class="text-gray-400 hover:text-gray-600 text-3xl font-light">×</button>
+    </div>
+    <form onsubmit="processarContratacao(event)" class="space-y-6">
+     <div class="grid md:grid-cols-2 gap-6">
+      <div><label class="block text-gray-700 font-semibold mb-2">Nome Completo</label> <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required>
+      </div>
+      <div><label class="block text-gray-700 font-semibold mb-2">Email</label> <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required>
+      </div>
+     </div>
+     <div><label class="block text-gray-700 font-semibold mb-2">Telefone/WhatsApp</label> <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required>
+     </div>
+     <div><label class="block text-gray-700 font-semibold mb-2">Destino Principal</label> <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" placeholder="Ex: Europa, Ásia, América do Norte..." required>
+     </div>
+     <div class="grid grid-cols-2 gap-6">
+      <div><label class="block text-gray-700 font-semibold mb-2">Data de Partida</label> <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required>
+      </div>
+      <div><label class="block text-gray-700 font-semibold mb-2">Data de Retorno</label> <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200" required>
+      </div>
+     </div><button type="submit" class="w-full btn-primary text-white py-4 rounded-xl font-semibold text-lg shadow-lg"> Solicitar Cotação Premium </button>
+    </form>
+   </div>
+  </div>
+  <script>
         // Default configuration
         const defaultConfig = {
             // Header
@@ -1361,9 +1197,6 @@ Data/Hora: ${new Date().toLocaleString('pt-BR')}`;
 
         // Start the carousel
         startCarousel();
-    </script>                 
-                <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9990677a71545be8',t:'MTc2MjIyMDQzNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
-            </body>             
-        </html>         
-    </body>     
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99907b9060545be8',t:'MTc2MjIyMTI1OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
