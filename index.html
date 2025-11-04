@@ -186,7 +186,7 @@
        <ul class="text-left space-y-4 mb-8">
         <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Cobertura médica até <strong>R$ 200.000</strong></span></li>
         <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Bagagem extraviada <strong>R$ 5.000</strong></span></li>
-        <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Cobertura para gestantes</span></li>
+        <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Cobertura para esportes radicais</span></li>
         <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Concierge de viagem 24h</span></li>
         <li class="flex items-start space-x-3"><span class="text-green-500 mt-1">✓</span> <span class="text-gray-700">Repatriação sanitária ilimitada</span></li>
        </ul><button class="w-full bg-gradient-to-r from-purple-600 to-purple-800 text-white py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-purple-900 transition-all duration-300" onclick="abrirFormulario('elite')"> Contratar Elite </button>
@@ -453,6 +453,186 @@
         </div>
        </div>
       </div>
+     </div><div class="w-full flex-shrink-0">
+       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('novayork')"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Nova York, EUA" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-gray-600 via-gray-700 to-gray-800 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏙️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Nova York</div><div class=\'text-sm opacity-90\'>Estados Unidos</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute inset-0 bg-gray-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">Clique para explorar</span>
+         </div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div class="font-semibold">
+           Nova York
+          </div>
+          <div class="text-sm opacity-90">
+           Estados Unidos
+          </div>
+         </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('tailandia')"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Tailândia" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-orange-500 via-yellow-500 to-red-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏯</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Tailândia</div><div class=\'text-sm opacity-90\'>Sudeste Asiático</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute inset-0 bg-orange-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">Clique para explorar</span>
+         </div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div class="font-semibold">
+           Tailândia
+          </div>
+          <div class="text-sm opacity-90">
+           Sudeste Asiático
+          </div>
+         </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('australia')"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Austrália" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-red-500 via-orange-500 to-yellow-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🦘</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Austrália</div><div class=\'text-sm opacity-90\'>Oceania</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute inset-0 bg-red-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">Clique para explorar</span>
+         </div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div class="font-semibold">
+           Austrália
+          </div>
+          <div class="text-sm opacity-90">
+           Oceania
+          </div>
+         </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('marrocos')"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Marrocos" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-yellow-600 via-orange-600 to-red-600 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🕌</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Marrocos</div><div class=\'text-sm opacity-90\'>África</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute inset-0 bg-yellow-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">Clique para explorar</span>
+         </div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div class="font-semibold">
+           Marrocos
+          </div>
+          <div class="text-sm opacity-90">
+           África
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div><div class="w-full flex-shrink-0">
+       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('novayork')"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Nova York, EUA" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-gray-600 via-gray-700 to-gray-800 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏙️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Nova York</div><div class=\'text-sm opacity-90\'>Estados Unidos</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute inset-0 bg-gray-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">Clique para explorar</span>
+         </div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div class="font-semibold">
+           Nova York
+          </div>
+          <div class="text-sm opacity-90">
+           Estados Unidos
+          </div>
+         </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('tailandia')"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Tailândia" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-orange-500 via-yellow-500 to-red-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏯</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Tailândia</div><div class=\'text-sm opacity-90\'>Sudeste Asiático</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute inset-0 bg-orange-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">Clique para explorar</span>
+         </div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div class="font-semibold">
+           Tailândia
+          </div>
+          <div class="text-sm opacity-90">
+           Sudeste Asiático
+          </div>
+         </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('australia')"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Austrália" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-red-500 via-orange-500 to-yellow-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🦘</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Austrália</div><div class=\'text-sm opacity-90\'>Oceania</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute inset-0 bg-red-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">Clique para explorar</span>
+         </div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div class="font-semibold">
+           Austrália
+          </div>
+          <div class="text-sm opacity-90">
+           Oceania
+          </div>
+         </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('marrocos')"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Marrocos" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-yellow-600 via-orange-600 to-red-600 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🕌</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Marrocos</div><div class=\'text-sm opacity-90\'>África</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute inset-0 bg-yellow-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">Clique para explorar</span>
+         </div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div class="font-semibold">
+           Marrocos
+          </div>
+          <div class="text-sm opacity-90">
+           África
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div><div class="w-full flex-shrink-0">
+       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('novayork')"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Nova York, EUA" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-gray-600 via-gray-700 to-gray-800 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏙️</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Nova York</div><div class=\'text-sm opacity-90\'>Estados Unidos</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute inset-0 bg-gray-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">Clique para explorar</span>
+         </div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div class="font-semibold">
+           Nova York
+          </div>
+          <div class="text-sm opacity-90">
+           Estados Unidos
+          </div>
+         </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('tailandia')"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Tailândia" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-orange-500 via-yellow-500 to-red-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🏯</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Tailândia</div><div class=\'text-sm opacity-90\'>Sudeste Asiático</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute inset-0 bg-orange-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">Clique para explorar</span>
+         </div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div class="font-semibold">
+           Tailândia
+          </div>
+          <div class="text-sm opacity-90">
+           Sudeste Asiático
+          </div>
+         </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('australia')"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Austrália" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-red-500 via-orange-500 to-yellow-500 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🦘</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Austrália</div><div class=\'text-sm opacity-90\'>Oceania</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute inset-0 bg-red-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">Clique para explorar</span>
+         </div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div class="font-semibold">
+           Austrália
+          </div>
+          <div class="text-sm opacity-90">
+           Oceania
+          </div>
+         </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="abrirDestinoModal('marrocos')"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Marrocos" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'h-64 bg-gradient-to-br from-yellow-600 via-orange-600 to-red-600 flex items-center justify-center\'><span class=\'text-8xl opacity-80\'>🕌</span></div><div class=\'absolute bottom-4 left-4 text-white\'><div class=\'font-semibold\'>Marrocos</div><div class=\'text-sm opacity-90\'>África</div></div>';">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+         <div class="absolute inset-0 bg-yellow-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-semibold">Clique para explorar</span>
+         </div>
+         <div class="absolute bottom-4 left-4 text-white">
+          <div class="font-semibold">
+           Marrocos
+          </div>
+          <div class="text-sm opacity-90">
+           África
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
      </div><div class="flex justify-center mt-8 space-x-2"><button class="carousel-dot w-3 h-3 rounded-full bg-blue-600 transition-all duration-300" data-slide="0"></button> <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300" data-slide="1"></button> <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300" data-slide="2"></button>
      </div>
     </div>
@@ -512,7 +692,7 @@
    </div>
   </section><section id="cotacao" class="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white relative overflow-hidden">
    <div class="absolute inset-0 bg-black bg-opacity-20"></div>
-   <div class="max-w-4xl mx-auto px-6 relative z-10">
+   <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
     <div class="text-center mb-12">
      <h3 id="quote-title" class="text-5xl font-bold mb-6">Faça sua Cotação de Seguro Viagem</h3>
      <p id="quote-subtitle" class="text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">Preencha seus dados e em seguida você será direcionado para o simulador oficial da Porto Seguro. Processo 100% seguro e oficial.</p>
@@ -1198,14 +1378,35 @@
             }
         };
 
-        // Existing JavaScript functions
+        // Funções de controle de modal (mantidas)
         function abrirFormulario(plano) {
             document.getElementById('modalFormulario').classList.remove('hidden');
             document.getElementById('modalFormulario').classList.add('flex');
             document.getElementById('tituloModal').textContent = `Contratar Seguro ${plano.charAt(0).toUpperCase() + plano.slice(1)}`;
         }
 
-        // Funções para modal de destino
+        function fecharModal() {
+            document.getElementById('modalFormulario').classList.add('hidden');
+            document.getElementById('modalFormulario').classList.remove('flex');
+        }
+
+        function comprarGuia(guia) {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50';
+            modal.innerHTML = `
+                <div class="bg-white rounded-2xl p-8 max-w-md mx-4 text-center">
+                    <div class="text-6xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Redirecionando...</h3>
+                    <p class="text-gray-600 mb-6">Você será levado para a página de pagamento seguro do Guia. Após o pagamento, o download será liberado imediatamente!</p>
+                    <button onclick="this.parentElement.parentElement.remove()" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold">
+                        Fechar
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        // Funções para modal de destino (mantidas e atualizadas para usar novas funções)
         function abrirDestinoModal(destino) {
             const dados = destinosData[destino];
             if (!dados) {
@@ -1213,18 +1414,15 @@
                 return;
             }
 
-            // Preenche os dados do modal
             document.getElementById('modalDestinoTitulo').textContent = dados.titulo;
             document.getElementById('modalDestinoPais').textContent = dados.pais;
             document.getElementById('modalDestinoImagemPrincipal').src = dados.imagemPrincipal;
             document.getElementById('modalDestinoDescricao').textContent = dados.descricao;
             
-            // Preenche as 3 imagens da galeria (com fallback)
             document.getElementById('modalDestinoImagem1').src = dados.imagens[0] || dados.imagemPrincipal;
             document.getElementById('modalDestinoImagem2').src = dados.imagens[1] || dados.imagemPrincipal;
             document.getElementById('modalDestinoImagem3').src = dados.imagens[2] || dados.imagemPrincipal;
 
-            // Mostra o modal
             document.getElementById('modalDestino').classList.remove('hidden');
             document.getElementById('modalDestino').classList.add('flex');
         }
@@ -1239,7 +1437,7 @@
             document.getElementById('cotacao').scrollIntoView({behavior: 'smooth', block: 'start'});
         }
 
-        // Funções para modal de contato
+        // Funções para modal de contato (mantidas e atualizadas)
         function abrirContatoModal() {
             document.getElementById('modalContato').classList.remove('hidden');
             document.getElementById('modalContato').classList.add('flex');
@@ -1250,69 +1448,31 @@
             document.getElementById('modalContato').classList.remove('flex');
         }
 
-        // MUDANÇA 3: FUNÇÃO CENTRALIZADA PARA ENVIO AO MAILJET (BACKEND SIMULADO)
-        async function enviarParaMailjet(dados, assunto, emailCliente) {
-            const corpoEmail = `
-                Novo Contato/Lead - ${assunto}
-                =====================================
-                
-                DADOS DO CLIENTE:
-                • Nome: ${dados.nome || dados.nome_completo || 'N/A'}
-                • Email: ${dados.email}
-                • Telefone/WhatsApp: ${dados.whatsapp || dados.telefone || 'N/A'}
-                ${dados.destino ? `• Destino: ${dados.destino}` : ''}
-                ${dados.plano ? `• Plano Desejado: ${dados.plano}` : ''}
-                ${dados.partida ? `• Data de Partida: ${dados.partida}` : ''}
-                ${dados.retorno ? `• Data de Retorno: ${dados.retorno}` : ''}
-                ${dados.assunto ? `• Assunto: ${dados.assunto}` : ''}
-                ${dados.mensagem ? `• Mensagem: ${dados.mensagem}` : ''}
-                
-                =====================================
-                Enviado via Rota Inesquecível
-                Data/Hora: ${new Date().toLocaleString('pt-BR')}
-            `;
+        // --- INÍCIO DAS FUNÇÕES REESCRITAS PARA USAR O ENDPOINT SEGURO ---
 
-            console.log("--- SIMULANDO ENVIO MAILJET ---");
-            console.log(`Para: contato@honigseguros.com.br`);
-            console.log(`Assunto: ${assunto}`);
-            console.log(`Corpo: ${corpoEmail}`);
-            
-            // ⚠️ AQUI VOCÊ DEVE IMPLEMENTAR UM ENDPOINT SEGURO NO SEU SERVIDOR (BACKEND)
-            // QUE RECEBA ESSES DADOS E FAÇA A CHAMADA À API DO MAILJET USANDO AS CHAVES SECRETAS.
-            // Exemplo de como a requisição **DEVE SER FEITA EM UM BACKEND**:
-            /*
+        // Função Genérica de Chamada ao Backend Vercel (NOVA)
+        async function callVercelEndpoint(dados, endpoint = '/api/send-email') {
             try {
-                const response = await fetch('/api/mailjet-send', {
+                const response = await fetch(endpoint, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ 
-                        to: 'contato@honigseguros.com.br',
-                        subject: assunto,
-                        text: corpoEmail,
-                        html: corpoEmail.replace(/\n/g, '<br>'),
-                        fromEmail: emailCliente,
-                        fromName: dados.nome || 'Novo Cliente'
-                    })
+                    body: JSON.stringify(dados)
                 });
-                
-                if (response.ok) {
-                    console.log('Envio Mailjet SUCESSO via backend.');
-                    return true;
+
+                const data = await response.json();
+
+                if (response.ok && data.success) {
+                    return { success: true, message: data.message };
                 } else {
-                    console.error('Envio Mailjet FALHA no backend.');
-                    return false;
+                    return { success: false, message: data.message || 'Erro desconhecido ao enviar lead.' };
                 }
             } catch (error) {
-                console.error('Erro de rede ao tentar enviar email:', error);
-                return false;
+                console.error('Erro de rede/servidor:', error);
+                return { success: false, message: 'Erro de conexão. Verifique sua rede.' };
             }
-            */
-           
-            // SIMULAÇÃO DE RESPOSTA BEM SUCEDIDA para o frontend
-            return new Promise(resolve => setTimeout(() => resolve(true), 500));
         }
 
-        // MUDANÇA 3: NOVA FUNÇÃO - Cotação de Seguro
+        // Substituição 1: Cotação
         async function processarCotacao(event) {
             event.preventDefault();
             
@@ -1322,7 +1482,7 @@
                 nome: formData.get('nome'),
                 email: formData.get('email'),
                 destino: formData.get('destino'),
-                whatsapp: formData.get('whatsapp'),
+                telefone: formData.get('whatsapp'), // Mapeando whatsapp para telefone
                 partida: formData.get('partida'),
                 retorno: formData.get('retorno')
             };
@@ -1330,38 +1490,40 @@
             const button = form.querySelector('button[type="submit"]');
             button.disabled = true;
             button.innerHTML = '⏳ Processando e redirecionando...';
-
             document.getElementById('mensagem-redirecionamento').classList.remove("hidden");
 
-            // 1. Enviar email com Mailjet (via simulação de backend)
-            const assuntoEmail = 'Lead de Cotação - Seguro Viagem';
-            const envioSucesso = await enviarParaMailjet(dadosCliente, assuntoEmail, dadosCliente.email);
+            // 1. Enviar lead para o endpoint seguro no Vercel
+            const resultado = await callVercelEndpoint({
+                ...dadosCliente,
+                assunto: 'Lead de Cotação - Seguro Viagem',
+                detalhes: `Destino: ${dadosCliente.destino}, Partida: ${dadosCliente.partida}, Retorno: ${dadosCliente.retorno}`
+            });
 
-            // 2. Redirecionar
+            // 2. Redirecionar (independente do sucesso do e-mail)
             setTimeout(function() {
                 window.open("http://www.porto.vc/VIAGEM_S3048J_3446214654cd463993a623a117cbf311", "_blank");
                 
-                // Reset do formulário após redirecionamento
+                // Reset de UI
                 document.getElementById('mensagem-redirecionamento').classList.add("hidden");
                 button.disabled = false;
                 button.innerHTML = '🚀 GERAR COTAÇÃO OFICIAL PORTO SEGURO';
                 form.reset();
                 
-                if (envioSucesso) {
-                    mostrarMensagem('sucesso', 'Dados enviados! Você será redirecionado para a Porto Seguro em instantes.');
+                // Feedback
+                if (resultado.success) {
+                    mostrarMensagem('sucesso', 'Dados enviados e você será redirecionado para a Porto Seguro!');
                 } else {
-                    mostrarMensagem('alerta', 'Erro ao enviar dados do lead, mas você será redirecionado para a Porto Seguro.');
+                    mostrarMensagem('alerta', `⚠️ Erro ao salvar lead (${resultado.message}), mas o redirecionamento será feito.`);
                 }
             }, 2000);
         }
 
-        // MUDANÇA 3: NOVA FUNÇÃO - Contratação no Modal
+        // Substituição 2: Contratação no Modal
         async function processarContratacao(event) {
             event.preventDefault();
             
             const form = event.target;
             const formData = new FormData(form);
-            
             const planoDesejado = document.getElementById('tituloModal').textContent.replace('Contratar Seguro ', '');
             
             const dadosCliente = {
@@ -1370,32 +1532,36 @@
                 telefone: formData.get('telefone'),
                 destino: formData.get('destino'),
                 partida: formData.get('partida'),
-                retorno: formData.get('retorno'),
-                plano: planoDesejado
+                retorno: formData.get('retorno')
             };
             
+            // Configurações de UI
             const button = form.querySelector('button[type="submit"]');
             button.disabled = true;
             button.innerHTML = '⏳ Solicitando Cotação...';
 
-            // 1. Enviar email com Mailjet (via simulação de backend)
-            const assuntoEmail = `Lead de Contratação - ${planoDesejado}`;
-            const envioSucesso = await enviarParaMailjet(dadosCliente, assuntoEmail, dadosCliente.email);
+            // 1. Enviar lead para o endpoint seguro no Vercel
+            const resultado = await callVercelEndpoint({
+                ...dadosCliente,
+                assunto: `Lead de Contratação - ${planoDesejado}`,
+                detalhes: `Plano: ${planoDesejado}, Destino: ${dadosCliente.destino}, Partida: ${dadosCliente.partida}, Retorno: ${dadosCliente.retorno}`
+            });
 
-            // 2. Mostrar modal de sucesso
+            // Reset de UI
             button.disabled = false;
             button.innerHTML = 'Solicitar Cotação Premium';
             form.reset();
             fecharModal();
             
-            if (envioSucesso) {
-                mostrarMensagem('sucesso', '🎉 Solicitação Enviada! Nossa equipe premium entrará em contato em até 2 horas com sua cotação personalizada e condições especiais.');
+            // Feedback
+            if (resultado.success) {
+                mostrarMensagem('sucesso', '🎉 Solicitação Enviada! Nossa equipe premium entrará em contato em até 2 horas com sua cotação personalizada.');
             } else {
-                mostrarMensagem('erro', '❌ Erro ao enviar solicitação. Por favor, tente novamente ou entre em contato pelo WhatsApp.');
+                mostrarMensagem('erro', `❌ Erro ao enviar solicitação (${resultado.message}). Por favor, use o WhatsApp.`);
             }
         }
 
-        // MUDANÇA 3: NOVA FUNÇÃO - Fale com Especialista
+        // Substituição 3: Contato com Especialista
         async function enviarMensagemContato(event) {
             event.preventDefault();
             
@@ -1409,16 +1575,18 @@
                 mensagem: formData.get('mensagem')
             };
             
+            // Configurações de UI
             const button = form.querySelector('button[type="submit"]');
-            
-            // Mostra mensagem de envio e desabilita
             document.getElementById('mensagemEnvioContato').classList.remove('hidden');
             button.disabled = true;
             button.innerHTML = '⏳ Enviando...';
             
-            // 1. Enviar email com Mailjet (via simulação de backend)
-            const assuntoEmail = `Mensagem de Contato: ${dadosContato.assunto}`;
-            const envioSucesso = await enviarParaMailjet(dadosContato, assuntoEmail, dadosContato.email);
+            // 1. Enviar lead para o endpoint seguro no Vercel
+            const resultado = await callVercelEndpoint({
+                ...dadosContato,
+                assunto: `Mensagem de Contato: ${dadosContato.assunto}`,
+                detalhes: `Mensagem: ${dadosContato.mensagem}`
+            });
 
             // 2. Mostrar feedback e resetar
             document.getElementById('mensagemEnvioContato').classList.add('hidden');
@@ -1426,15 +1594,17 @@
             button.innerHTML = '📧 Enviar Mensagem';
             form.reset();
             
-            if (envioSucesso) {
+            if (resultado.success) {
                 mostrarMensagem('sucesso', '✅ Mensagem Enviada! Recebemos sua mensagem e entraremos em contato em até 2 horas. Obrigado!');
                 fecharContatoModal();
             } else {
-                mostrarMensagem('erro', '❌ Erro ao enviar mensagem. Por favor, tente novamente ou use o WhatsApp.');
+                mostrarMensagem('erro', `❌ Erro ao enviar mensagem (${resultado.message}). Por favor, tente novamente ou use o WhatsApp.`);
             }
         }
 
-        // Função Genérica para mostrar Modal de Feedback
+        // --- FIM DAS FUNÇÕES REESCRITAS ---
+
+        // Função Genérica para mostrar Modal de Feedback (mantida)
         function mostrarMensagem(tipo, texto) {
             const icones = {
                 sucesso: { emoji: '✅', cor: 'bg-green-100 text-green-800' },
@@ -1458,27 +1628,6 @@
             document.body.appendChild(modal);
         }
 
-        // Funções de fechar/comprar (mantidas)
-        function fecharModal() {
-            document.getElementById('modalFormulario').classList.add('hidden');
-            document.getElementById('modalFormulario').classList.remove('flex');
-        }
-
-        function comprarGuia(guia) {
-            const modal = document.createElement('div');
-            modal.className = 'fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50';
-            modal.innerHTML = `
-                <div class="bg-white rounded-2xl p-8 max-w-md mx-4 text-center">
-                    <div class="text-6xl mb-4">🚀</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Redirecionando...</h3>
-                    <p class="text-gray-600 mb-6">Você será levado para a página de pagamento seguro do Guia. Após o pagamento, o download será liberado imediatamente!</p>
-                    <button onclick="this.parentElement.parentElement.remove()" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold">
-                        Fechar
-                    </button>
-                </div>
-            `;
-            document.body.appendChild(modal);
-        }
 
         // Smooth scroll (mantido)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
