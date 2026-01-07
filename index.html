@@ -1,3 +1,8 @@
+<!-- ===================== AJUSTES IMPORTANTES ===================== -->
+<!-- 1) Seguros Premium: cards com mesma altura -->
+<!-- 2) Destinos Inspiradores: carrossel horizontal com 4 colunas -->
+<!-- =============================================================== -->
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -5,103 +10,91 @@
   <title>Rota Inesquecível</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-    .hover-lift { transition: all .3s ease }
-    .hover-lift:hover { transform: translateY(-6px); box-shadow: 0 15px 30px rgba(0,0,0,.15) }
-    .hero {
-      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-      url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1920&q=80') center/cover;
-    }
-  </style>
 </head>
 
 <body class="bg-gray-50">
 
-<!-- HEADER -->
-<header class="fixed top-0 w-full bg-white shadow z-50">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <span class="text-2xl font-bold">Rota Inesquecível</span>
-    <nav class="space-x-6 hidden md:block">
-      <a href="#seguros">Seguros</a>
-      <a href="#guias">Guias</a>
-      <a href="#destinos">Destinos</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero pt-32 pb-28 text-center text-white">
-  <h1 class="text-5xl font-bold mb-6">Viaje com Segurança e Tranquilidade</h1>
-  <p class="text-xl max-w-2xl mx-auto mb-8">
-    Seguros completos, guias premium e destinos inesquecíveis para sua viagem perfeita.
-  </p>
-  <button class="bg-blue-600 px-8 py-4 rounded-lg font-semibold">
-    Começar Agora
-  </button>
-</section>
-
-<!-- SEGUROS PREMIUM -->
-<section id="seguros" class="py-20">
+<!-- ===================== SEGUROS PREMIUM ===================== -->
+<section id="seguros" class="py-20 bg-gray-50">
   <div class="container mx-auto px-6">
     <h2 class="text-4xl font-bold text-center mb-12">Seguros Premium</h2>
 
-    <div class="flex gap-6 overflow-x-auto scroll-smooth pb-6">
+    <div class="grid md:grid-cols-4 gap-6 items-stretch">
 
       <!-- CARD -->
-      <div class="min-w-[25%] bg-white rounded-2xl p-8 shadow hover-lift flex flex-col">
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift flex flex-col h-full">
         <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=400&q=80"
              class="h-40 w-full object-cover rounded mb-4">
+
         <h3 class="text-2xl font-bold mb-2">Plano Cruzeiro</h3>
-        <div class="text-green-600 text-2xl font-bold mb-4">R$ 60,00</div>
+        <div class="text-2xl font-bold text-green-600 mb-4">R$ 60,00</div>
+
+        <ul class="text-sm space-y-2 mb-6">
+          <li>✔ Despesas médicas</li>
+          <li>✔ Despesas farmacêuticas</li>
+          <li>✔ Extravio de bagagem</li>
+          <li>✔ Cancelamento</li>
+        </ul>
+
+        <button class="mt-auto bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+          Contratar Plano
+        </button>
+      </div>
+
+      <!-- DUPLICA O PADRÃO PARA OS DEMAIS PLANOS -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift flex flex-col h-full">
+        <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=400&q=80"
+             class="h-40 w-full object-cover rounded mb-4">
+
+        <h3 class="text-2xl font-bold mb-2">Brasil Básico</h3>
+        <div class="text-2xl font-bold text-green-600 mb-4">R$ 40,00</div>
+
         <ul class="text-sm space-y-2 mb-6">
           <li>✔ Despesas médicas</li>
           <li>✔ Farmácia</li>
           <li>✔ Bagagem</li>
           <li>✔ Cancelamento</li>
         </ul>
-        <button class="mt-auto bg-blue-600 text-white py-3 rounded-lg font-semibold">
+
+        <button class="mt-auto bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
           Contratar Plano
         </button>
       </div>
 
-      <div class="min-w-[25%] bg-white rounded-2xl p-8 shadow hover-lift flex flex-col">
-        <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=400&q=80"
-             class="h-40 w-full object-cover rounded mb-4">
-        <h3 class="text-2xl font-bold mb-2">Brasil Básico</h3>
-        <div class="text-green-600 text-2xl font-bold mb-4">R$ 40,00</div>
-        <ul class="text-sm space-y-2 mb-6">
-          <li>✔ Médicas</li><li>✔ Farmácia</li><li>✔ Bagagem</li><li>✔ Cancelamento</li>
-        </ul>
-        <button class="mt-auto bg-blue-600 text-white py-3 rounded-lg font-semibold">
-          Contratar Plano
-        </button>
-      </div>
-
-      <div class="min-w-[25%] bg-white rounded-2xl p-8 shadow hover-lift flex flex-col">
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift flex flex-col h-full">
         <img src="https://images.unsplash.com/photo-1516815231560-8f41ec531527?w=400&q=80"
              class="h-40 w-full object-cover rounded mb-4">
+
         <h3 class="text-2xl font-bold mb-2">Brasil Intermediário</h3>
-        <div class="text-green-600 text-2xl font-bold mb-4">R$ 50,00</div>
+        <div class="text-2xl font-bold text-green-600 mb-4">R$ 50,00</div>
+
         <ul class="text-sm space-y-2 mb-6">
-          <li>✔ Médicas</li><li>✔ Farmácia</li><li>✔ Bagagem</li><li>✔ Cancelamento</li>
+          <li>✔ Médicas</li>
+          <li>✔ Farmácia</li>
+          <li>✔ Bagagem</li>
+          <li>✔ Cancelamento</li>
         </ul>
-        <button class="mt-auto bg-blue-600 text-white py-3 rounded-lg font-semibold">
+
+        <button class="mt-auto bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
           Contratar Plano
         </button>
       </div>
 
-      <div class="min-w-[25%] bg-white rounded-2xl p-8 shadow hover-lift flex flex-col">
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift flex flex-col h-full">
         <img src="https://images.unsplash.com/photo-1446941611757-91d2c3bd3d45?w=400&q=80"
              class="h-40 w-full object-cover rounded mb-4">
+
         <h3 class="text-2xl font-bold mb-2">América Latina</h3>
-        <div class="text-green-600 text-2xl font-bold mb-4">R$ 60,00</div>
+        <div class="text-2xl font-bold text-green-600 mb-4">R$ 60,00</div>
+
         <ul class="text-sm space-y-2 mb-6">
-          <li>✔ Médicas</li><li>✔ Farmácia</li><li>✔ Bagagem</li><li>✔ Cancelamento</li>
+          <li>✔ Médicas</li>
+          <li>✔ Farmácia</li>
+          <li>✔ Bagagem</li>
+          <li>✔ Cancelamento</li>
         </ul>
-        <button class="mt-auto bg-blue-600 text-white py-3 rounded-lg font-semibold">
+
+        <button class="mt-auto bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
           Contratar Plano
         </button>
       </div>
@@ -110,76 +103,62 @@
   </div>
 </section>
 
-<!-- GUIAS -->
-<section id="guias" class="py-20 bg-white">
-  <div class="container mx-auto px-6">
-    <h2 class="text-4xl font-bold text-center mb-12">Guias Premium</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-gray-100 p-8 rounded-xl">Guia Europa</div>
-      <div class="bg-gray-100 p-8 rounded-xl">Guia América</div>
-      <div class="bg-gray-100 p-8 rounded-xl">Guia Ásia</div>
-    </div>
-  </div>
-</section>
-
-<!-- DESTINOS INSPIRADORES -->
-<section id="destinos" class="py-20">
+<!-- ===================== DESTINOS INSPIRADORES ===================== -->
+<section class="py-20 bg-white">
   <div class="container mx-auto px-6">
     <h2 class="text-4xl font-bold text-center mb-12">Destinos Inspiradores</h2>
 
-    <div class="flex gap-6 overflow-x-auto scroll-smooth">
+    <!-- CARROSSEL HORIZONTAL -->
+    <div class="flex gap-6 overflow-x-auto scroll-smooth pb-4">
 
-      <div class="min-w-[25%] h-64 relative rounded-xl overflow-hidden">
+      <!-- CARD -->
+      <div class="min-w-[25%] relative h-64 rounded-xl overflow-hidden">
         <img src="https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=600&q=80"
              class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-black/60 flex items-end p-6">
-          <h3 class="text-white text-xl font-bold">Santorini</h3>
+        <div class="absolute inset-0 bg-black/50 flex items-end p-6">
+          <div>
+            <h3 class="text-white text-xl font-bold">Santorini</h3>
+            <p class="text-white/80">Grécia</p>
+          </div>
         </div>
       </div>
 
-      <div class="min-w-[25%] h-64 relative rounded-xl overflow-hidden">
+      <div class="min-w-[25%] relative h-64 rounded-xl overflow-hidden">
         <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=80"
              class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-black/60 flex items-end p-6">
-          <h3 class="text-white text-xl font-bold">Bali</h3>
+        <div class="absolute inset-0 bg-black/50 flex items-end p-6">
+          <div>
+            <h3 class="text-white text-xl font-bold">Bali</h3>
+            <p class="text-white/80">Indonésia</p>
+          </div>
         </div>
       </div>
 
-      <div class="min-w-[25%] h-64 relative rounded-xl overflow-hidden">
+      <div class="min-w-[25%] relative h-64 rounded-xl overflow-hidden">
         <img src="https://images.unsplash.com/photo-1591444022447-460a8e1f3ce0?w=600&q=80"
              class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-black/60 flex items-end p-6">
-          <h3 class="text-white text-xl font-bold">Patagônia</h3>
+        <div class="absolute inset-0 bg-black/50 flex items-end p-6">
+          <div>
+            <h3 class="text-white text-xl font-bold">Patagônia</h3>
+            <p class="text-white/80">Chile</p>
+          </div>
         </div>
       </div>
 
-      <div class="min-w-[25%] h-64 relative rounded-xl overflow-hidden">
+      <div class="min-w-[25%] relative h-64 rounded-xl overflow-hidden">
         <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80"
              class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-black/60 flex items-end p-6">
-          <h3 class="text-white text-xl font-bold">Kyoto</h3>
+        <div class="absolute inset-0 bg-black/50 flex items-end p-6">
+          <div>
+            <h3 class="text-white text-xl font-bold">Kyoto</h3>
+            <p class="text-white/80">Japão</p>
+          </div>
         </div>
       </div>
 
     </div>
   </div>
 </section>
-
-<!-- CONTATO -->
-<section id="contato" class="py-20 bg-white">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-4xl font-bold mb-6">Entre em Contato</h2>
-    <p class="mb-8">Fale com nossos especialistas</p>
-    <button class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold">
-      Falar no WhatsApp
-    </button>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-gray-900 text-white py-8 text-center">
-  © 2026 Rota Inesquecível. Todos os direitos reservados.
-</footer>
 
 </body>
 </html>
