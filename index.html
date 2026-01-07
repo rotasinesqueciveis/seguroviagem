@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rota Inesquecível - Seguros e Guias Premium</title>
+  <title>Rota Inesquecível - Seguros e Guias de Viagem Premium</title>
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -18,7 +18,7 @@
   <style>
     body { font-family: 'Inter', sans-serif; }
 
-    /* HERO */
+    /* HERO BACKGROUND */
     .hero-bg::before{
       content:"";
       position:absolute;
@@ -35,41 +35,49 @@
     }
 
     /* GLASS EFFECT */
-    .glass-btn{
-      background:rgba(255,255,255,.2);
-      backdrop-filter:blur(12px);
-      -webkit-backdrop-filter:blur(12px);
-      border:1px solid rgba(255,255,255,.35);
+    .glass{
+      background: rgba(255,255,255,0.18);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.35);
     }
-
-    /* SWIPER */
-    .swiper-slide{ height:auto; }
   </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
 
 <!-- HEADER -->
-<header class="fixed w-full top-0 z-50 bg-white/70 backdrop-blur-md shadow">
+<header class="fixed top-0 w-full z-50 glass shadow">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
     <h1 class="text-2xl font-bold">Rota Inesquecível</h1>
     <nav class="hidden md:flex gap-8 font-medium">
       <a href="#seguros">Seguros</a>
+      <a href="#guias">Guias</a>
       <a href="#destinos">Destinos</a>
+      <a href="#cotacao">Cotação</a>
       <a href="#contato">Contato</a>
     </nav>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="hero-bg relative pt-40 pb-32 text-white">
-  <div class="max-w-7xl mx-auto px-6 text-center">
+<section class="hero-bg relative pt-40 pb-32 text-white text-center">
+  <div class="max-w-5xl mx-auto px-6">
     <h2 class="text-4xl md:text-6xl font-extrabold mb-6">Viaje com tranquilidade absoluta</h2>
-    <p class="text-xl max-w-2xl mx-auto mb-10">Seguros premium e destinos inesquecíveis para quem exige o melhor.</p>
+    <p class="text-xl mb-10">Seguros premium, guias exclusivos e destinos inesquecíveis.</p>
+    <a href="#guias" class="inline-block px-10 py-4 rounded-xl font-semibold text-lg glass hover:bg-white/30 transition">Ver Guias Exclusivos</a>
+  </div>
+</section>
 
-    <a href="#guias" class="inline-block px-10 py-4 rounded-xl font-semibold text-lg glass-btn hover:bg-white/30 transition">
-      Ver Guias Exclusivos
-    </a>
+<!-- GUIAS PREMIUM -->
+<section id="guias" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-14">Guias de Viagem Premium</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6 rounded-2xl shadow bg-gray-50"><h3 class="font-bold mb-2">Europa Essencial</h3><p>Dicas exclusivas, roteiros e experiências únicas.</p></div>
+      <div class="p-6 rounded-2xl shadow bg-gray-50"><h3 class="font-bold mb-2">Américas</h3><p>Destinos icônicos com planejamento inteligente.</p></div>
+      <div class="p-6 rounded-2xl shadow bg-gray-50"><h3 class="font-bold mb-2">Ásia & Oceania</h3><p>Cultura, aventura e luxo em equilíbrio.</p></div>
+    </div>
   </div>
 </section>
 
@@ -77,34 +85,15 @@
 <section id="seguros" class="py-24">
   <div class="max-w-7xl mx-auto px-6">
     <h2 class="text-3xl font-bold text-center mb-14">Seguros Premium</h2>
-
     <div class="swiper segurosSwiper">
       <div class="swiper-wrapper">
-
-        <!-- PLANO -->
-        <div class="swiper-slide">
-          <div class="bg-white rounded-2xl p-6 shadow h-full">
-            <h3 class="font-bold text-xl mb-3">Plano Cruzeiro</h3>
-            <ul class="text-sm space-y-1 mb-4">
-              <li>✔ Despesas médicas e odontológicas</li>
-              <li>✔ Despesas farmacêuticas</li>
-              <li>✔ Extravio de bagagem</li>
-              <li>✔ Cancelamento de viagem</li>
-            </ul>
-            <p class="font-semibold">Valor: a partir de R$ 60,00</p>
-          </div>
-        </div>
-
-        <div class="swiper-slide"><div class="bg-white rounded-2xl p-6 shadow h-full"><h3 class="font-bold text-xl mb-3">Brasil Básico</h3><ul class="text-sm space-y-1 mb-4"><li>✔ Despesas médicas</li><li>✔ Farmácia</li><li>✔ Bagagem</li><li>✔ Cancelamento</li></ul><p class="font-semibold">A partir de R$ 40,00</p></div></div>
-        <div class="swiper-slide"><div class="bg-white rounded-2xl p-6 shadow h-full"><h3 class="font-bold text-xl mb-3">Brasil Intermediário</h3><ul class="text-sm space-y-1 mb-4"><li>✔ Despesas médicas</li><li>✔ Farmácia</li><li>✔ Bagagem</li><li>✔ Cancelamento</li></ul><p class="font-semibold">A partir de R$ 50,00</p></div></div>
-        <div class="swiper-slide"><div class="bg-white rounded-2xl p-6 shadow h-full"><h3 class="font-bold text-xl mb-3">América Latina</h3><ul class="text-sm space-y-1 mb-4"><li>✔ Despesas médicas</li><li>✔ Farmácia</li><li>✔ Bagagem</li><li>✔ Cancelamento</li></ul><p class="font-semibold">A partir de R$ 60,00</p></div></div>
-        <div class="swiper-slide"><div class="bg-white rounded-2xl p-6 shadow h-full"><h3 class="font-bold text-xl mb-3">Europa Básico</h3><ul class="text-sm space-y-1 mb-4"><li>✔ Despesas médicas</li><li>✔ Farmácia</li><li>✔ Bagagem</li><li>✔ Cancelamento</li></ul><p class="font-semibold">R$ 30,00 / dia*</p></div></div>
-        <div class="swiper-slide"><div class="bg-white rounded-2xl p-6 shadow h-full"><h3 class="font-bold text-xl mb-3">Mundo Básico</h3><ul class="text-sm space-y-1 mb-4"><li>✔ Despesas médicas</li><li>✔ Farmácia</li><li>✔ Bagagem</li><li>✔ Cancelamento</li></ul><p class="font-semibold">R$ 45,00 / dia*</p></div></div>
-
+        <div class="swiper-slide"><div class="bg-white p-6 rounded-2xl shadow h-full"><h3 class="font-bold">Plano Cruzeiro</h3><p class="mt-2">A partir de R$ 60,00</p></div></div>
+        <div class="swiper-slide"><div class="bg-white p-6 rounded-2xl shadow h-full"><h3 class="font-bold">Brasil Básico</h3><p class="mt-2">A partir de R$ 40,00</p></div></div>
+        <div class="swiper-slide"><div class="bg-white p-6 rounded-2xl shadow h-full"><h3 class="font-bold">Brasil Intermediário</h3><p class="mt-2">A partir de R$ 50,00</p></div></div>
+        <div class="swiper-slide"><div class="bg-white p-6 rounded-2xl shadow h-full"><h3 class="font-bold">Europa Básico</h3><p class="mt-2">R$ 30,00/dia</p></div></div>
+        <div class="swiper-slide"><div class="bg-white p-6 rounded-2xl shadow h-full"><h3 class="font-bold">Mundo Básico</h3><p class="mt-2">R$ 45,00/dia</p></div></div>
       </div>
     </div>
-
-    <p class="text-xs text-center mt-6 text-gray-500">* Valores estimados para viagem de 7 dias, 1 passageiro até 70 anos. Sujeitos a variação.</p>
   </div>
 </section>
 
@@ -112,14 +101,13 @@
 <section class="bg-white py-24">
   <div class="max-w-7xl mx-auto px-6">
     <h2 class="text-3xl font-bold text-center mb-14">Coberturas que fazem a diferença na sua viagem</h2>
-
     <div class="grid grid-cols-2 md:grid-cols-6 gap-8 text-center">
-      <div>🏥<h4 class="font-semibold mt-2">Despesas Médicas</h4></div>
-      <div>💊<h4 class="font-semibold mt-2">Farmacêuticas</h4></div>
-      <div>✈️<h4 class="font-semibold mt-2">Remarcação</h4></div>
-      <div>🧳<h4 class="font-semibold mt-2">Bagagem</h4></div>
-      <div>👨‍👩‍👧<h4 class="font-semibold mt-2">Acompanhantes</h4></div>
-      <div>🏄‍♂️<h4 class="font-semibold mt-2">Esportes Radicais</h4></div>
+      <div>🏥<p class="mt-2 font-semibold">Despesas Médicas</p></div>
+      <div>💊<p class="mt-2 font-semibold">Farmácia</p></div>
+      <div>✈️<p class="mt-2 font-semibold">Remarcação</p></div>
+      <div>🧳<p class="mt-2 font-semibold">Bagagem</p></div>
+      <div>👨‍👩‍👧<p class="mt-2 font-semibold">Acompanhantes</p></div>
+      <div>🏄‍♂️<p class="mt-2 font-semibold">Esportes</p></div>
     </div>
   </div>
 </section>
@@ -128,38 +116,39 @@
 <section id="destinos" class="py-24 bg-gray-100">
   <div class="max-w-7xl mx-auto px-6">
     <h2 class="text-3xl font-bold text-center mb-14">Destinos Inspiradores</h2>
-
     <div class="swiper destinosSwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img class="rounded-xl" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"></div>
         <div class="swiper-slide"><img class="rounded-xl" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80"></div>
         <div class="swiper-slide"><img class="rounded-xl" src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=80"></div>
         <div class="swiper-slide"><img class="rounded-xl" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=80"></div>
-        <div class="swiper-slide"><img class="rounded-xl" src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=800&q=80"></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer id="contato" class="bg-slate-900 text-white py-10 text-center">
-  <p>© 2024 Rota Inesquecível. Todos os direitos reservados.</p>
-</footer>
+<!-- COTAÇÃO -->
+<section id="cotacao" class="py-24 bg-white">
+  <div class="max-w-xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-8">Solicite sua Cotação</h2>
+    <form class="space-y-4">
+      <input class="w-full p-3 border rounded-lg" placeholder="Nome completo" />
+      <input class="w-full p-3 border rounded-lg" placeholder="Email" />
+      <input class="w-full p-3 border rounded-lg" placeholder="Destino" />
+      <button class="w-full py-3 rounded-lg bg-blue-600 text-white font-semibold">Solicitar Cotação</button>
+    </form>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="py-16 bg-slate-900 text-white text-center">
+  <p class="mb-2">contato@rota-inesquecivel.com</p>
+  <p>© 2024 Rota Inesquecível</p>
+</section>
 
 <script>
-  new Swiper('.segurosSwiper',{
-    slidesPerView:4,
-    spaceBetween:24,
-    breakpoints:{0:{slidesPerView:1},640:{slidesPerView:2},1024:{slidesPerView:4}}
-  });
-
-  new Swiper('.destinosSwiper',{
-    slidesPerView:4,
-    spaceBetween:24,
-    loop:true,
-    autoplay:{delay:3000},
-    breakpoints:{0:{slidesPerView:1},640:{slidesPerView:2},1024:{slidesPerView:4}}
-  });
+  new Swiper('.segurosSwiper',{slidesPerView:4,spaceBetween:24,breakpoints:{0:{slidesPerView:1},640:{slidesPerView:2},1024:{slidesPerView:4}}});
+  new Swiper('.destinosSwiper',{slidesPerView:4,spaceBetween:24,loop:true,autoplay:{delay:3000},breakpoints:{0:{slidesPerView:1},640:{slidesPerView:2},1024:{slidesPerView:4}}});
 </script>
 
 </body>
