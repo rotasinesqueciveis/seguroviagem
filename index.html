@@ -14,11 +14,10 @@
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1920&q=80');
             background-size: cover; background-position: center; background-attachment: fixed; 
         }
-        .glass-effect { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
+        .modal-backdrop { background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(5px); }
         .carousel-slide, .carrossel-seguros-slide { display: none; }
         .carousel-slide.active, .carrossel-seguros-slide.active { display: grid; }
         .carrossel-seguros-slide.active { display: block; }
-        .modal-backdrop { background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(5px); }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .fade-in { animation: fadeIn 0.6s ease-out; }
     </style>
@@ -32,10 +31,10 @@
                 <span class="text-2xl font-bold text-gray-800">Rota Inesquecível</span>
             </div>
             <div class="hidden md:flex space-x-8">
-                <a href="#seguros" class="text-gray-700 hover:text-blue-600 font-medium">Seguros</a>
-                <a href="#guias" class="text-gray-700 hover:text-blue-600 font-medium">Guias Premium</a>
-                <a href="#cotacao" class="text-gray-700 hover:text-blue-600 font-medium">Cotação</a>
-                <a href="#contato" class="text-gray-700 hover:text-blue-600 font-medium">Contato</a>
+                <a href="#seguros" class="text-gray-700 hover:text-blue-600 font-medium transition">Seguros</a>
+                <a href="#guias" class="text-gray-700 hover:text-blue-600 font-medium transition">Guias Premium</a>
+                <a href="#cotacao" class="text-gray-700 hover:text-blue-600 font-medium transition">Cotação</a>
+                <a href="#contato" class="text-gray-700 hover:text-blue-600 font-medium transition">Contato</a>
             </div>
             <button onclick="document.getElementById('cotacao').scrollIntoView({behavior: 'smooth'})" class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">Começar Agora</button>
         </nav>
@@ -44,47 +43,10 @@
     <section class="hero-bg h-full w-full flex items-center justify-center text-white pt-20">
         <div class="container mx-auto px-6 py-20 text-center">
             <h1 class="text-5xl md:text-7xl font-bold mb-6 fade-in">Viaje com <span class="text-blue-300">Segurança</span> e <span class="text-blue-300">Expertise</span></h1>
-            <p class="text-xl md:text-2xl mb-12 text-gray-200 max-w-3xl mx-auto fade-in">Proteção completa para suas viagens e roteiros exclusivos pelos destinos mais incríveis do mundo</p>
+            <p class="text-xl md:text-2xl mb-12 text-gray-200 max-w-3xl mx-auto fade-in">Proteção completa e roteiros exclusivos pelos destinos mais incríveis do mundo.</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center fade-in">
                 <button onclick="document.getElementById('seguros').scrollIntoView({behavior: 'smooth'})" class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover-lift">Explorar Seguros Premium</button>
-                <button onclick="document.getElementById('guias').scrollIntoView({behavior: 'smooth'})" class="glass-effect text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 hover-lift">Ver Guias Exclusivos</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="seguros" class="py-20 bg-gray-50 w-full">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Seguros Premium</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Assistência 24 horas e cobertura completa.</p>
-            </div>
-            <div class="relative max-w-7xl mx-auto">
-                <div id="carrosselSeguros" class="relative overflow-hidden">
-                    <div class="carrossel-seguros-slide active">
-                        <div class="grid md:grid-cols-4 gap-6">
-                            <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
-                                <h3 class="text-2xl font-bold mb-2">Plano Cruzeiro</h3>
-                                <div class="text-2xl font-bold text-green-600 mb-6">R$ 60,00</div>
-                                <button onclick="abrirModalSeguro('Plano Cruzeiro')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold">Contratar Plano</button>
-                            </div>
-                            <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
-                                <h3 class="text-2xl font-bold mb-2">Brasil Básico</h3>
-                                <div class="text-2xl font-bold text-green-600 mb-6">R$ 40,00</div>
-                                <button onclick="abrirModalSeguro('Brasil Básico')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold">Contratar Plano</button>
-                            </div>
-                            <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift border-4 border-blue-600">
-                                <h3 class="text-2xl font-bold mb-2">Europa Básico</h3>
-                                <div class="text-2xl font-bold text-green-600 mb-6">R$ 30,00/dia</div>
-                                <button onclick="abrirModalSeguro('Europa Básico')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold">Contratar Plano</button>
-                            </div>
-                            <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
-                                <h3 class="text-2xl font-bold mb-2">Mundo Básico</h3>
-                                <div class="text-2xl font-bold text-green-600 mb-6">R$ 45,00/dia</div>
-                                <button onclick="abrirModalSeguro('Mundo Básico')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold">Contratar Plano</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <button onclick="document.getElementById('guias').scrollIntoView({behavior: 'smooth'})" class="bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 hover-lift">Ver Guias Exclusivos</button>
             </div>
         </div>
     </section>
@@ -93,39 +55,60 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Faça sua Cotação de Seguro Viagem</h2>
-                <p class="text-xl text-blue-100 max-w-2xl mx-auto">Processo 100% seguro e oficial.</p>
+                <p class="text-xl text-blue-100 max-w-2xl mx-auto">Receba uma proposta personalizada em minutos.</p>
             </div>
             <form id="formCotacao" class="max-w-4xl mx-auto bg-white rounded-2xl p-8 text-gray-800">
                 <div class="grid md:grid-cols-2 gap-6">
-                    <input type="text" name="Nome Completo" placeholder="Nome Completo *" required class="w-full px-4 py-3 rounded-lg border border-gray-300">
-                    <input type="email" name="Email" placeholder="Email *" required class="w-full px-4 py-3 rounded-lg border border-gray-300">
-                    <input type="text" name="Destino" placeholder="Destino *" required class="w-full px-4 py-3 rounded-lg border border-gray-300">
-                    <input type="tel" name="WhatsApp" placeholder="WhatsApp *" required class="w-full px-4 py-3 rounded-lg border border-gray-300">
-                    <input type="date" name="Data de Partida" required class="w-full px-4 py-3 rounded-lg border border-gray-300">
-                    <input type="date" name="Data de Retorno" required class="w-full px-4 py-3 rounded-lg border border-gray-300">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Nome Completo *</label>
+                        <input type="text" name="nome" required class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none focus:border-blue-600">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Email *</label>
+                        <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none focus:border-blue-600">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Destino *</label>
+                        <input type="text" name="destino" required class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none focus:border-blue-600">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">WhatsApp *</label>
+                        <input type="tel" name="whatsapp" required class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none focus:border-blue-600">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Data de Partida *</label>
+                        <input type="date" name="partida" required class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none focus:border-blue-600">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Data de Retorno *</label>
+                        <input type="date" name="retorno" required class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none focus:border-blue-600">
+                    </div>
                 </div>
-                <button type="submit" class="w-full mt-8 bg-blue-600 text-white py-4 rounded-lg font-bold hover:bg-blue-700 transition">🚀 SOLICITAR COTAÇÃO PERSONALIZADA</button>
+                <button type="submit" class="w-full mt-8 bg-blue-600 text-white py-4 rounded-lg text-lg font-bold hover:bg-blue-700 transition hover-lift">
+                    🚀 SOLICITAR COTAÇÃO PERSONALIZADA
+                </button>
             </form>
         </div>
     </section>
 
-    <div id="modalSeguro" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop">
+    <div id="modalContato" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop">
         <div class="bg-white rounded-2xl max-w-2xl w-full p-8 fade-in">
             <div class="flex justify-between items-start mb-6">
-                <h3 id="modalSeguroTitulo" class="text-3xl font-bold text-gray-800">Contratar Seguro</h3>
-                <button onclick="fecharModal('modalSeguro')" class="text-gray-500 text-3xl">×</button>
+                <h3 class="text-3xl font-bold text-gray-800">Falar com Especialista</h3>
+                <button onclick="fecharModal('modalContato')" class="text-gray-500 hover:text-gray-700 text-3xl">×</button>
             </div>
-            <form id="formSeguro" class="space-y-4">
-                <input type="hidden" name="Plano Escolhido" id="seguro-plano-hidden">
-                <input type="text" name="Nome Completo" placeholder="Nome Completo *" required class="w-full px-4 py-3 rounded-lg border">
-                <input type="email" name="Email" placeholder="Email *" required class="w-full px-4 py-3 rounded-lg border">
-                <input type="tel" name="Telefone" placeholder="Telefone/WhatsApp *" required class="w-full px-4 py-3 rounded-lg border">
-                <input type="text" name="Destino" placeholder="Destino Principal *" required class="w-full px-4 py-3 rounded-lg border">
-                <div class="grid grid-cols-2 gap-4">
-                    <input type="date" name="Data de Partida" required class="w-full px-4 py-3 rounded-lg border">
-                    <input type="date" name="Data de Retorno" required class="w-full px-4 py-3 rounded-lg border">
-                </div>
-                <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold">Solicitar Cotação Premium</button>
+            <form id="formContato" class="space-y-4">
+                <input type="text" name="nome" placeholder="Nome Completo *" required class="w-full px-4 py-3 rounded-lg border">
+                <input type="email" name="email" placeholder="Email *" required class="w-full px-4 py-3 rounded-lg border">
+                <input type="tel" name="telefone" placeholder="WhatsApp *" required class="w-full px-4 py-3 rounded-lg border">
+                <select name="assunto" required class="w-full px-4 py-3 rounded-lg border">
+                    <option value="">Selecione o assunto...</option>
+                    <option value="Cotação">Cotação de Seguro</option>
+                    <option value="Guias">Guias Premium</option>
+                    <option value="Suporte">Suporte</option>
+                </select>
+                <textarea name="mensagem" placeholder="Sua mensagem..." rows="4" required class="w-full px-4 py-3 rounded-lg border resize-none"></textarea>
+                <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">📧 Enviar Mensagem</button>
             </form>
         </div>
     </div>
@@ -135,12 +118,12 @@
             <div class="text-6xl mb-4">✅</div>
             <h3 id="modalSucessoTitulo" class="text-2xl font-bold text-gray-800 mb-4">Sucesso!</h3>
             <p id="modalSucessoMensagem" class="text-gray-600 mb-6"></p>
-            <button onclick="fecharModal('modalSucesso')" class="bg-blue-600 text-white px-8 py-3 rounded-lg">Entendi</button>
+            <button onclick="fecharModal('modalSucesso')" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">Entendi</button>
         </div>
     </div>
 
     <script>
-        // --- INTEGRAÇÃO VERCEL + MAILJET ---
+        // --- FUNÇÃO DE ENVIO CENTRALIZADA (MESMA DO INDEX 1) ---
         async function callVercelEndpoint(dados, endpoint = '/api/send-email') {
             try {
                 const response = await fetch(endpoint, {
@@ -151,61 +134,93 @@
                 const data = await response.json();
                 return { success: response.ok && data.success, message: data.message };
             } catch (error) {
-                return { success: false, message: 'Erro de conexão.' };
+                console.error('Erro:', error);
+                return { success: false, message: 'Erro de conexão com o servidor.' };
             }
         }
 
-        // Form Cotação
+        // Lógica Formulário de Cotação
         document.getElementById('formCotacao').addEventListener('submit', async function(e) {
             e.preventDefault();
             const btn = this.querySelector('button');
             const formData = new FormData(this);
-            btn.disabled = true; btn.innerHTML = '⏳ Processando...';
+            
+            btn.disabled = true;
+            btn.innerHTML = '⏳ Processando...';
 
-            const res = await callVercelEndpoint({
-                nome: formData.get('Nome Completo'), email: formData.get('Email'),
-                destino: formData.get('Destino'), telefone: formData.get('WhatsApp'),
-                partida: formData.get('Data de Partida'), retorno: formData.get('Data de Retorno'),
-                assunto: 'Lead de Cotação - Novo Site', detalhes: 'Solicitação de cotação via formulário principal.'
-            });
+            const payload = {
+                nome: formData.get('nome'),
+                email: formData.get('email'),
+                destino: formData.get('destino'),
+                telefone: formData.get('whatsapp'),
+                partida: formData.get('partida'),
+                retorno: formData.get('retorno'),
+                assunto: 'Lead de Cotação - Seguro Viagem',
+                detalhes: `Destino: ${formData.get('destino')} | Site: Index 2`
+            };
+
+            const res = await callVercelEndpoint(payload);
 
             if (res.success) {
-                mostrarSucesso('Enviado!', 'Você será redirecionado para a Porto Seguro.');
-                setTimeout(() => window.open('http://www.porto.vc/VIAGEM_S3048J_3446214654cd463993a623a117cbf311', '_blank'), 2000);
-            } else { alert('Erro: ' + res.message); }
-            btn.disabled = false; btn.innerHTML = '🚀 SOLICITAR COTAÇÃO PERSONALIZADA';
+                mostrarSucesso('Dados Enviados!', 'Você será redirecionado para o simulador oficial em instantes.');
+                setTimeout(() => {
+                    window.open('http://www.porto.vc/VIAGEM_S3048J_3446214654cd463993a623a117cbf311', '_blank');
+                    this.reset();
+                    btn.disabled = false;
+                    btn.innerHTML = '🚀 SOLICITAR COTAÇÃO PERSONALIZADA';
+                }, 2000);
+            } else {
+                alert('Erro ao processar: ' + res.message);
+                btn.disabled = false;
+                btn.innerHTML = '🚀 SOLICITAR COTAÇÃO PERSONALIZADA';
+            }
         });
 
-        // Form Modal Seguro
-        document.getElementById('formSeguro').addEventListener('submit', async function(e) {
+        // Lógica Formulário de Contato
+        document.getElementById('formContato').addEventListener('submit', async function(e) {
             e.preventDefault();
             const btn = this.querySelector('button');
             const formData = new FormData(this);
-            const plano = document.getElementById('seguro-plano-hidden').value;
-            btn.disabled = true; btn.innerHTML = '⏳ Enviando...';
+            
+            btn.disabled = true;
+            btn.innerHTML = '⏳ Enviando...';
 
-            const res = await callVercelEndpoint({
-                nome: formData.get('Nome Completo'), email: formData.get('Email'),
-                telefone: formData.get('Telefone'), destino: formData.get('Destino'),
-                partida: formData.get('Data de Partida'), retorno: formData.get('Data de Retorno'),
-                assunto: 'Contratação: ' + plano, detalhes: 'Interesse no plano ' + plano
-            });
+            const payload = {
+                nome: formData.get('nome'),
+                email: formData.get('email'),
+                telefone: formData.get('telefone'),
+                assunto: 'Contato: ' + formData.get('assunto'),
+                mensagem: formData.get('mensagem'),
+                detalhes: 'Mensagem enviada via Modal de Contato (Index 2)'
+            };
 
-            if (res.success) { fecharModal('modalSeguro'); mostrarSucesso('Solicitado!', 'Entraremos em contato em breve.'); this.reset(); }
-            btn.disabled = false; btn.innerHTML = 'Solicitar Cotação Premium';
+            const res = await callVercelEndpoint(payload);
+
+            if (res.success) {
+                fecharModal('modalContato');
+                mostrarSucesso('Mensagem Recebida!', 'Nossa equipe entrará em contato em até 2 horas úteis.');
+                this.reset();
+            } else {
+                alert('Erro: ' + res.message);
+            }
+            btn.disabled = false;
+            btn.innerHTML = '📧 Enviar Mensagem';
         });
 
-        // UI Functions
-        function abrirModalSeguro(plano) {
-            document.getElementById('modalSeguroTitulo').textContent = 'Contratar ' + plano;
-            document.getElementById('seguro-plano-hidden').value = plano;
-            document.getElementById('modalSeguro').classList.remove('hidden');
-        }
+        // Funções de UI
         function fecharModal(id) { document.getElementById(id).classList.add('hidden'); }
-        function mostrarSucesso(tit, msg) {
-            document.getElementById('modalSucessoTitulo').textContent = tit;
+        function abrirModalContato() { document.getElementById('modalContato').classList.remove('hidden'); }
+        function mostrarSucesso(titulo, msg) {
+            document.getElementById('modalSucessoTitulo').textContent = titulo;
             document.getElementById('modalSucessoMensagem').textContent = msg;
             document.getElementById('modalSucesso').classList.remove('hidden');
+        }
+
+        // Fechar modais ao clicar fora
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal-backdrop')) {
+                event.target.classList.add('hidden');
+            }
         }
     </script>
 </body>
