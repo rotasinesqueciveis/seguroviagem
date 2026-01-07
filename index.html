@@ -1,134 +1,166 @@
 <!doctype html>
-<html lang="pt-BR" class="h-full">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rota Inesquecível - Seguros e Guias Premium</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { box-sizing: border-box; font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
-        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .hover-lift:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
-        .hero-bg { 
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1920&q=80');
-            background-size: cover; background-position: center; background-attachment: fixed; 
-        }
-        .modal-backdrop { background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(5px); }
-        .carousel-slide, .carrossel-seguros-slide { display: none; }
-        .carousel-slide.active, .carrossel-seguros-slide.active { display: grid; }
-        .carrossel-seguros-slide.active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .fade-in { animation: fadeIn 0.6s ease-out; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rota Inesquecível - Seguros e Guias Premium</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+
+    /* HERO */
+    .hero-bg::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1920&q=80') center/cover no-repeat;
+      z-index:-2;
+    }
+    .hero-bg::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(15,23,42,.75);
+      z-index:-1;
+    }
+
+    /* GLASS EFFECT */
+    .glass-btn{
+      background:rgba(255,255,255,.2);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,.35);
+    }
+
+    /* SWIPER */
+    .swiper-slide{ height:auto; }
+  </style>
 </head>
-<body class="h-full w-full">
 
-    <header class="fixed top-0 w-full bg-white shadow-md z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">RI</div>
-                <span class="text-2xl font-bold text-gray-800">Rota Inesquecível</span>
-            </div>
-            <div class="hidden md:flex space-x-8">
-                <a href="#seguros" class="text-gray-700 hover:text-blue-600 font-medium transition">Seguros</a>
-                <a href="#guias" class="text-gray-700 hover:text-blue-600 font-medium transition">Guias Premium</a>
-                <a href="#cotacao" class="text-gray-700 hover:text-blue-600 font-medium transition">Cotação</a>
-            </div>
-            <button onclick="document.getElementById('cotacao').scrollIntoView({behavior: 'smooth'})" class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">Começar Agora</button>
-        </nav>
-    </header>
+<body class="bg-gray-50 text-gray-800">
 
-    <section class="hero-bg h-screen w-full flex items-center justify-center text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 fade-in">Viaje com <span class="text-blue-300">Segurança</span></h1>
-            <p class="text-xl md:text-2xl mb-12 text-gray-200 fade-in">Proteção completa via Vercel & Mailjet.</p>
-            <button onclick="document.getElementById('cotacao').scrollIntoView({behavior: 'smooth'})" class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover-lift">Fazer Cotação Agora</button>
+<!-- HEADER -->
+<header class="fixed w-full top-0 z-50 bg-white/70 backdrop-blur-md shadow">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Rota Inesquecível</h1>
+    <nav class="hidden md:flex gap-8 font-medium">
+      <a href="#seguros">Seguros</a>
+      <a href="#destinos">Destinos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-bg relative pt-40 pb-32 text-white">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-4xl md:text-6xl font-extrabold mb-6">Viaje com tranquilidade absoluta</h2>
+    <p class="text-xl max-w-2xl mx-auto mb-10">Seguros premium e destinos inesquecíveis para quem exige o melhor.</p>
+
+    <a href="#guias" class="inline-block px-10 py-4 rounded-xl font-semibold text-lg glass-btn hover:bg-white/30 transition">
+      Ver Guias Exclusivos
+    </a>
+  </div>
+</section>
+
+<!-- SEGUROS PREMIUM -->
+<section id="seguros" class="py-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-14">Seguros Premium</h2>
+
+    <div class="swiper segurosSwiper">
+      <div class="swiper-wrapper">
+
+        <!-- PLANO -->
+        <div class="swiper-slide">
+          <div class="bg-white rounded-2xl p-6 shadow h-full">
+            <h3 class="font-bold text-xl mb-3">Plano Cruzeiro</h3>
+            <ul class="text-sm space-y-1 mb-4">
+              <li>✔ Despesas médicas e odontológicas</li>
+              <li>✔ Despesas farmacêuticas</li>
+              <li>✔ Extravio de bagagem</li>
+              <li>✔ Cancelamento de viagem</li>
+            </ul>
+            <p class="font-semibold">Valor: a partir de R$ 60,00</p>
+          </div>
         </div>
-    </section>
 
-    <section id="cotacao" class="py-20 bg-gray-100 w-full">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800">Cotação Online</h2>
-            </div>
-            
-            <form id="formCotacao" class="max-w-4xl mx-auto bg-white rounded-2xl p-8 shadow-xl">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <input type="text" name="nome" placeholder="Nome Completo" required class="w-full px-4 py-3 rounded-lg border border-gray-300">
-                    <input type="email" name="email" placeholder="Seu Melhor Email" required class="w-full px-4 py-3 rounded-lg border border-gray-300">
-                    <input type="text" name="destino" placeholder="Destino da Viagem" required class="w-full px-4 py-3 rounded-lg border border-gray-300">
-                    <input type="tel" name="whatsapp" placeholder="WhatsApp com DDD" required class="w-full px-4 py-3 rounded-lg border border-gray-300">
-                    <input type="date" name="partida" required class="w-full px-4 py-3 rounded-lg border border-gray-300">
-                    <input type="date" name="retorno" required class="w-full px-4 py-3 rounded-lg border border-gray-300">
-                </div>
-                <button type="submit" id="btnSubmit" class="w-full mt-8 bg-blue-600 text-white py-4 rounded-lg font-bold hover:bg-blue-700 transition">
-                    🚀 ENVIAR SOLICITAÇÃO
-                </button>
-            </form>
-        </div>
-    </section>
+        <div class="swiper-slide"><div class="bg-white rounded-2xl p-6 shadow h-full"><h3 class="font-bold text-xl mb-3">Brasil Básico</h3><ul class="text-sm space-y-1 mb-4"><li>✔ Despesas médicas</li><li>✔ Farmácia</li><li>✔ Bagagem</li><li>✔ Cancelamento</li></ul><p class="font-semibold">A partir de R$ 40,00</p></div></div>
+        <div class="swiper-slide"><div class="bg-white rounded-2xl p-6 shadow h-full"><h3 class="font-bold text-xl mb-3">Brasil Intermediário</h3><ul class="text-sm space-y-1 mb-4"><li>✔ Despesas médicas</li><li>✔ Farmácia</li><li>✔ Bagagem</li><li>✔ Cancelamento</li></ul><p class="font-semibold">A partir de R$ 50,00</p></div></div>
+        <div class="swiper-slide"><div class="bg-white rounded-2xl p-6 shadow h-full"><h3 class="font-bold text-xl mb-3">América Latina</h3><ul class="text-sm space-y-1 mb-4"><li>✔ Despesas médicas</li><li>✔ Farmácia</li><li>✔ Bagagem</li><li>✔ Cancelamento</li></ul><p class="font-semibold">A partir de R$ 60,00</p></div></div>
+        <div class="swiper-slide"><div class="bg-white rounded-2xl p-6 shadow h-full"><h3 class="font-bold text-xl mb-3">Europa Básico</h3><ul class="text-sm space-y-1 mb-4"><li>✔ Despesas médicas</li><li>✔ Farmácia</li><li>✔ Bagagem</li><li>✔ Cancelamento</li></ul><p class="font-semibold">R$ 30,00 / dia*</p></div></div>
+        <div class="swiper-slide"><div class="bg-white rounded-2xl p-6 shadow h-full"><h3 class="font-bold text-xl mb-3">Mundo Básico</h3><ul class="text-sm space-y-1 mb-4"><li>✔ Despesas médicas</li><li>✔ Farmácia</li><li>✔ Bagagem</li><li>✔ Cancelamento</li></ul><p class="font-semibold">R$ 45,00 / dia*</p></div></div>
 
-    <div id="modalSucesso" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop">
-        <div class="bg-white rounded-2xl max-w-md w-full p-8 text-center fade-in">
-            <div class="text-6xl mb-4">✅</div>
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">Solicitação Enviada!</h3>
-            <p class="text-gray-600 mb-6">Recebemos os seus dados. Verifique a sua caixa de entrada ou aguarde o nosso contacto.</p>
-            <button onclick="location.reload()" class="bg-blue-600 text-white px-8 py-3 rounded-lg">Voltar ao Início</button>
-        </div>
+      </div>
     </div>
 
-    <script>
-        // 1. Função que comunica com a sua API no Vercel (Igual ao Index 1)
-        async function callVercelEndpoint(dados) {
-            try {
-                const response = await fetch('/api/send-email', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(dados)
-                });
-                
-                const result = await response.json();
-                return { success: response.ok && result.success, message: result.message };
-            } catch (error) {
-                return { success: false, message: 'Erro ao conectar com o servidor.' };
-            }
-        }
+    <p class="text-xs text-center mt-6 text-gray-500">* Valores estimados para viagem de 7 dias, 1 passageiro até 70 anos. Sujeitos a variação.</p>
+  </div>
+</section>
 
-        // 2. Captura o envio do formulário
-        document.getElementById('formCotacao').addEventListener('submit', async function(e) {
-            e.preventDefault(); // IMPEDE O ERRO: Não deixa a página recarregar ou usar action externa
-            
-            const btn = document.getElementById('btnSubmit');
-            const formData = new FormData(this);
-            
-            btn.disabled = true;
-            btn.innerHTML = '⏳ Enviando para Mailjet...';
+<!-- COBERTURAS -->
+<section class="bg-white py-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-14">Coberturas que fazem a diferença na sua viagem</h2>
 
-            // Organiza os dados para a sua API
-            const payload = {
-                nome: formData.get('nome'),
-                email: formData.get('email'),
-                destino: formData.get('destino'),
-                telefone: formData.get('whatsapp'),
-                partida: formData.get('partida'),
-                retorno: formData.get('retorno'),
-                assunto: 'Nova Cotação - Site Index 2',
-                detalhes: 'Lead vindo do novo layout index 2.'
-            };
+    <div class="grid grid-cols-2 md:grid-cols-6 gap-8 text-center">
+      <div>🏥<h4 class="font-semibold mt-2">Despesas Médicas</h4></div>
+      <div>💊<h4 class="font-semibold mt-2">Farmacêuticas</h4></div>
+      <div>✈️<h4 class="font-semibold mt-2">Remarcação</h4></div>
+      <div>🧳<h4 class="font-semibold mt-2">Bagagem</h4></div>
+      <div>👨‍👩‍👧<h4 class="font-semibold mt-2">Acompanhantes</h4></div>
+      <div>🏄‍♂️<h4 class="font-semibold mt-2">Esportes Radicais</h4></div>
+    </div>
+  </div>
+</section>
 
-            const res = await callVercelEndpoint(payload);
+<!-- DESTINOS -->
+<section id="destinos" class="py-24 bg-gray-100">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-14">Destinos Inspiradores</h2>
 
-            if (res.success) {
-                document.getElementById('modalSucesso').classList.remove('hidden');
-                this.reset();
-            } else {
-                alert('Erro: ' + (res.message || 'Falha ao enviar. Verifique se a API do Vercel está ativa.'));
-            }
-            
-            btn.disabled = false;
-            btn.innerHTML = '🚀 ENVIAR SOLICITAÇÃO';
-        });
-    </script>
+    <div class="swiper destinosSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img class="rounded-xl" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"></div>
+        <div class="swiper-slide"><img class="rounded-xl" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80"></div>
+        <div class="swiper-slide"><img class="rounded-xl" src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=80"></div>
+        <div class="swiper-slide"><img class="rounded-xl" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=80"></div>
+        <div class="swiper-slide"><img class="rounded-xl" src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=800&q=80"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contato" class="bg-slate-900 text-white py-10 text-center">
+  <p>© 2024 Rota Inesquecível. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+  new Swiper('.segurosSwiper',{
+    slidesPerView:4,
+    spaceBetween:24,
+    breakpoints:{0:{slidesPerView:1},640:{slidesPerView:2},1024:{slidesPerView:4}}
+  });
+
+  new Swiper('.destinosSwiper',{
+    slidesPerView:4,
+    spaceBetween:24,
+    loop:true,
+    autoplay:{delay:3000},
+    breakpoints:{0:{slidesPerView:1},640:{slidesPerView:2},1024:{slidesPerView:4}}
+  });
+</script>
+
 </body>
 </html>
