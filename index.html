@@ -1,640 +1,783 @@
-<!doctype html>
-<html lang="pt-BR" class="h-full">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rota Inesquecível - Seguros e Guias Premium</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
-  <style>
-        body {
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .hover-lift:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .destination-card img {
-            transition: transform 0.5s ease;
-        }
-        .destination-card:hover img {
-            transform: scale(1.1);
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .fade-in {
-            animation: fadeIn 0.6s ease-out;
-        }
-        .modal-backdrop {
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(5px);
-        }
-        #carrosselSeguros::-webkit-scrollbar {
-            display: none;
-        }
-        #carrosselSeguros {
-            scrollbar-width: none;
-        }
-    </style>
-  <style>@view-transition { navigation: auto; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
-  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
- </head>
- <body class="h-full w-full"><!-- Header -->
-  <header class="fixed top-0 w-full bg-white shadow-md z-50">
-   <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="flex items-center space-x-3">
-     <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
-      RI
-     </div><span class="text-2xl font-bold text-gray-800">Rota Inesquecível</span>
+<!doctype html> 
+<html lang="pt-BR" class="h-full"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Rota Inesquecível - Seguros e Guias Premium</title>         
+        <img src="" alt=""> 
+        <script src="https://cdn.tailwindcss.com"></script>         
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"> 
+        <style>body { box-sizing: border-box; font-family: 'Inter', sans-serif; } * { margin: 0; padding: 0; box-sizing: border-box; } .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; } .hover-lift:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); } .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); } .hero-bg { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1920&q=80'); background-size: cover; background-position: center; background-attachment: fixed; } .glass-effect { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); } .destination-card img { transition: transform 0.5s ease; } .destination-card:hover img { transform: scale(1.1); } @keyframes fadeIn { from {  opacity: 0;  transform: translateY(20px); }  to {  opacity: 1;  transform: translateY(0); } } .fade-in { animation: fadeIn 0.6s ease-out; } .modal-backdrop { background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(5px); } #carrosselSeguros::-webkit-scrollbar { display: none; } #carrosselSeguros { scrollbar-width: none; }</style>         
+        <style>@view-transition { navigation: auto; }</style>         
+        <script src="/_sdk/data_sdk.js" type="text/javascript"></script>         
+        <script src="/_sdk/element_sdk.js" type="text/javascript"></script>         
+    </head>     
+    <body class="h-full w-full">
+        <!-- Header -->         
+        <header class="fixed top-0 w-full bg-white shadow-md z-50"> 
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center"> 
+                <div class="flex items-center space-x-3"> 
+                    <img src="logo.png" alt="Logo Rota Inesquecível" class="h-16 object-contain space-x-0 space-y-0 w-auto"> 
+                </div>                 
+            </div>             
+            <div class="hidden md:flex space-x-8">
+                <a href="#seguros" class="text-gray-700 hover:text-blue-600 font-medium transition">Cotação de Seguros Viagem</a> <a href="#guias" class="text-gray-700 hover:text-blue-600 font-medium transition">Guias Premium</a> <a href="#cotacao" class="text-gray-700 hover:text-blue-600 font-medium transition"></a> <a href="#contato" class="text-gray-700 hover:text-blue-600 font-medium transition"></a> 
+            </div>
+            <button onclick="document.getElementById('cotacao').scrollIntoView({behavior: 'smooth'})" class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">Fale Conosco</button>             
+        </nav>         
+    </header>
+    <!-- Hero Section -->     
+    <section class="hero-bg h-full w-full flex items-center justify-center text-white pt-20"> 
+        <div class="container mx-auto px-6 py-20 text-center"> 
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 fade-in">Viaje com <span class="text-blue-300">Segurança</span> e <span class="text-blue-300">Expertise</span></h1> 
+            <p class="text-xl md:text-2xl mb-12 text-gray-200 max-w-3xl mx-auto fade-in">Proteção completa para suas viagens e roteiros exclusivos pelos destinos mais incríveis do mundo</p> 
+            <div class="flex flex-col md:flex-row gap-4 justify-center mb-16 fade-in">
+                <button onclick="document.getElementById('seguros').scrollIntoView({behavior: 'smooth'})" class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition hover-lift"> Explorar Seguros Premium </button>                 
+                <button onclick="document.getElementById('guias').scrollIntoView({behavior: 'smooth'})" class="glass-effect text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition hover-lift"> Ver Guias Exclusivos </button>                 
+            </div>             
+        </div>         
+    </section>
+    <!-- Seguros Section -->     
+    <section id="seguros" class="py-20 bg-gray-50 w-full"> 
+        <div class="container mx-auto px-6"> 
+            <div class="text-center mb-16"> 
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Seguros Premium</h2> 
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Escolha o plano perfeito para sua viagem com cobertura completa e assistência 24 horas</p> 
+            </div>             
+            <div class="relative max-w-7xl mx-auto mb-12">
+                <!-- Carrossel Horizontal de Seguros -->                 
+                <div id="carrosselSeguros" class="overflow-x-auto scroll-smooth pb-4 px-2"> 
+                    <div class="flex gap-6" style="width: max-content;">
+                        <!-- Plano Cruzeiro -->                         
+                        <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift flex flex-col" style="width: 300px; min-width: 300px;">
+                            <img src="/primeiro-cruzeiro-caribe-msc-sescape-capa.jpg" alt="Cruzeiro" class="w-full h-40 object-cover rounded-lg mb-4"> 
+                            <h3 class="text-2xl font-bold mb-2">Plano Cruzeiro</h3> 
+                            <div class="text-2xl font-bold bg-gradient-to-r from-green-400 to-green-700 bg-clip-text text-transparent mb-6"> 
+                                R$ 60,00
+</div>                             
+                            <h4 class="font-semibold text-gray-700 mb-3">Coberturas:</h4> 
+                            <ul class="space-y-3 mb-8 flex-grow"> 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Reembolso de despesas médicas, hospitalares e odontológicas</span>
+                                </li>                                 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Reembolso de despesas farmacêuticas</span>
+                                </li>                                 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Extravio de bagagem</span>
+                                </li>                                 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Cancelamento de viagem</span>
+                                </li>                                 
+                            </ul>
+                            <button onclick="abrirModalSeguro('Plano Cruzeiro')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition mt-auto"> Contratar Plano </button>                             
+                        </div>
+                        <!-- Plano Brasil Básico -->                         
+                        <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift flex flex-col" style="width: 300px; min-width: 300px;">
+                            <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=400&amp;q=80" alt="Brasil" class="w-full h-40 object-cover rounded-lg mb-4"> 
+                            <h3 class="text-2xl font-bold mb-2">Brasil Básico</h3> 
+                            <div class="text-2xl font-bold bg-gradient-to-r from-green-400 to-green-700 bg-clip-text text-transparent mb-6"> 
+                                R$ 40,00
+</div>                             
+                            <h4 class="font-semibold text-gray-700 mb-3">Coberturas:</h4> 
+                            <ul class="space-y-3 mb-8 flex-grow"> 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Despesas médicas, hospitalares e odontológicas</span>
+                                </li>                                 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Despesas farmacêuticas</span>
+                                </li>                                 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Extravio de bagagem</span>
+                                </li>                                 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Cancelamento de viagem</span>
+                                </li>                                 
+                            </ul>
+                            <button onclick="abrirModalSeguro('Brasil Básico')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition mt-auto"> Contratar Plano </button>                             
+                        </div>
+                        <!-- Plano Brasil Intermediário -->                         
+                        <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift flex flex-col" style="width: 300px; min-width: 300px;">
+                            <img src="https://images.unsplash.com/photo-1516815231560-8f41ec531527?w=400&amp;q=80" alt="Brasil Intermediário" class="w-full h-40 object-cover rounded-lg mb-4"> 
+                            <h3 class="text-2xl font-bold mb-2">Brasil Intermediário</h3> 
+                            <div class="text-2xl font-bold bg-gradient-to-r from-green-400 to-green-700 bg-clip-text text-transparent mb-6"> 
+                                R$ 50,00
+</div>                             
+                            <h4 class="font-semibold text-gray-700 mb-3">Coberturas:</h4> 
+                            <ul class="space-y-3 mb-8 flex-grow"> 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Despesas médicas, hospitalares e odontológicas</span>
+                                </li>                                 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Despesas farmacêuticas</span>
+                                </li>                                 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Extravio de bagagem</span>
+                                </li>                                 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Cancelamento de viagem</span>
+                                </li>                                 
+                            </ul>
+                            <button onclick="abrirModalSeguro('Brasil Intermediário')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition mt-auto"> Contratar Plano </button>                             
+                        </div>
+                        <!-- Plano América Latina Básico -->                         
+                        <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift flex flex-col" style="width: 300px; min-width: 300px;">
+                            <img src="/latina.jpg" alt="América Latina" class="w-full h-40 object-cover rounded-lg mb-4"> 
+                            <h3 class="text-2xl font-bold mb-2">América Latina Básico</h3> 
+                            <div class="text-2xl font-bold bg-gradient-to-r from-green-400 to-green-700 bg-clip-text text-transparent mb-6"> 
+                                R$ 60,00
+</div>                             
+                            <h4 class="font-semibold text-gray-700 mb-3">Coberturas:</h4> 
+                            <ul class="space-y-3 mb-8 flex-grow"> 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Despesas médicas, hospitalares e odontológicas</span>
+                                </li>                                 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Despesas farmacêuticas</span>
+                                </li>                                 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Extravio de bagagem</span>
+                                </li>                                 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Cancelamento de viagem</span>
+                                </li>                                 
+                            </ul>
+                            <button onclick="abrirModalSeguro('América Latina Básico')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition mt-auto"> Contratar Plano </button>                             
+                        </div>
+                        <!-- Plano Europa Básico -->                         
+                        <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift border-4 border-blue-600 relative flex flex-col" style="width: 300px; min-width: 300px;"> 
+                            <div class="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 rounded-bl-lg rounded-tr-lg text-sm font-semibold"> 
+                                MAIS PROCURADO
+</div>
+                            <img src="/europa.jpg" alt="Europa" class="w-full h-40 object-cover rounded-lg mb-4"> 
+                            <h3 class="text-2xl font-bold mb-2">Europa Básico</h3> 
+                            <div class="text-2xl font-bold bg-gradient-to-r from-green-400 to-green-700 bg-clip-text text-transparent mb-6"> 
+                                R$ 30,00/dia*
+</div>                             
+                            <h4 class="font-semibold text-gray-700 mb-3">Coberturas:</h4> 
+                            <ul class="space-y-3 mb-8 flex-grow"> 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Despesas médicas, hospitalares e odontológicas</span>
+                                </li>                                 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Despesas farmacêuticas</span>
+                                </li>                                 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Extravio de bagagem</span>
+                                </li>                                 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Cancelamento de viagem</span>
+                                </li>                                 
+                            </ul>
+                            <button onclick="abrirModalSeguro('Europa Básico')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition mt-auto"> Contratar Plano </button>                             
+                        </div>
+                        <!-- Plano Mundo Básico -->                         
+                        <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift flex flex-col" style="width: 300px; min-width: 300px;">
+                            <img src="/mundo.webp" alt="Mundo" class="w-full h-40 object-cover rounded-lg mb-4"> 
+                            <h3 class="text-2xl font-bold mb-2">Mundo Básico</h3> 
+                            <div class="text-2xl font-bold bg-gradient-to-r from-green-400 to-green-700 bg-clip-text text-transparent mb-6"> 
+                                R$ 45,00/dia*
+</div>                             
+                            <h4 class="font-semibold text-gray-700 mb-3">Coberturas:</h4> 
+                            <ul class="space-y-3 mb-8 flex-grow"> 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Despesas médicas, hospitalares e odontológicas</span>
+                                </li>                                 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Despesas farmacêuticas</span>
+                                </li>                                 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Extravio de bagagem</span>
+                                </li>                                 
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span> <span class="text-sm">Cancelamento de viagem</span>
+                                </li>                                 
+                            </ul>
+                            <button onclick="abrirModalSeguro('Mundo Básico')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition mt-auto"> Contratar Plano </button>                             
+                        </div>                         
+                    </div>                     
+                </div>
+                <!-- Botões de navegação -->                 
+                <button onclick="scrollSeguros(-1)" class="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-gray-100 transition z-10"> <span class="text-2xl text-gray-700">‹</span> 
+                </button>                 
+                <button onclick="scrollSeguros(1)" class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-gray-100 transition z-10"> <span class="text-2xl text-gray-700">›</span> 
+                </button>                 
+            </div>
+            <!-- Aviso Legal -->             
+            <div class="mt-12 max-w-4xl mx-auto"> 
+                <p class="text-sm text-gray-600 text-center leading-relaxed">* Valores estimados para viagem de 7 dias, 1 passageiro até 70 anos. Sujeitos a variação cambial e condições específicas de cada cobertura. A cotação final será calculada de acordo com o destino, período da viagem e perfil do viajante.</p> 
+            </div>
+            <!-- Coberturas Section -->             
+            <div class="mt-20 max-w-7xl mx-auto"> 
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">Coberturas que fazem a diferença na sua viagem</h2> 
+                <div class="grid md:grid-cols-6 gap-8">
+                    <!-- Despesas médicas e hospitalares -->                     
+                    <div class="text-center"> 
+                        <div class="w-20 h-20 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center"> 
+                            <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>                                 
+                            </svg>                             
+                        </div>                         
+                        <h3 class="font-bold text-gray-800 mb-2">Despesas médicas e hospitalares</h3> 
+                        <p class="text-sm text-gray-600">Cobertura para atendimento médico, hospitalar e odontológico.</p> 
+                    </div>
+                    <!-- Despesas Farmacêuticas -->                     
+                    <div class="text-center"> 
+                        <div class="w-20 h-20 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center"> 
+                            <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>                                 
+                            </svg>                             
+                        </div>                         
+                        <h3 class="font-bold text-gray-800 mb-2">Despesas Farmacêuticas</h3> 
+                        <p class="text-sm text-gray-600">Reembolso em casos de medicações receitadas durante o período da viagem.</p> 
+                    </div>
+                    <!-- Remarcação de Passagem -->                     
+                    <div class="text-center"> 
+                        <div class="w-20 h-20 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center"> 
+                            <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>                                 
+                            </svg>                             
+                        </div>                         
+                        <h3 class="font-bold text-gray-800 mb-2">Remarcação de Passagem</h3> 
+                        <p class="text-sm text-gray-600">Reembolso de multas e tarifas ao remarcar passagens do segurado e familiares, em casos de imprevistos com a saúde.</p> 
+                    </div>
+                    <!-- Problemas com a bagagem -->                     
+                    <div class="text-center"> 
+                        <div class="w-20 h-20 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center"> 
+                            <svg class="w-10 h-10 text-orange-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>                                 
+                            </svg>                             
+                        </div>                         
+                        <h3 class="font-bold text-gray-800 mb-2">Problemas com a bagagem</h3> 
+                        <p class="text-sm text-gray-600">Direito à indenização em casos de perda, extravio ou danos na bagagem.</p> 
+                    </div>
+                    <!-- Segurança dos acompanhantes -->                     
+                    <div class="text-center"> 
+                        <div class="w-20 h-20 mx-auto mb-4 bg-red-100 rounded-full flex items-center justify-center"> 
+                            <svg class="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>                                 
+                            </svg>                             
+                        </div>                         
+                        <h3 class="font-bold text-gray-800 mb-2">Segurança dos acompanhantes</h3> 
+                        <p class="text-sm text-gray-600">Caso um menor acompanhante passe por um fato imprevisto de saúde, o plano inclui reembolso de uma passagem para o Brasil.</p> 
+                    </div>
+                    <!-- Prática de Esportes Radicais -->                     
+                    <div class="text-center"> 
+                        <div class="w-20 h-20 mx-auto mb-4 bg-teal-100 rounded-full flex items-center justify-center"> 
+                            <svg class="w-10 h-10 text-teal-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>                                 
+                            </svg>                             
+                        </div>                         
+                        <h3 class="font-bold text-gray-800 mb-2">Prática de Esportes Radicais</h3> 
+                        <p class="text-sm text-gray-600">Cobertura para atendimento médico em caso de acidentes durante a prática de esportes radicais.</p> 
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>         
+    </section>
+    <!-- Guias Premium Section -->     
+    <section id="guias" class="py-20 bg-white w-full"> 
+        <div class="container mx-auto px-6"> 
+            <div class="text-center mb-16"> 
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Guias Premium de Viagem</h2> 
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Roteiros exclusivos criados por especialistas com mapas detalhados e dicas locais</p> 
+            </div>             
+            <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Guia Europa -->                 
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift destination-card"> 
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&amp;q=80" alt="Europa" class="w-full h-full object-cover"> 
+                        <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold"> 
+                            BESTSELLER
+</div>                         
+                    </div>                     
+                    <div class="p-6"> 
+                        <h3 class="text-2xl font-bold mb-2">Europa Grand Tour</h3> 
+                        <p class="text-gray-600 mb-4">21 dias por 15 países europeus com roteiro otimizado</p> 
+                        <div class="flex items-center justify-between mb-4"> 
+                            <div>
+                                <span class="text-3xl font-bold text-blue-600">R$ 149</span> <span class="text-gray-500 line-through ml-2">R$ 199</span> 
+                            </div>                             
+                        </div>                         
+                        <div class="text-sm text-gray-600 mb-4"></div>
+                        <button onclick="comprarGuia('Europa Grand Tour')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"> Adquirir Guia Premium </button>                         
+                    </div>                     
+                </div>
+                <!-- Guia Ásia -->                 
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift destination-card"> 
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="sudesteasiatico.webp" alt="Ásia" class="w-full h-full object-cover"> 
+                        <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold"> 
+                            NOVO
+</div>                         
+                    </div>                     
+                    <div class="p-6"> 
+                        <h3 class="text-2xl font-bold mb-2">Sudeste Asiático Autêntico</h3> 
+                        <p class="text-gray-600 mb-4">30 dias por 8 países asiáticos com experiências únicas</p> 
+                        <div class="flex items-center justify-between mb-4"> 
+                            <div>
+                                <span class="text-3xl font-bold text-orange-600">R$ 129</span> <span class="text-gray-500 line-through ml-2">R$ 179</span> 
+                            </div>                             
+                        </div>                         
+                        <div class="text-sm text-gray-600 mb-4"></div>
+                        <button onclick="comprarGuia('Sudeste Asiático Autêntico')" class="w-full bg-orange-600 text-white py-3 rounded-lg font-semibold hover:bg-orange-700 transition"> Adquirir Guia Premium </button>                         
+                    </div>                     
+                </div>
+                <!-- Guia Andes -->                 
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift destination-card"> 
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="vista-de-area-montanhosa-coberta-por-neve-na-regiao-da-patagonia.webp" alt="Andes" class="w-full h-full object-cover"> 
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold"> 
+                            EXCLUSIVO
+</div>                         
+                    </div>                     
+                    <div class="p-6"> 
+                        <h3 class="text-2xl font-bold mb-2">Andes &amp; Patagônia Épica</h3> 
+                        <p class="text-gray-600 mb-4">25 dias pelas cordilheiras com trilhas exclusivas</p> 
+                        <div class="flex items-center justify-between mb-4"> 
+                            <div>
+                                <span class="text-3xl font-bold text-green-600">R$ 169</span> <span class="text-gray-500 line-through ml-2">R$ 229</span> 
+                            </div>                             
+                        </div>                         
+                        <div class="text-sm text-gray-600 mb-4"></div>
+                        <button onclick="comprarGuia('Andes &amp; Patagônia Épica')" class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition"> Adquirir Guia Premium </button>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>         
+    </section>
+    <!-- Galeria de Destinos -->     
+    <section class="py-20 bg-gray-50 w-full"> 
+        <div class="container mx-auto px-6"> 
+            <div class="text-center mb-16"> 
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Destinos Inspiradores</h2> 
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Explore os lugares mais incríveis do mundo</p> 
+            </div>             
+            <div class="relative max-w-7xl mx-auto overflow-hidden"> 
+                <div id="carouselDestinos" class="flex transition-transform duration-500 ease-in-out">
+                    <!-- Todos os 12 destinos em uma única linha -->                     
+                    <div onclick="abrirModalDestino('santorini')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;">
+                        <img src="https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=600&amp;q=80" alt="Santorini" class="w-full h-full object-cover"> 
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"> 
+                            <div> 
+                                <h3 class="text-white text-2xl font-bold">Santorini</h3> 
+                                <p class="text-white/90">Grécia</p> 
+                            </div>                             
+                        </div>
+                        <button class="absolute top-0 right-0 bg-blue-600/30 backdrop-blur-md border border-blue-400/50 text-white px-4 py-2 rounded-bl-lg font-semibold opacity-0 group-hover:opacity-100 transition shadow-lg hover:bg-blue-600/50"> Descubra </button>                         
+                    </div>                     
+                    <div onclick="abrirModalDestino('bali')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&amp;q=80" alt="Bali" class="w-full h-full object-cover"> 
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"> 
+                            <div> 
+                                <h3 class="text-white text-2xl font-bold">Bali</h3> 
+                                <p class="text-white/90">Indonésia</p> 
+                            </div>                             
+                        </div>
+                        <button class="absolute top-0 right-0 bg-blue-600/30 backdrop-blur-md border border-blue-400/50 text-white px-4 py-2 rounded-bl-lg font-semibold opacity-0 group-hover:opacity-100 transition shadow-lg hover:bg-blue-600/50"> Descubra </button>                         
+                    </div>                     
+                    <div onclick="abrirModalDestino('patagonia')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;">
+                        <img src="https://images.unsplash.com/photo-1591444022447-460a8e1f3ce0?w=600&amp;q=80" alt="Patagônia" class="w-full h-full object-cover"> 
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"> 
+                            <div> 
+                                <h3 class="text-white text-2xl font-bold">Patagônia</h3> 
+                                <p class="text-white/90">Chile</p> 
+                            </div>                             
+                        </div>
+                        <button class="absolute top-0 right-0 bg-blue-600/30 backdrop-blur-md border border-blue-400/50 text-white px-4 py-2 rounded-bl-lg font-semibold opacity-0 group-hover:opacity-100 transition shadow-lg hover:bg-blue-600/50"> Descubra </button>                         
+                    </div>                     
+                    <div onclick="abrirModalDestino('kyoto')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;">
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&amp;q=80" alt="Kyoto" class="w-full h-full object-cover"> 
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"> 
+                            <div> 
+                                <h3 class="text-white text-2xl font-bold">Kyoto</h3> 
+                                <p class="text-white/90">Japão</p> 
+                            </div>                             
+                        </div>
+                        <button class="absolute top-0 right-0 bg-blue-600/30 backdrop-blur-md border border-blue-400/50 text-white px-4 py-2 rounded-bl-lg font-semibold opacity-0 group-hover:opacity-100 transition shadow-lg hover:bg-blue-600/50"> Descubra </button>                         
+                    </div>                     
+                    <div onclick="abrirModalDestino('paris')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&amp;q=80" alt="Paris" class="w-full h-full object-cover"> 
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"> 
+                            <div> 
+                                <h3 class="text-white text-2xl font-bold">Paris</h3> 
+                                <p class="text-white/90">França</p> 
+                            </div>                             
+                        </div>
+                        <button class="absolute top-0 right-0 bg-blue-600/30 backdrop-blur-md border border-blue-400/50 text-white px-4 py-2 rounded-bl-lg font-semibold opacity-0 group-hover:opacity-100 transition shadow-lg hover:bg-blue-600/50"> Descubra </button>                         
+                    </div>                     
+                    <div onclick="abrirModalDestino('maldivas')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;">
+                        <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&amp;q=80" alt="Maldivas" class="w-full h-full object-cover"> 
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"> 
+                            <div> 
+                                <h3 class="text-white text-2xl font-bold">Maldivas</h3> 
+                                <p class="text-white/90">Oceano Índico</p> 
+                            </div>                             
+                        </div>
+                        <button class="absolute top-0 right-0 bg-blue-600/30 backdrop-blur-md border border-blue-400/50 text-white px-4 py-2 rounded-bl-lg font-semibold opacity-0 group-hover:opacity-100 transition shadow-lg hover:bg-blue-600/50"> Descubra </button>                         
+                    </div>                     
+                    <div onclick="abrirModalDestino('dubai')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&amp;q=80" alt="Dubai" class="w-full h-full object-cover"> 
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"> 
+                            <div> 
+                                <h3 class="text-white text-2xl font-bold">Dubai</h3> 
+                                <p class="text-white/90">Emirados Árabes</p> 
+                            </div>                             
+                        </div>
+                        <button class="absolute top-0 right-0 bg-blue-600/30 backdrop-blur-md border border-blue-400/50 text-white px-4 py-2 rounded-bl-lg font-semibold opacity-0 group-hover:opacity-100 transition shadow-lg hover:bg-blue-600/50"> Descubra </button>                         
+                    </div>                     
+                    <div onclick="abrirModalDestino('islandia')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;">
+                        <img src="https://images.unsplash.com/photo-1504829857797-ddff29c27927?w=600&amp;q=80" alt="Islândia" class="w-full h-full object-cover"> 
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"> 
+                            <div> 
+                                <h3 class="text-white text-2xl font-bold">Islândia</h3> 
+                                <p class="text-white/90">Europa do Norte</p> 
+                            </div>                             
+                        </div>
+                        <button class="absolute top-0 right-0 bg-blue-600/30 backdrop-blur-md border border-blue-400/50 text-white px-4 py-2 rounded-bl-lg font-semibold opacity-0 group-hover:opacity-100 transition shadow-lg hover:bg-blue-600/50"> Descubra </button>                         
+                    </div>                     
+                    <div onclick="abrirModalDestino('newyork')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;">
+                        <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&amp;q=80" alt="Nova York" class="w-full h-full object-cover"> 
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"> 
+                            <div> 
+                                <h3 class="text-white text-2xl font-bold">Nova York</h3> 
+                                <p class="text-white/90">EUA</p> 
+                            </div>                             
+                        </div>
+                        <button class="absolute top-0 right-0 bg-blue-600/30 backdrop-blur-md border border-blue-400/50 text-white px-4 py-2 rounded-bl-lg font-semibold opacity-0 group-hover:opacity-100 transition shadow-lg hover:bg-blue-600/50"> Descubra </button>                         
+                    </div>                     
+                    <div onclick="abrirModalDestino('tailandia')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;">
+                        <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=600&amp;q=80" alt="Tailândia" class="w-full h-full object-cover"> 
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"> 
+                            <div> 
+                                <h3 class="text-white text-2xl font-bold">Tailândia</h3> 
+                                <p class="text-white/90">Sudeste Asiático</p> 
+                            </div>                             
+                        </div>
+                        <button class="absolute top-0 right-0 bg-blue-600/30 backdrop-blur-md border border-blue-400/50 text-white px-4 py-2 rounded-bl-lg font-semibold opacity-0 group-hover:opacity-100 transition shadow-lg hover:bg-blue-600/50"> Descubra </button>                         
+                    </div>                     
+                    <div onclick="abrirModalDestino('australia')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;">
+                        <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=600&amp;q=80" alt="Austrália" class="w-full h-full object-cover"> 
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"> 
+                            <div> 
+                                <h3 class="text-white text-2xl font-bold">Austrália</h3> 
+                                <p class="text-white/90">Oceania</p> 
+                            </div>                             
+                        </div>
+                        <button class="absolute top-0 right-0 bg-blue-600/30 backdrop-blur-md border border-blue-400/50 text-white px-4 py-2 rounded-bl-lg font-semibold opacity-0 group-hover:opacity-100 transition shadow-lg hover:bg-blue-600/50"> Descubra </button>                         
+                    </div>                     
+                    <div onclick="abrirModalDestino('marrocos')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px);">
+                        <img src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=600&amp;q=80" alt="Marrocos" class="w-full h-full object-cover"> 
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"> 
+                            <div> 
+                                <h3 class="text-white text-2xl font-bold">Marrocos</h3> 
+                                <p class="text-white/90">Norte da África</p> 
+                            </div>                             
+                        </div>
+                        <button class="absolute top-0 right-0 bg-blue-600/30 backdrop-blur-md border border-blue-400/50 text-white px-4 py-2 rounded-bl-lg font-semibold opacity-0 group-hover:opacity-100 transition shadow-lg hover:bg-blue-600/50"> Descubra </button>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>         
+    </section>
+    <!-- Depoimentos -->     
+    <section class="py-20 bg-white w-full"> 
+        <div class="container mx-auto px-6"> 
+            <div class="text-center mb-16"> 
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">O que dizem nossos clientes</h2> 
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Milhares de viajantes confiam na Just Go</p> 
+            </div>             
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"> 
+                <div class="bg-gray-50 rounded-2xl p-8 hover-lift"> 
+                    <div class="flex items-center mb-4"> 
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-lg mr-4"> 
+                            MC
+</div>                         
+                        <div> 
+                            <h4 class="font-bold text-gray-800">Maria Clara</h4> 
+                            <p class="text-sm text-gray-600">Empresária</p> 
+                        </div>                         
+                    </div>                     
+                    <p class="text-gray-700 leading-relaxed">"O seguro me salvou quando precisei de atendimento médico em Paris. Atendimento rápido, em português e reembolso sem burocracia. Recomendo muito!"</p> 
+                </div>                 
+                <div class="bg-gray-50 rounded-2xl p-8 hover-lift"> 
+                    <div class="flex items-center mb-4"> 
+                        <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold text-lg mr-4"> 
+                            RS
+</div>                         
+                        <div> 
+                            <h4 class="font-bold text-gray-800">Roberto Silva</h4> 
+                            <p class="text-sm text-gray-600">Fotógrafo</p> 
+                        </div>                         
+                    </div>                     
+                    <p class="text-gray-700 leading-relaxed">"Os guias são incríveis! Descobri lugares únicos na Ásia que não encontrei em nenhum outro roteiro. Valeu cada centavo investido."</p> 
+                </div>                 
+                <div class="bg-gray-50 rounded-2xl p-8 hover-lift"> 
+                    <div class="flex items-center mb-4"> 
+                        <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold text-lg mr-4"> 
+                            AL
+</div>                         
+                        <div> 
+                            <h4 class="font-bold text-gray-800">Ana Luiza</h4> 
+                            <p class="text-sm text-gray-600">Arquiteta</p> 
+                        </div>                         
+                    </div>                     
+                    <p class="text-gray-700 leading-relaxed">"Profissionalismo total! Desde a contratação até o suporte durante a viagem. Equipe atenciosa e experiente. Viajo sempre com eles!"</p> 
+                </div>                 
+            </div>             
+        </div>         
+    </section>
+    <!-- Cotação Section -->     
+    <section id="cotacao" class="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white w-full"> 
+        <div class="container mx-auto px-6"> 
+            <div class="text-center mb-12"> 
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Faça sua Cotação de Seguro Viagem</h2> 
+                <p class="text-xl text-blue-100 max-w-2xl mx-auto">Receba uma proposta personalizada em minutos</p> 
+            </div>             
+            <form id="formCotacao" action="https://formsubmit.co/contato@honigseguros.com.br" method="POST" target="_blank" class="max-w-4xl mx-auto bg-white rounded-2xl p-8 text-gray-800">
+                <input type="hidden" name="_subject" value="Rota Inesquecível - COTAÇÃO DE SEGURO VIAGEM"> 
+                <input type="hidden" name="_template" value="table"> 
+                <input type="hidden" name="_captcha" value="false"> 
+                <input type="hidden" name="Tipo" value="COTAÇÃO DE SEGURO VIAGEM"> 
+                <div class="grid md:grid-cols-2 gap-6"> 
+                    <div>
+                        <label class="block text-sm font-semibold mb-2" for="cotacao-nome">Nome Completo *</label>                         
+                        <input type="text" id="cotacao-nome" name="Nome Completo" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none transition"> 
+                    </div>                     
+                    <div>
+                        <label class="block text-sm font-semibold mb-2" for="cotacao-email">Email *</label>                         
+                        <input type="email" id="cotacao-email" name="Email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none transition"> 
+                    </div>                     
+                    <div>
+                        <label class="block text-sm font-semibold mb-2" for="cotacao-destino">Destino *</label>                         
+                        <input type="text" id="cotacao-destino" name="Destino" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none transition"> 
+                    </div>                     
+                    <div>
+                        <label class="block text-sm font-semibold mb-2" for="cotacao-whatsapp">WhatsApp *</label>                         
+                        <input type="tel" id="cotacao-whatsapp" name="WhatsApp" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none transition"> 
+                    </div>                     
+                    <div>
+                        <label class="block text-sm font-semibold mb-2" for="cotacao-partida">Data de Partida *</label>                         
+                        <input type="date" id="cotacao-partida" name="Data de Partida" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none transition"> 
+                    </div>                     
+                    <div>
+                        <label class="block text-sm font-semibold mb-2" for="cotacao-retorno">Data de Retorno *</label>                         
+                        <input type="date" id="cotacao-retorno" name="Data de Retorno" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none transition"> 
+                    </div>                     
+                </div>
+                <button type="submit" class="w-full mt-8 bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 rounded-lg text-lg font-bold hover:from-blue-700 hover:to-blue-800 transition hover-lift"> 🚀 SOLICITAR COTAÇÃO PERSONALIZADA </button>                 
+            </form>             
+        </div>         
+    </section>
+    <!-- Contato Section -->     
+    <section id="contato" class="py-20 bg-gradient-to-br from-gray-800 to-gray-900 text-white w-full"> 
+        <div class="container mx-auto px-6"> 
+            <div class="text-center mb-12"> 
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Pronto para sua próxima aventura?</h2> 
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">Nossa equipe de especialistas está pronta para ajudar</p> 
+            </div>             
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12"> 
+                <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover-lift"> 
+                    <div class="text-5xl mb-4"> 
+                        📧
+</div>                     
+                    <h3 class="text-2xl font-bold mb-2">Email Direto</h3> 
+                    <p class="text-gray-300 mb-4">Resposta em até 2 horas úteis</p>
+                    <a href="mailto:contato@honigseguros.com.br" class="text-blue-400 hover:text-blue-300 font-semibold"> contato@honigseguros.com.br </a> 
+                </div>                 
+                <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover-lift"> 
+                    <div class="text-5xl mb-4"> 
+                        📱
+</div>                     
+                    <h3 class="text-2xl font-bold mb-2">WhatsApp&nbsp;</h3> 
+                    <p class="text-gray-300 mb-4">Atendimento em tempo real</p>
+                    <a href="https://wa.me/5511999998888" target="_blank" class="text-blue-400 hover:text-blue-300 font-semibold"> (11) 99999-8888 </a> 
+                </div>                 
+            </div>             
+            <div class="text-center">
+                <button onclick="abrirModalContato()" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-lg text-lg font-bold hover:from-blue-700 hover:to-purple-700 transition hover-lift inline-flex items-center"> 💬 Falar com Especialista Agora </button>                 
+            </div>             
+        </div>         
+    </section>
+    <!-- Footer -->     
+    <footer class="bg-black text-gray-300 py-16 w-full"> 
+        <div class="container mx-auto px-6"> 
+            <div class="grid md:grid-cols-4 gap-12 mb-12"> 
+                <div> 
+                    <div class="flex items-center space-x-3 mb-4"> 
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold"></div>
+                        <span class="text-xl font-bold text-white"><img src="logo.png" alt=""> </span>
+                    </div>                     
+                    <p class="text-sm leading-relaxed">Transformando sonhos em experiências reais com segurança e expertise desde 2015.</p> 
+                </div>                 
+                <div> 
+                    <h4 class="text-white font-bold mb-4">Seguros Premium</h4> 
+                    <ul class="space-y-2 text-sm"> 
+                        <li>
+                            <a href="#" class="hover:text-blue-400 transition">Plano Essential</a>
+                        </li>                         
+                        <li>
+                            <a href="#" class="hover:text-blue-400 transition">Plano Premium</a>
+                        </li>                         
+                        <li>
+                            <a href="#" class="hover:text-blue-400 transition">Plano Elite</a>
+                        </li>                         
+                        <li>
+                            <a href="#" class="hover:text-blue-400 transition">Comparar Planos</a>
+                        </li>                         
+                    </ul>                     
+                </div>                 
+                <div> 
+                    <h4 class="text-white font-bold mb-4">Guias Exclusivos</h4> 
+                    <ul class="space-y-2 text-sm"> 
+                        <li>
+                            <a href="#" class="hover:text-blue-400 transition">Europa Grand Tour</a>
+                        </li>                         
+                        <li>
+                            <a href="#" class="hover:text-blue-400 transition">Sudeste Asiático</a>
+                        </li>                         
+                        <li>
+                            <a href="#" class="hover:text-blue-400 transition">Andes &amp; Patagônia</a>
+                        </li>                         
+                        <li>
+                            <a href="#" class="hover:text-blue-400 transition">Roteiros Personalizados</a>
+                        </li>                         
+                    </ul>                     
+                </div>                 
+                <div> 
+                    <h4 class="text-white font-bold mb-4">Suporte Premium</h4> 
+                    <ul class="space-y-2 text-sm"> 
+                        <li>
+                            <a href="mailto:contato@honigseguros.com.br" class="hover:text-blue-400 transition">contato@honigseguros.com.br</a>
+                        </li>                         
+                        <li>
+                            <a href="https://wa.me/5511999998888" class="hover:text-blue-400 transition">(11) 99999-8888</a>
+                        </li>                         
+                        <li>
+                            <a href="#" class="hover:text-blue-400 transition">Chat 24/7</a>
+                        </li>                         
+                        <li>
+                            <a href="#" class="hover:text-blue-400 transition">Consultoria especializada</a>
+                        </li>                         
+                    </ul>                     
+                </div>                 
+            </div>             
+            <div class="border-t border-gray-800 pt-8 text-center text-sm"> 
+                <p>&copy; 2026 Just Go. Todos os direitos reservados. Viaje com segurança e expertise.</p> 
+            </div>             
+        </div>         
+    </footer>
+    <!-- Modal Seguro -->     
+    <div id="modalSeguro" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 modal-backdrop"> 
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto fade-in"> 
+            <div class="p-8"> 
+                <div class="flex justify-between items-start mb-6"> 
+                    <h3 id="modalSeguroTitulo" class="text-3xl font-bold text-gray-800"></h3>
+                    <button onclick="fecharModal('modalSeguro')" class="text-gray-500 hover:text-gray-700 text-3xl leading-none">×</button>                     
+                </div>                 
+                <form id="formSeguro" action="https://formsubmit.co/contato@honigseguros.com.br" method="POST" target="_blank">
+                    <input type="hidden" name="_subject" id="seguro-subject" value=""> 
+                    <input type="hidden" name="_template" value="table"> 
+                    <input type="hidden" name="_captcha" value="false"> 
+                    <input type="hidden" name="Tipo" value="CONTRATAÇÃO DE SEGURO"> 
+                    <input type="hidden" name="Plano Escolhido" id="seguro-plano-hidden" value=""> 
+                    <div class="space-y-4"> 
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" for="seguro-nome">Nome Completo *</label>                             
+                            <input type="text" id="seguro-nome" name="Nome Completo" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none"> 
+                        </div>                         
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" for="seguro-email">Email *</label>                             
+                            <input type="email" id="seguro-email" name="Email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none"> 
+                        </div>                         
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" for="seguro-telefone">Telefone/WhatsApp *</label>                             
+                            <input type="tel" id="seguro-telefone" name="Telefone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none"> 
+                        </div>                         
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" for="seguro-destino">Destino Principal *</label>                             
+                            <input type="text" id="seguro-destino" name="Destino" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none"> 
+                        </div>                         
+                        <div class="grid grid-cols-2 gap-4"> 
+                            <div>
+                                <label class="block text-sm font-semibold mb-2" for="seguro-partida">Data de Partida *</label>                                 
+                                <input type="date" id="seguro-partida" name="Data de Partida" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none"> 
+                            </div>                             
+                            <div>
+                                <label class="block text-sm font-semibold mb-2" for="seguro-retorno">Data de Retorno *</label>                                 
+                                <input type="date" id="seguro-retorno" name="Data de Retorno" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none"> 
+                            </div>                             
+                        </div>                         
+                    </div>
+                    <button type="submit" class="w-full mt-6 bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"> Solicitar Cotação Premium </button>                     
+                </form>                 
+            </div>             
+        </div>         
     </div>
-    <div class="hidden md:flex space-x-8"><a href="#seguros" class="text-gray-700 hover:text-blue-600 font-medium transition">Seguros</a> <a href="#guias" class="text-gray-700 hover:text-blue-600 font-medium transition">Guias Premium</a> <a href="#cotacao" class="text-gray-700 hover:text-blue-600 font-medium transition">Cotação</a> <a href="#contato" class="text-gray-700 hover:text-blue-600 font-medium transition">Contato</a>
-    </div><button onclick="document.getElementById('cotacao').scrollIntoView({behavior: 'smooth'})" class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition"> Começar Agora </button>
-   </nav>
-  </header><!-- Hero Section -->
-  <section class="hero-bg h-full w-full flex items-center justify-center text-white pt-20">
-   <div class="container mx-auto px-6 py-20 text-center">
-    <h1 class="text-5xl md:text-7xl font-bold mb-6 fade-in">Viaje com <span class="text-blue-300">Segurança</span> e <span class="text-blue-300">Expertise</span></h1>
-    <p class="text-xl md:text-2xl mb-12 text-gray-200 max-w-3xl mx-auto fade-in">Proteção completa para suas viagens e roteiros exclusivos pelos destinos mais incríveis do mundo</p>
-    <div class="flex flex-col md:flex-row gap-4 justify-center mb-16 fade-in"><button onclick="document.getElementById('seguros').scrollIntoView({behavior: 'smooth'})" class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition hover-lift"> Explorar Seguros Premium </button> <button onclick="document.getElementById('guias').scrollIntoView({behavior: 'smooth'})" class="glass-effect text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition hover-lift"> Ver Guias Exclusivos </button>
+    <!-- Modal Contato -->     
+    <div id="modalContato" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 modal-backdrop"> 
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto fade-in"> 
+            <div class="p-8"> 
+                <div class="flex justify-between items-start mb-6"> 
+                    <h3 class="text-3xl font-bold text-gray-800">Falar com Especialista</h3>
+                    <button onclick="fecharModal('modalContato')" class="text-gray-500 hover:text-gray-700 text-3xl leading-none">×</button>                     
+                </div>                 
+                <form id="formContato" action="https://formsubmit.co/contato@honigseguros.com.br" method="POST" target="_blank">
+                    <input type="hidden" name="_subject" value="Rota Inesquecível - MENSAGEM DE CONTATO"> 
+                    <input type="hidden" name="_template" value="table"> 
+                    <input type="hidden" name="_captcha" value="false"> 
+                    <input type="hidden" name="Tipo" value="MENSAGEM DE CONTATO"> 
+                    <div class="space-y-4"> 
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" for="contato-nome">Nome Completo *</label>                             
+                            <input type="text" id="contato-nome" name="Nome Completo" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none"> 
+                        </div>                         
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" for="contato-email">Email *</label>                             
+                            <input type="email" id="contato-email" name="Email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none"> 
+                        </div>                         
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" for="contato-telefone">Telefone/WhatsApp *</label>                             
+                            <input type="tel" id="contato-telefone" name="Telefone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none"> 
+                        </div>                         
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" for="contato-assunto">Assunto *</label>                             
+                            <select id="contato-assunto" name="Assunto" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none"> 
+                                <option value="">Selecione...</option>                                 
+                                <option value="Cotação de Seguro Viagem">Cotação de Seguro Viagem</option>                                 
+                                <option value="Informações sobre Guias Premium">Informações sobre Guias Premium</option>                                 
+                                <option value="Consultoria Personalizada">Consultoria Personalizada</option>                                 
+                                <option value="Suporte Técnico">Suporte Técnico</option>                                 
+                                <option value="Outros">Outros</option>                                 
+                            </select>                             
+                        </div>                         
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" for="contato-mensagem">Mensagem *</label>                             
+                            <textarea id="contato-mensagem" name="Mensagem" required rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none resize-none"></textarea> 
+                        </div>                         
+                    </div>
+                    <button type="submit" class="w-full mt-6 bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"> 📧 Enviar Mensagem </button>                     
+                </form>                 
+            </div>             
+        </div>         
     </div>
-   </div>
-  </section><!-- Seguros Section -->
-  <section id="seguros" class="py-20 bg-gray-50 w-full">
-   <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-     <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Seguros Premium</h2>
-     <p class="text-xl text-gray-600 max-w-2xl mx-auto">Escolha o plano perfeito para sua viagem com cobertura completa e assistência 24 horas</p>
-    </div>
-    <div class="relative max-w-7xl mx-auto mb-12"><!-- Carrossel Horizontal de Seguros -->
-     <div id="carrosselSeguros" class="overflow-x-auto scroll-smooth pb-4 px-2">
-      <div class="flex gap-6" style="width: max-content;"><!-- Plano Cruzeiro -->
-       <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift flex flex-col" style="width: 300px; min-width: 300px;"><img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=400&amp;q=80" alt="Cruzeiro" class="w-full h-40 object-cover rounded-lg mb-4">
-        <h3 class="text-2xl font-bold mb-2">Plano Cruzeiro</h3>
-        <div class="text-2xl font-bold bg-gradient-to-r from-green-400 to-green-700 bg-clip-text text-transparent mb-6">
-         R$ 60,00
-        </div>
-        <h4 class="font-semibold text-gray-700 mb-3">Coberturas:</h4>
-        <ul class="space-y-3 mb-8 flex-grow">
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Reembolso de despesas médicas, hospitalares e odontológicas</span></li>
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Reembolso de despesas farmacêuticas</span></li>
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Extravio de bagagem</span></li>
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Cancelamento de viagem</span></li>
-        </ul><button onclick="abrirModalSeguro('Plano Cruzeiro')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition mt-auto"> Contratar Plano </button>
-       </div><!-- Plano Brasil Básico -->
-       <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift flex flex-col" style="width: 300px; min-width: 300px;"><img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=400&amp;q=80" alt="Brasil" class="w-full h-40 object-cover rounded-lg mb-4">
-        <h3 class="text-2xl font-bold mb-2">Brasil Básico</h3>
-        <div class="text-2xl font-bold bg-gradient-to-r from-green-400 to-green-700 bg-clip-text text-transparent mb-6">
-         R$ 40,00
-        </div>
-        <h4 class="font-semibold text-gray-700 mb-3">Coberturas:</h4>
-        <ul class="space-y-3 mb-8 flex-grow">
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Despesas médicas, hospitalares e odontológicas</span></li>
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Despesas farmacêuticas</span></li>
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Extravio de bagagem</span></li>
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Cancelamento de viagem</span></li>
-        </ul><button onclick="abrirModalSeguro('Brasil Básico')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition mt-auto"> Contratar Plano </button>
-       </div><!-- Plano Brasil Intermediário -->
-       <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift flex flex-col" style="width: 300px; min-width: 300px;"><img src="https://images.unsplash.com/photo-1516815231560-8f41ec531527?w=400&amp;q=80" alt="Brasil Intermediário" class="w-full h-40 object-cover rounded-lg mb-4">
-        <h3 class="text-2xl font-bold mb-2">Brasil Intermediário</h3>
-        <div class="text-2xl font-bold bg-gradient-to-r from-green-400 to-green-700 bg-clip-text text-transparent mb-6">
-         R$ 50,00
-        </div>
-        <h4 class="font-semibold text-gray-700 mb-3">Coberturas:</h4>
-        <ul class="space-y-3 mb-8 flex-grow">
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Despesas médicas, hospitalares e odontológicas</span></li>
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Despesas farmacêuticas</span></li>
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Extravio de bagagem</span></li>
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Cancelamento de viagem</span></li>
-        </ul><button onclick="abrirModalSeguro('Brasil Intermediário')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition mt-auto"> Contratar Plano </button>
-       </div><!-- Plano América Latina Básico -->
-       <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift flex flex-col" style="width: 300px; min-width: 300px;"><img src="https://images.unsplash.com/photo-1446941611757-91d2c3bd3d45?w=400&amp;q=80" alt="América Latina" class="w-full h-40 object-cover rounded-lg mb-4">
-        <h3 class="text-2xl font-bold mb-2">América Latina Básico</h3>
-        <div class="text-2xl font-bold bg-gradient-to-r from-green-400 to-green-700 bg-clip-text text-transparent mb-6">
-         R$ 60,00
-        </div>
-        <h4 class="font-semibold text-gray-700 mb-3">Coberturas:</h4>
-        <ul class="space-y-3 mb-8 flex-grow">
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Despesas médicas, hospitalares e odontológicas</span></li>
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Despesas farmacêuticas</span></li>
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Extravio de bagagem</span></li>
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Cancelamento de viagem</span></li>
-        </ul><button onclick="abrirModalSeguro('América Latina Básico')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition mt-auto"> Contratar Plano </button>
-       </div><!-- Plano Europa Básico -->
-       <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift border-4 border-blue-600 relative flex flex-col" style="width: 300px; min-width: 300px;">
-        <div class="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 rounded-bl-lg rounded-tr-lg text-sm font-semibold">
-         MAIS PROCURADO
-        </div><img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=400&amp;q=80" alt="Europa" class="w-full h-40 object-cover rounded-lg mb-4">
-        <h3 class="text-2xl font-bold mb-2">Europa Básico</h3>
-        <div class="text-2xl font-bold bg-gradient-to-r from-green-400 to-green-700 bg-clip-text text-transparent mb-6">
-         R$ 30,00/dia*
-        </div>
-        <h4 class="font-semibold text-gray-700 mb-3">Coberturas:</h4>
-        <ul class="space-y-3 mb-8 flex-grow">
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Despesas médicas, hospitalares e odontológicas</span></li>
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Despesas farmacêuticas</span></li>
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Extravio de bagagem</span></li>
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Cancelamento de viagem</span></li>
-        </ul><button onclick="abrirModalSeguro('Europa Básico')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition mt-auto"> Contratar Plano </button>
-       </div><!-- Plano Mundo Básico -->
-       <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift flex flex-col" style="width: 300px; min-width: 300px;"><img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&amp;q=80" alt="Mundo" class="w-full h-40 object-cover rounded-lg mb-4">
-        <h3 class="text-2xl font-bold mb-2">Mundo Básico</h3>
-        <div class="text-2xl font-bold bg-gradient-to-r from-green-400 to-green-700 bg-clip-text text-transparent mb-6">
-         R$ 45,00/dia*
-        </div>
-        <h4 class="font-semibold text-gray-700 mb-3">Coberturas:</h4>
-        <ul class="space-y-3 mb-8 flex-grow">
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Despesas médicas, hospitalares e odontológicas</span></li>
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Despesas farmacêuticas</span></li>
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Extravio de bagagem</span></li>
-         <li class="flex items-start"><span class="text-green-500 mr-2">•</span> <span class="text-sm">Cancelamento de viagem</span></li>
-        </ul><button onclick="abrirModalSeguro('Mundo Básico')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition mt-auto"> Contratar Plano </button>
-       </div>
-      </div>
-     </div><!-- Botões de navegação --> <button onclick="scrollSeguros(-1)" class="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-gray-100 transition z-10"> <span class="text-2xl text-gray-700">‹</span> </button> <button onclick="scrollSeguros(1)" class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-gray-100 transition z-10"> <span class="text-2xl text-gray-700">›</span> </button>
-    </div><!-- Aviso Legal -->
-    <div class="mt-12 max-w-4xl mx-auto">
-     <p class="text-sm text-gray-600 text-center leading-relaxed">* Valores estimados para viagem de 7 dias, 1 passageiro até 70 anos. Sujeitos a variação cambial e condições específicas de cada cobertura. A cotação final será calculada de acordo com o destino, período da viagem e perfil do viajante.</p>
-    </div><!-- Coberturas Section -->
-    <div class="mt-20 max-w-7xl mx-auto">
-     <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">Coberturas que fazem a diferença na sua viagem</h2>
-     <div class="grid md:grid-cols-6 gap-8"><!-- Despesas médicas e hospitalares -->
-      <div class="text-center">
-       <div class="w-20 h-20 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-        <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-        </svg>
-       </div>
-       <h3 class="font-bold text-gray-800 mb-2">Despesas médicas e hospitalares</h3>
-       <p class="text-sm text-gray-600">Cobertura para atendimento médico, hospitalar e odontológico.</p>
-      </div><!-- Despesas Farmacêuticas -->
-      <div class="text-center">
-       <div class="w-20 h-20 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
-        <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-        </svg>
-       </div>
-       <h3 class="font-bold text-gray-800 mb-2">Despesas Farmacêuticas</h3>
-       <p class="text-sm text-gray-600">Reembolso em casos de medicações receitadas durante o período da viagem.</p>
-      </div><!-- Remarcação de Passagem -->
-      <div class="text-center">
-       <div class="w-20 h-20 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
-        <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-        </svg>
-       </div>
-       <h3 class="font-bold text-gray-800 mb-2">Remarcação de Passagem</h3>
-       <p class="text-sm text-gray-600">Reembolso de multas e tarifas ao remarcar passagens do segurado e familiares, em casos de imprevistos com a saúde.</p>
-      </div><!-- Problemas com a bagagem -->
-      <div class="text-center">
-       <div class="w-20 h-20 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center">
-        <svg class="w-10 h-10 text-orange-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
-        </svg>
-       </div>
-       <h3 class="font-bold text-gray-800 mb-2">Problemas com a bagagem</h3>
-       <p class="text-sm text-gray-600">Direito à indenização em casos de perda, extravio ou danos na bagagem.</p>
-      </div><!-- Segurança dos acompanhantes -->
-      <div class="text-center">
-       <div class="w-20 h-20 mx-auto mb-4 bg-red-100 rounded-full flex items-center justify-center">
-        <svg class="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-        </svg>
-       </div>
-       <h3 class="font-bold text-gray-800 mb-2">Segurança dos acompanhantes</h3>
-       <p class="text-sm text-gray-600">Caso um menor acompanhante passe por um fato imprevisto de saúde, o plano inclui reembolso de uma passagem para o Brasil.</p>
-      </div><!-- Prática de Esportes Radicais -->
-      <div class="text-center">
-       <div class="w-20 h-20 mx-auto mb-4 bg-teal-100 rounded-full flex items-center justify-center">
-        <svg class="w-10 h-10 text-teal-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-        </svg>
-       </div>
-       <h3 class="font-bold text-gray-800 mb-2">Prática de Esportes Radicais</h3>
-       <p class="text-sm text-gray-600">Cobertura para atendimento médico em caso de acidentes durante a prática de esportes radicais.</p>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section><!-- Guias Premium Section -->
-  <section id="guias" class="py-20 bg-white w-full">
-   <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-     <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Guias Premium de Viagem</h2>
-     <p class="text-xl text-gray-600 max-w-2xl mx-auto">Roteiros exclusivos criados por especialistas com mapas detalhados e dicas locais</p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto"><!-- Guia Europa -->
-     <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift destination-card">
-      <div class="relative h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&amp;q=80" alt="Europa" class="w-full h-full object-cover">
-       <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-        BESTSELLER
-       </div>
-      </div>
-      <div class="p-6">
-       <h3 class="text-2xl font-bold mb-2">Europa Grand Tour</h3>
-       <p class="text-gray-600 mb-4">21 dias por 15 países europeus com roteiro otimizado</p>
-       <div class="flex items-center justify-between mb-4">
-        <div><span class="text-3xl font-bold text-blue-600">R$ 149</span> <span class="text-gray-500 line-through ml-2">R$ 199</span>
-        </div>
-       </div>
-       <div class="text-sm text-gray-600 mb-4">
-        ✓ PDF Premium + Mapas + App Offline
-       </div><button onclick="comprarGuia('Europa Grand Tour')" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"> Adquirir Guia Premium </button>
-      </div>
-     </div><!-- Guia Ásia -->
-     <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift destination-card">
-      <div class="relative h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&amp;q=80" alt="Ásia" class="w-full h-full object-cover">
-       <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-        NOVO
-       </div>
-      </div>
-      <div class="p-6">
-       <h3 class="text-2xl font-bold mb-2">Sudeste Asiático Autêntico</h3>
-       <p class="text-gray-600 mb-4">30 dias por 8 países asiáticos com experiências únicas</p>
-       <div class="flex items-center justify-between mb-4">
-        <div><span class="text-3xl font-bold text-orange-600">R$ 129</span> <span class="text-gray-500 line-through ml-2">R$ 179</span>
-        </div>
-       </div>
-       <div class="text-sm text-gray-600 mb-4">
-        ✓ PDF Premium + Mapas + Frases Essenciais
-       </div><button onclick="comprarGuia('Sudeste Asiático Autêntico')" class="w-full bg-orange-600 text-white py-3 rounded-lg font-semibold hover:bg-orange-700 transition"> Adquirir Guia Premium </button>
-      </div>
-     </div><!-- Guia Andes -->
-     <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift destination-card">
-      <div class="relative h-64 overflow-hidden"><img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=800&amp;q=80" alt="Andes" class="w-full h-full object-cover">
-       <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-        EXCLUSIVO
-       </div>
-      </div>
-      <div class="p-6">
-       <h3 class="text-2xl font-bold mb-2">Andes &amp; Patagônia Épica</h3>
-       <p class="text-gray-600 mb-4">25 dias pelas cordilheiras com trilhas exclusivas</p>
-       <div class="flex items-center justify-between mb-4">
-        <div><span class="text-3xl font-bold text-green-600">R$ 169</span> <span class="text-gray-500 line-through ml-2">R$ 229</span>
-        </div>
-       </div>
-       <div class="text-sm text-gray-600 mb-4">
-        ✓ PDF Premium + Mapas + GPS Coordinates
-       </div><button onclick="comprarGuia('Andes &amp; Patagônia Épica')" class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition"> Adquirir Guia Premium </button>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section><!-- Galeria de Destinos -->
-  <section class="py-20 bg-gray-50 w-full">
-   <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-     <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Destinos Inspiradores</h2>
-     <p class="text-xl text-gray-600 max-w-2xl mx-auto">Explore os lugares mais incríveis do mundo</p>
-    </div>
-    <div class="relative max-w-7xl mx-auto overflow-hidden">
-     <div id="carouselDestinos" class="flex transition-transform duration-500 ease-in-out"><!-- Todos os 12 destinos em uma única linha -->
-      <div onclick="abrirModalDestino('santorini')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;"><img src="https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=600&amp;q=80" alt="Santorini" class="w-full h-full object-cover">
-       <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-        <div>
-         <h3 class="text-white text-2xl font-bold">Santorini</h3>
-         <p class="text-white/90">Grécia</p>
-        </div>
-       </div>
-       <div class="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/20 transition flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 transition font-semibold">Clique para explorar</span>
-       </div>
-      </div>
-      <div onclick="abrirModalDestino('bali')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&amp;q=80" alt="Bali" class="w-full h-full object-cover">
-       <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-        <div>
-         <h3 class="text-white text-2xl font-bold">Bali</h3>
-         <p class="text-white/90">Indonésia</p>
-        </div>
-       </div>
-       <div class="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/20 transition flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 transition font-semibold">Clique para explorar</span>
-       </div>
-      </div>
-      <div onclick="abrirModalDestino('patagonia')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;"><img src="https://images.unsplash.com/photo-1591444022447-460a8e1f3ce0?w=600&amp;q=80" alt="Patagônia" class="w-full h-full object-cover">
-       <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-        <div>
-         <h3 class="text-white text-2xl font-bold">Patagônia</h3>
-         <p class="text-white/90">Chile</p>
-        </div>
-       </div>
-       <div class="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/20 transition flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 transition font-semibold">Clique para explorar</span>
-       </div>
-      </div>
-      <div onclick="abrirModalDestino('kyoto')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;"><img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&amp;q=80" alt="Kyoto" class="w-full h-full object-cover">
-       <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-        <div>
-         <h3 class="text-white text-2xl font-bold">Kyoto</h3>
-         <p class="text-white/90">Japão</p>
-        </div>
-       </div>
-       <div class="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/20 transition flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 transition font-semibold">Clique para explorar</span>
-       </div>
-      </div>
-      <div onclick="abrirModalDestino('paris')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&amp;q=80" alt="Paris" class="w-full h-full object-cover">
-       <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-        <div>
-         <h3 class="text-white text-2xl font-bold">Paris</h3>
-         <p class="text-white/90">França</p>
-        </div>
-       </div>
-       <div class="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/20 transition flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 transition font-semibold">Clique para explorar</span>
-       </div>
-      </div>
-      <div onclick="abrirModalDestino('maldivas')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;"><img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&amp;q=80" alt="Maldivas" class="w-full h-full object-cover">
-       <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-        <div>
-         <h3 class="text-white text-2xl font-bold">Maldivas</h3>
-         <p class="text-white/90">Oceano Índico</p>
-        </div>
-       </div>
-       <div class="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/20 transition flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 transition font-semibold">Clique para explorar</span>
-       </div>
-      </div>
-      <div onclick="abrirModalDestino('dubai')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&amp;q=80" alt="Dubai" class="w-full h-full object-cover">
-       <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-        <div>
-         <h3 class="text-white text-2xl font-bold">Dubai</h3>
-         <p class="text-white/90">Emirados Árabes</p>
-        </div>
-       </div>
-       <div class="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/20 transition flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 transition font-semibold">Clique para explorar</span>
-       </div>
-      </div>
-      <div onclick="abrirModalDestino('islandia')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;"><img src="https://images.unsplash.com/photo-1504829857797-ddff29c27927?w=600&amp;q=80" alt="Islândia" class="w-full h-full object-cover">
-       <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-        <div>
-         <h3 class="text-white text-2xl font-bold">Islândia</h3>
-         <p class="text-white/90">Europa do Norte</p>
-        </div>
-       </div>
-       <div class="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/20 transition flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 transition font-semibold">Clique para explorar</span>
-       </div>
-      </div>
-      <div onclick="abrirModalDestino('newyork')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;"><img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&amp;q=80" alt="Nova York" class="w-full h-full object-cover">
-       <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-        <div>
-         <h3 class="text-white text-2xl font-bold">Nova York</h3>
-         <p class="text-white/90">EUA</p>
-        </div>
-       </div>
-       <div class="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/20 transition flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 transition font-semibold">Clique para explorar</span>
-       </div>
-      </div>
-      <div onclick="abrirModalDestino('tailandia')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;"><img src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=600&amp;q=80" alt="Tailândia" class="w-full h-full object-cover">
-       <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-        <div>
-         <h3 class="text-white text-2xl font-bold">Tailândia</h3>
-         <p class="text-white/90">Sudeste Asiático</p>
-        </div>
-       </div>
-       <div class="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/20 transition flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 transition font-semibold">Clique para explorar</span>
-       </div>
-      </div>
-      <div onclick="abrirModalDestino('australia')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px); margin-right: 24px;"><img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=600&amp;q=80" alt="Austrália" class="w-full h-full object-cover">
-       <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-        <div>
-         <h3 class="text-white text-2xl font-bold">Austrália</h3>
-         <p class="text-white/90">Oceania</p>
-        </div>
-       </div>
-       <div class="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/20 transition flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 transition font-semibold">Clique para explorar</span>
-       </div>
-      </div>
-      <div onclick="abrirModalDestino('marrocos')" class="destination-card relative h-64 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0" style="width: calc(25% - 18px);"><img src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=600&amp;q=80" alt="Marrocos" class="w-full h-full object-cover">
-       <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-        <div>
-         <h3 class="text-white text-2xl font-bold">Marrocos</h3>
-         <p class="text-white/90">Norte da África</p>
-        </div>
-       </div>
-       <div class="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/20 transition flex items-center justify-center"><span class="text-white opacity-0 group-hover:opacity-100 transition font-semibold">Clique para explorar</span>
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section><!-- Depoimentos -->
-  <section class="py-20 bg-white w-full">
-   <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-     <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">O que dizem nossos clientes</h2>
-     <p class="text-xl text-gray-600 max-w-2xl mx-auto">Milhares de viajantes confiam na Rota Inesquecível</p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-     <div class="bg-gray-50 rounded-2xl p-8 hover-lift">
-      <div class="flex items-center mb-4">
-       <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-lg mr-4">
-        MC
-       </div>
-       <div>
-        <h4 class="font-bold text-gray-800">Maria Clara</h4>
-        <p class="text-sm text-gray-600">Empresária</p>
-       </div>
-      </div>
-      <p class="text-gray-700 leading-relaxed">"O seguro me salvou quando precisei de atendimento médico em Paris. Atendimento rápido, em português e reembolso sem burocracia. Recomendo muito!"</p>
-     </div>
-     <div class="bg-gray-50 rounded-2xl p-8 hover-lift">
-      <div class="flex items-center mb-4">
-       <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold text-lg mr-4">
-        RS
-       </div>
-       <div>
-        <h4 class="font-bold text-gray-800">Roberto Silva</h4>
-        <p class="text-sm text-gray-600">Fotógrafo</p>
-       </div>
-      </div>
-      <p class="text-gray-700 leading-relaxed">"Os guias são incríveis! Descobri lugares únicos na Ásia que não encontrei em nenhum outro roteiro. Valeu cada centavo investido."</p>
-     </div>
-     <div class="bg-gray-50 rounded-2xl p-8 hover-lift">
-      <div class="flex items-center mb-4">
-       <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold text-lg mr-4">
-        AL
-       </div>
-       <div>
-        <h4 class="font-bold text-gray-800">Ana Luiza</h4>
-        <p class="text-sm text-gray-600">Arquiteta</p>
-       </div>
-      </div>
-      <p class="text-gray-700 leading-relaxed">"Profissionalismo total! Desde a contratação até o suporte durante a viagem. Equipe atenciosa e experiente. Viajo sempre com eles!"</p>
-     </div>
-    </div>
-   </div>
-  </section><!-- Cotação Section -->
-  <section id="cotacao" class="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white w-full">
-   <div class="container mx-auto px-6">
-    <div class="text-center mb-12">
-     <h2 class="text-4xl md:text-5xl font-bold mb-4">Faça sua Cotação de Seguro Viagem</h2>
-     <p class="text-xl text-blue-100 max-w-2xl mx-auto">Receba uma proposta personalizada em minutos</p>
-    </div>
-    <form id="formCotacao" action="https://formsubmit.co/contato@honigseguros.com.br" method="POST" target="_blank" class="max-w-4xl mx-auto bg-white rounded-2xl p-8 text-gray-800"><input type="hidden" name="_subject" value="Rota Inesquecível - COTAÇÃO DE SEGURO VIAGEM"> <input type="hidden" name="_template" value="table"> <input type="hidden" name="_captcha" value="false"> <input type="hidden" name="Tipo" value="COTAÇÃO DE SEGURO VIAGEM">
-     <div class="grid md:grid-cols-2 gap-6">
-      <div><label class="block text-sm font-semibold mb-2" for="cotacao-nome">Nome Completo *</label> <input type="text" id="cotacao-nome" name="Nome Completo" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none transition">
-      </div>
-      <div><label class="block text-sm font-semibold mb-2" for="cotacao-email">Email *</label> <input type="email" id="cotacao-email" name="Email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none transition">
-      </div>
-      <div><label class="block text-sm font-semibold mb-2" for="cotacao-destino">Destino *</label> <input type="text" id="cotacao-destino" name="Destino" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none transition">
-      </div>
-      <div><label class="block text-sm font-semibold mb-2" for="cotacao-whatsapp">WhatsApp *</label> <input type="tel" id="cotacao-whatsapp" name="WhatsApp" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none transition">
-      </div>
-      <div><label class="block text-sm font-semibold mb-2" for="cotacao-partida">Data de Partida *</label> <input type="date" id="cotacao-partida" name="Data de Partida" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none transition">
-      </div>
-      <div><label class="block text-sm font-semibold mb-2" for="cotacao-retorno">Data de Retorno *</label> <input type="date" id="cotacao-retorno" name="Data de Retorno" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none transition">
-      </div>
-     </div><button type="submit" class="w-full mt-8 bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 rounded-lg text-lg font-bold hover:from-blue-700 hover:to-blue-800 transition hover-lift"> 🚀 SOLICITAR COTAÇÃO PERSONALIZADA </button>
-    </form>
-   </div>
-  </section><!-- Contato Section -->
-  <section id="contato" class="py-20 bg-gradient-to-br from-gray-800 to-gray-900 text-white w-full">
-   <div class="container mx-auto px-6">
-    <div class="text-center mb-12">
-     <h2 class="text-4xl md:text-5xl font-bold mb-4">Pronto para sua próxima aventura?</h2>
-     <p class="text-xl text-gray-300 max-w-2xl mx-auto">Nossa equipe de especialistas está pronta para ajudar</p>
-    </div>
-    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
-     <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover-lift">
-      <div class="text-5xl mb-4">
-       📧
-      </div>
-      <h3 class="text-2xl font-bold mb-2">Email Direto</h3>
-      <p class="text-gray-300 mb-4">Resposta em até 2 horas úteis</p><a href="mailto:contato@honigseguros.com.br" class="text-blue-400 hover:text-blue-300 font-semibold"> contato@honigseguros.com.br </a>
-     </div>
-     <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover-lift">
-      <div class="text-5xl mb-4">
-       📱
-      </div>
-      <h3 class="text-2xl font-bold mb-2">WhatsApp Premium</h3>
-      <p class="text-gray-300 mb-4">Atendimento em tempo real</p><a href="https://wa.me/5511999998888" target="_blank" class="text-blue-400 hover:text-blue-300 font-semibold"> (11) 99999-8888 </a>
-     </div>
-    </div>
-    <div class="text-center"><button onclick="abrirModalContato()" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-lg text-lg font-bold hover:from-blue-700 hover:to-purple-700 transition hover-lift inline-flex items-center"> 💬 Falar com Especialista Agora </button>
-    </div>
-   </div>
-  </section><!-- Footer -->
-  <footer class="bg-black text-gray-300 py-16 w-full">
-   <div class="container mx-auto px-6">
-    <div class="grid md:grid-cols-4 gap-12 mb-12">
-     <div>
-      <div class="flex items-center space-x-3 mb-4">
-       <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-        RI
-       </div><span class="text-xl font-bold text-white">Rota Inesquecível</span>
-      </div>
-      <p class="text-sm leading-relaxed">Transformando sonhos em experiências reais com segurança e expertise desde 2015.</p>
-     </div>
-     <div>
-      <h4 class="text-white font-bold mb-4">Seguros Premium</h4>
-      <ul class="space-y-2 text-sm">
-       <li><a href="#" class="hover:text-blue-400 transition">Plano Essential</a></li>
-       <li><a href="#" class="hover:text-blue-400 transition">Plano Premium</a></li>
-       <li><a href="#" class="hover:text-blue-400 transition">Plano Elite</a></li>
-       <li><a href="#" class="hover:text-blue-400 transition">Comparar Planos</a></li>
-      </ul>
-     </div>
-     <div>
-      <h4 class="text-white font-bold mb-4">Guias Exclusivos</h4>
-      <ul class="space-y-2 text-sm">
-       <li><a href="#" class="hover:text-blue-400 transition">Europa Grand Tour</a></li>
-       <li><a href="#" class="hover:text-blue-400 transition">Sudeste Asiático</a></li>
-       <li><a href="#" class="hover:text-blue-400 transition">Andes &amp; Patagônia</a></li>
-       <li><a href="#" class="hover:text-blue-400 transition">Roteiros Personalizados</a></li>
-      </ul>
-     </div>
-     <div>
-      <h4 class="text-white font-bold mb-4">Suporte Premium</h4>
-      <ul class="space-y-2 text-sm">
-       <li><a href="mailto:contato@honigseguros.com.br" class="hover:text-blue-400 transition">contato@honigseguros.com.br</a></li>
-       <li><a href="https://wa.me/5511999998888" class="hover:text-blue-400 transition">(11) 99999-8888</a></li>
-       <li><a href="#" class="hover:text-blue-400 transition">Chat 24/7</a></li>
-       <li><a href="#" class="hover:text-blue-400 transition">Consultoria especializada</a></li>
-      </ul>
-     </div>
-    </div>
-    <div class="border-t border-gray-800 pt-8 text-center text-sm">
-     <p>© 2024 Rota Inesquecível. Todos os direitos reservados. Viaje com segurança e expertise.</p>
-    </div>
-   </div>
-  </footer><!-- Modal Seguro -->
-  <div id="modalSeguro" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 modal-backdrop">
-   <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto fade-in">
-    <div class="p-8">
-     <div class="flex justify-between items-start mb-6">
-      <h3 id="modalSeguroTitulo" class="text-3xl font-bold text-gray-800"></h3><button onclick="fecharModal('modalSeguro')" class="text-gray-500 hover:text-gray-700 text-3xl leading-none">×</button>
-     </div>
-     <form id="formSeguro" action="https://formsubmit.co/contato@honigseguros.com.br" method="POST" target="_blank"><input type="hidden" name="_subject" id="seguro-subject" value=""> <input type="hidden" name="_template" value="table"> <input type="hidden" name="_captcha" value="false"> <input type="hidden" name="Tipo" value="CONTRATAÇÃO DE SEGURO"> <input type="hidden" name="Plano Escolhido" id="seguro-plano-hidden" value="">
-      <div class="space-y-4">
-       <div><label class="block text-sm font-semibold mb-2" for="seguro-nome">Nome Completo *</label> <input type="text" id="seguro-nome" name="Nome Completo" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none">
-       </div>
-       <div><label class="block text-sm font-semibold mb-2" for="seguro-email">Email *</label> <input type="email" id="seguro-email" name="Email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none">
-       </div>
-       <div><label class="block text-sm font-semibold mb-2" for="seguro-telefone">Telefone/WhatsApp *</label> <input type="tel" id="seguro-telefone" name="Telefone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none">
-       </div>
-       <div><label class="block text-sm font-semibold mb-2" for="seguro-destino">Destino Principal *</label> <input type="text" id="seguro-destino" name="Destino" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none">
-       </div>
-       <div class="grid grid-cols-2 gap-4">
-        <div><label class="block text-sm font-semibold mb-2" for="seguro-partida">Data de Partida *</label> <input type="date" id="seguro-partida" name="Data de Partida" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none">
-        </div>
-        <div><label class="block text-sm font-semibold mb-2" for="seguro-retorno">Data de Retorno *</label> <input type="date" id="seguro-retorno" name="Data de Retorno" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none">
-        </div>
-       </div>
-      </div><button type="submit" class="w-full mt-6 bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"> Solicitar Cotação Premium </button>
-     </form>
-    </div>
-   </div>
-  </div><!-- Modal Contato -->
-  <div id="modalContato" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 modal-backdrop">
-   <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto fade-in">
-    <div class="p-8">
-     <div class="flex justify-between items-start mb-6">
-      <h3 class="text-3xl font-bold text-gray-800">Falar com Especialista</h3><button onclick="fecharModal('modalContato')" class="text-gray-500 hover:text-gray-700 text-3xl leading-none">×</button>
-     </div>
-     <form id="formContato" action="https://formsubmit.co/contato@honigseguros.com.br" method="POST" target="_blank"><input type="hidden" name="_subject" value="Rota Inesquecível - MENSAGEM DE CONTATO"> <input type="hidden" name="_template" value="table"> <input type="hidden" name="_captcha" value="false"> <input type="hidden" name="Tipo" value="MENSAGEM DE CONTATO">
-      <div class="space-y-4">
-       <div><label class="block text-sm font-semibold mb-2" for="contato-nome">Nome Completo *</label> <input type="text" id="contato-nome" name="Nome Completo" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none">
-       </div>
-       <div><label class="block text-sm font-semibold mb-2" for="contato-email">Email *</label> <input type="email" id="contato-email" name="Email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none">
-       </div>
-       <div><label class="block text-sm font-semibold mb-2" for="contato-telefone">Telefone/WhatsApp *</label> <input type="tel" id="contato-telefone" name="Telefone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none">
-       </div>
-       <div><label class="block text-sm font-semibold mb-2" for="contato-assunto">Assunto *</label> <select id="contato-assunto" name="Assunto" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none"> <option value="">Selecione...</option> <option value="Cotação de Seguro Viagem">Cotação de Seguro Viagem</option> <option value="Informações sobre Guias Premium">Informações sobre Guias Premium</option> <option value="Consultoria Personalizada">Consultoria Personalizada</option> <option value="Suporte Técnico">Suporte Técnico</option> <option value="Outros">Outros</option> </select>
-       </div>
-       <div><label class="block text-sm font-semibold mb-2" for="contato-mensagem">Mensagem *</label> <textarea id="contato-mensagem" name="Mensagem" required rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none resize-none"></textarea>
-       </div>
-      </div><button type="submit" class="w-full mt-6 bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"> 📧 Enviar Mensagem </button>
-     </form>
-    </div>
-   </div>
-  </div><!-- Modal Destino -->
-  <div id="modalDestino" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 modal-backdrop">
-   <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto fade-in">
-    <div class="relative"><button onclick="fecharModal('modalDestino')" class="absolute top-4 right-4 z-10 bg-white rounded-full w-10 h-10 flex items-center justify-center text-gray-700 hover:bg-gray-100 text-2xl leading-none shadow-lg"> × </button> <img id="modalDestinoImagem" src="" alt="" class="w-full h-80 object-cover rounded-t-2xl">
-    </div>
-    <div class="p-8">
-     <h3 id="modalDestinoTitulo" class="text-4xl font-bold text-gray-800 mb-2"></h3>
-     <p id="modalDestinoPais" class="text-xl text-gray-600 mb-6"></p>
-     <div id="modalDestinoGaleria" class="grid grid-cols-3 gap-4 mb-6"></div>
-     <p id="modalDestinoDescricao" class="text-gray-700 leading-relaxed mb-8 text-lg"></p><button onclick="document.getElementById('cotacao').scrollIntoView({behavior: 'smooth'}); fecharModal('modalDestino');" class="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition text-lg"> ✈️ Fazer Cotação de Seguro para este Destino </button>
-    </div>
-   </div>
-  </div>
-  <script>
+    <!-- Modal Destino -->     
+    <div id="modalDestino" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 modal-backdrop"> 
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto fade-in"> 
+            <div class="relative">
+                <button onclick="fecharModal('modalDestino')" class="absolute top-4 right-4 z-10 bg-white rounded-full w-10 h-10 flex items-center justify-center text-gray-700 hover:bg-gray-100 text-2xl leading-none shadow-lg"> × </button>                 
+                <img id="modalDestinoImagem" src="https://brasilescola.uol.com.br/geografia/patagonia.htm" alt="" class="w-full h-80 object-cover rounded-t-2xl"> 
+            </div>             
+            <div class="p-8"> 
+                <h3 id="modalDestinoTitulo" class="text-4xl font-bold text-gray-800 mb-2"></h3> 
+                <p id="modalDestinoPais" class="text-xl text-gray-600 mb-6"></p> 
+                <div id="modalDestinoGaleria" class="grid grid-cols-3 gap-4 mb-6"></div>                 
+                <p id="modalDestinoDescricao" class="text-gray-700 leading-relaxed mb-8 text-lg"></p>
+                <button onclick="document.getElementById('cotacao').scrollIntoView({behavior: 'smooth'}); fecharModal('modalDestino');" class="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition text-lg"> ✈️ Fazer Cotação de Seguro para este Destino </button>                 
+            </div>             
+        </div>         
+    </div>     
+    <script>
 // Função para scroll do carrossel de seguros
 function scrollSeguros(direction) {
     const container = document.getElementById('carrosselSeguros');
@@ -684,18 +827,31 @@ function comprarGuia(guia) {
 
 // Carrossel de Destinos com scroll automático
 let carouselPosition = 0;
+let carouselPaused = false;
 const carouselTrack = document.getElementById('carouselDestinos');
 const cardWidth = window.innerWidth >= 768 ? (carouselTrack.parentElement.offsetWidth / 4) : carouselTrack.parentElement.offsetWidth;
 
+// Pausar quando mouse entrar no carrossel
+carouselTrack.parentElement.addEventListener('mouseenter', () => {
+    carouselPaused = true;
+});
+
+// Retomar quando mouse sair do carrossel
+carouselTrack.parentElement.addEventListener('mouseleave', () => {
+    carouselPaused = false;
+});
+
 function autoScrollDestinos() {
-    const maxScroll = carouselTrack.scrollWidth - carouselTrack.parentElement.offsetWidth;
-    carouselPosition += 1;
-    
-    if (carouselPosition >= maxScroll) {
-        carouselPosition = 0;
+    if (!carouselPaused) {
+        const maxScroll = carouselTrack.scrollWidth - carouselTrack.parentElement.offsetWidth;
+        carouselPosition += 1;
+        
+        if (carouselPosition >= maxScroll) {
+            carouselPosition = 0;
+        }
+        
+        carouselTrack.style.transform = `translateX(-${carouselPosition}px)`;
     }
-    
-    carouselTrack.style.transform = `translateX(-${carouselPosition}px)`;
 }
 
 // Iniciar scroll automático
@@ -728,7 +884,7 @@ const destinos = {
     patagonia: {
         nome: 'Patagônia',
         pais: 'Chile',
-        imagem: 'https://images.unsplash.com/photo-1591444022447-460a8e1f3ce0?w=800&q=80',
+        imagem: 'https://brasilescola.uol.com.br/geografia/patagonia.htm',
         galeria: [
             'https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=400&q=80',
             'https://images.unsplash.com/photo-1516731566880-8862236fe1e3?w=400&q=80',
@@ -860,6 +1016,6 @@ function abrirModalDestino(destinoId) {
     
     document.getElementById('modalDestino').classList.remove('hidden');
 }
-</script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ba7356c407a06ca',t:'MTc2NzgyODI2Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-</html>
+</script>     
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ba74f09f5d006ca',t:'MTc2NzgyOTMxNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
